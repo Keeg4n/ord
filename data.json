@@ -1,0 +1,2354 @@
+{
+    "generatedAt": "2026-07-09T14:41:16+00:00",
+    "applicant": "58490",
+    "directions": [
+        {
+            "code": "31.08.01",
+            "name": "Акушерство и гинекология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 11,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 21,
+                    "applicants": 3,
+                    "maxScore": 120,
+                    "list": [
+                        {
+                            "code": "59846",
+                            "score": 120,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.68 (2)",
+                            "entryId": 2141
+                        },
+                        {
+                            "code": "60820",
+                            "score": 75,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2141
+                        },
+                        {
+                            "code": "60643",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2141
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 11,
+            "budgetEffective": 11
+        },
+        {
+            "code": "31.08.02",
+            "name": "Анестезиология-реаниматология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 1,
+                    "maxScore": 95,
+                    "list": [
+                        {
+                            "code": "60800",
+                            "score": 95,
+                            "priority": 3,
+                            "consent": "Оригинал",
+                            "other": "31.08.42 (1), 31.08.02 (2)",
+                            "entryId": 2142
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 20,
+                    "applicants": 1,
+                    "maxScore": 130,
+                    "list": [
+                        {
+                            "code": "59913",
+                            "score": 130,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2702
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 10,
+                    "applicants": 2,
+                    "maxScore": 130,
+                    "list": [
+                        {
+                            "code": "59913",
+                            "score": 130,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.02 (1), 31.08.20 (2)",
+                            "entryId": 2142
+                        },
+                        {
+                            "code": "60800",
+                            "score": 95,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.42 (1), 31.08.02 (3)",
+                            "entryId": 2142
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 19,
+            "budgetEffective": 19
+        },
+        {
+            "code": "31.08.05",
+            "name": "Клиническая лабораторная диагностика",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 3,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 3,
+            "budgetEffective": 3
+        },
+        {
+            "code": "31.08.07",
+            "name": "Патологическая анатомия",
+            "forms": {
+                "budget": {
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 2,
+            "budgetEffective": 3
+        },
+        {
+            "code": "31.08.09",
+            "name": "Рентгенология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 1,
+                    "maxScore": 175,
+                    "list": [
+                        {
+                            "code": "58811",
+                            "score": 175,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.09 (1), 31.08.59 (3)",
+                            "entryId": 2145
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 8,
+                    "applicants": 2,
+                    "maxScore": 175,
+                    "list": [
+                        {
+                            "code": "58811",
+                            "score": 175,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2718
+                        },
+                        {
+                            "code": "60019",
+                            "score": 175,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2718
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 15,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "58749",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.51 (1)",
+                            "entryId": 2145
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 6,
+            "budgetEffective": 6
+        },
+        {
+            "code": "31.08.10",
+            "name": "Судебно-медицинская экспертиза",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 6,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 6,
+            "budgetEffective": 6
+        },
+        {
+            "code": "31.08.13",
+            "name": "Детская кардиология",
+            "forms": {
+                "budget": {
+                    "places": 4,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 3,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 4
+        },
+        {
+            "code": "31.08.16",
+            "name": "Детская хирургия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 4,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 4,
+            "budgetEffective": 4
+        },
+        {
+            "code": "31.08.17",
+            "name": "Детская эндокринология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 3,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.18",
+            "name": "Неонатология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 4,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 4,
+            "budgetEffective": 4
+        },
+        {
+            "code": "31.08.19",
+            "name": "Педиатрия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 3,
+                    "maxScore": 150,
+                    "list": [
+                        {
+                            "code": "60523",
+                            "score": 150,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.54 (2)",
+                            "entryId": 2149
+                        },
+                        {
+                            "code": "58491",
+                            "score": 140,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1)",
+                            "entryId": 2149
+                        },
+                        {
+                            "code": "58658",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1), 31.08.54 (2)",
+                            "entryId": 2149
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 16,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 10,
+                    "applicants": 3,
+                    "maxScore": 140,
+                    "list": [
+                        {
+                            "code": "58491",
+                            "score": 140,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1)",
+                            "entryId": 2149
+                        },
+                        {
+                            "code": "60799",
+                            "score": 80,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.42 (2)",
+                            "entryId": 2149
+                        },
+                        {
+                            "code": "58658",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1), 31.08.54 (2)",
+                            "entryId": 2149
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 16,
+            "budgetEffective": 16
+        },
+        {
+            "code": "31.08.20",
+            "name": "Психиатрия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 16,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 11,
+                    "applicants": 5,
+                    "maxScore": 130,
+                    "list": [
+                        {
+                            "code": "59913",
+                            "score": 130,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.02 (1)",
+                            "entryId": 2150
+                        },
+                        {
+                            "code": "60512",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.59 (1)",
+                            "entryId": 2150
+                        },
+                        {
+                            "code": "60808",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2150
+                        },
+                        {
+                            "code": "59970",
+                            "score": 35,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2150
+                        },
+                        {
+                            "code": "60887",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.42 (2)",
+                            "entryId": 2150
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 16,
+            "budgetEffective": 16
+        },
+        {
+            "code": "31.08.28",
+            "name": "Гастроэнтерология",
+            "forms": {
+                "budget": {
+                    "places": 4,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "60731",
+                            "score": 100,
+                            "priority": 3,
+                            "consent": "Оригинал",
+                            "other": "31.08.57 (1), 31.08.28 (2)",
+                            "entryId": 2151
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 6,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "60731",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.57 (1), 31.08.28 (3)",
+                            "entryId": 2151
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 1,
+            "budgetEffective": 5
+        },
+        {
+            "code": "31.08.29",
+            "name": "Гематология",
+            "forms": {
+                "budget": {
+                    "places": 2,
+                    "applicants": 1,
+                    "maxScore": 180,
+                    "list": [
+                        {
+                            "code": "58345",
+                            "score": 180,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.29 (1), 31.08.49 (1)",
+                            "entryId": 2571
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 2,
+                    "applicants": 1,
+                    "maxScore": 180,
+                    "list": [
+                        {
+                            "code": "58345",
+                            "score": 180,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1), 31.08.29 (2)",
+                            "entryId": 2571
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 2
+        },
+        {
+            "code": "31.08.32",
+            "name": "Дерматовенерология",
+            "forms": {
+                "budget": {
+                    "places": 1,
+                    "applicants": 1,
+                    "maxScore": 125,
+                    "list": [
+                        {
+                            "code": "60286",
+                            "score": 125,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2239
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 31,
+                    "applicants": 11,
+                    "maxScore": 215,
+                    "list": [
+                        {
+                            "code": "58867",
+                            "score": 215,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "59850",
+                            "score": 160,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "60078",
+                            "score": 150,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "60286",
+                            "score": 125,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "58724",
+                            "score": 120,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.59 (1)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "60958",
+                            "score": 120,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.59 (2)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "60643",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.01 (2)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "59970",
+                            "score": 35,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.20 (2)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "58655",
+                            "score": 30,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.53 (2)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "58496",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.71 (2)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "58238",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.53 (2)",
+                            "entryId": 2239
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 1
+        },
+        {
+            "code": "31.08.35",
+            "name": "Инфекционные болезни",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 6,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 6,
+            "budgetEffective": 6
+        },
+        {
+            "code": "31.08.36",
+            "name": "Кардиология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 6,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "60912",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2751
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 11,
+                    "applicants": 3,
+                    "maxScore": 110,
+                    "list": [
+                        {
+                            "code": "58869",
+                            "score": 110,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.53 (2)",
+                            "entryId": 2241
+                        },
+                        {
+                            "code": "60912",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.36 (1)",
+                            "entryId": 2241
+                        },
+                        {
+                            "code": "60805",
+                            "score": 80,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.54 (2)",
+                            "entryId": 2241
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 5,
+            "budgetEffective": 5
+        },
+        {
+            "code": "31.08.42",
+            "name": "Неврология",
+            "forms": {
+                "budget": {
+                    "places": 1,
+                    "applicants": 2,
+                    "maxScore": 95,
+                    "list": [
+                        {
+                            "code": "60800",
+                            "score": 95,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.42 (1), 31.08.02 (2)",
+                            "entryId": 2242
+                        },
+                        {
+                            "code": "60112",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.42 (1)",
+                            "entryId": 2242
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 6,
+                    "applicants": 2,
+                    "maxScore": 95,
+                    "list": [
+                        {
+                            "code": "60800",
+                            "score": 95,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2758
+                        },
+                        {
+                            "code": "60112",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2758
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 9,
+                    "applicants": 5,
+                    "maxScore": 220,
+                    "list": [
+                        {
+                            "code": "57417",
+                            "score": 220,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.49 (2)",
+                            "entryId": 2242
+                        },
+                        {
+                            "code": "60800",
+                            "score": 95,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.42 (1), 31.08.02 (2)",
+                            "entryId": 2242
+                        },
+                        {
+                            "code": "60799",
+                            "score": 80,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.19 (1)",
+                            "entryId": 2242
+                        },
+                        {
+                            "code": "60112",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.42 (1)",
+                            "entryId": 2242
+                        },
+                        {
+                            "code": "60887",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.20 (1)",
+                            "entryId": 2242
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 4,
+            "budgetEffective": 5
+        },
+        {
+            "code": "31.08.45",
+            "name": "Пульмонология",
+            "forms": {
+                "budget": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 4,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 4,
+            "budgetEffective": 6
+        },
+        {
+            "code": "31.08.46",
+            "name": "Ревматология",
+            "forms": {
+                "budget": {
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 2,
+            "budgetEffective": 3
+        },
+        {
+            "code": "31.08.48",
+            "name": "Скорая медицинская помощь",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 8,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 8,
+            "budgetEffective": 8
+        },
+        {
+            "code": "31.08.49",
+            "name": "Терапия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 4,
+                    "maxScore": 180,
+                    "list": [
+                        {
+                            "code": "58345",
+                            "score": 180,
+                            "priority": 3,
+                            "consent": "Оригинал",
+                            "other": "31.08.29 (1), 31.08.49 (1)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "60019",
+                            "score": 175,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.09 (1)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "58711",
+                            "score": 150,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.54 (2)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "58707",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1), 31.08.54 (2)",
+                            "entryId": 2245
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 20,
+                    "applicants": 2,
+                    "maxScore": 220,
+                    "list": [
+                        {
+                            "code": "58345",
+                            "score": 180,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2773
+                        },
+                        {
+                            "code": "58500",
+                            "score": 220,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2773
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 7,
+                    "applicants": 7,
+                    "maxScore": 220,
+                    "list": [
+                        {
+                            "code": "57417",
+                            "score": 220,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.42 (1)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "58500",
+                            "score": 220,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.49 (1)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "60933",
+                            "score": 145,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.54 (2)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "60714",
+                            "score": 110,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.53 (1)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "58707",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1), 31.08.54 (2)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "60843",
+                            "score": 95,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.53 (1)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "58895",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.53 (2)",
+                            "entryId": 2245
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 18,
+            "budgetEffective": 18
+        },
+        {
+            "code": "31.08.51",
+            "name": "Фтизиатрия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 8,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "58749",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2785
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 7,
+            "budgetEffective": 7
+        },
+        {
+            "code": "31.08.53",
+            "name": "Эндокринология",
+            "forms": {
+                "budget": {
+                    "places": 3,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "58490",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.53 (1), 31.08.57 (2)",
+                            "entryId": 2247
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 3,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 11,
+                    "applicants": 7,
+                    "maxScore": 110,
+                    "list": [
+                        {
+                            "code": "58869",
+                            "score": 110,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.36 (1)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "60714",
+                            "score": 110,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.49 (2)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "58490",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.53 (1), 31.08.57 (2)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "60843",
+                            "score": 95,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.49 (2)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "58895",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.49 (1)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "58655",
+                            "score": 30,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "58238",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2247
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 3,
+            "budgetEffective": 6
+        },
+        {
+            "code": "31.08.54",
+            "name": "Общая врачебная практика (семейная медицина)",
+            "forms": {
+                "budget": {
+                    "places": 3,
+                    "applicants": 4,
+                    "maxScore": 150,
+                    "list": [
+                        {
+                            "code": "58711",
+                            "score": 150,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "60523",
+                            "score": 150,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "58707",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1), 31.08.54 (2)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "58658",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1), 31.08.54 (2)",
+                            "entryId": 2248
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 17,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 3,
+                    "applicants": 4,
+                    "maxScore": 145,
+                    "list": [
+                        {
+                            "code": "60933",
+                            "score": 145,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.49 (1)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "58707",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1), 31.08.54 (2)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "60805",
+                            "score": 80,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.36 (1)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "58658",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1), 31.08.54 (2)",
+                            "entryId": 2248
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 17,
+            "budgetEffective": 20
+        },
+        {
+            "code": "31.08.56",
+            "name": "Нейрохирургия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 7,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.57",
+            "name": "Онкология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 2,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "58490",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.53 (1), 31.08.57 (2)",
+                            "entryId": 2249
+                        },
+                        {
+                            "code": "60731",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.57 (1), 31.08.28 (2)",
+                            "entryId": 2249
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 12,
+                    "applicants": 1,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "60731",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2803
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 6,
+                    "applicants": 2,
+                    "maxScore": 100,
+                    "list": [
+                        {
+                            "code": "58490",
+                            "score": 100,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.53 (1), 31.08.57 (2)",
+                            "entryId": 2249
+                        },
+                        {
+                            "code": "60731",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.57 (1), 31.08.28 (2)",
+                            "entryId": 2249
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 11,
+            "budgetEffective": 11
+        },
+        {
+            "code": "31.08.58",
+            "name": "Оториноларингология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 5,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 10,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 5,
+            "budgetEffective": 5
+        },
+        {
+            "code": "31.08.59",
+            "name": "Офтальмология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 3,
+                    "maxScore": 175,
+                    "list": [
+                        {
+                            "code": "58811",
+                            "score": 175,
+                            "priority": 3,
+                            "consent": "Оригинал",
+                            "other": "31.08.09 (1)",
+                            "entryId": 2251
+                        },
+                        {
+                            "code": "58724",
+                            "score": 120,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.32 (1), 31.08.59 (2)",
+                            "entryId": 2251
+                        },
+                        {
+                            "code": "58788",
+                            "score": 80,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.59 (1)",
+                            "entryId": 2251
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 5,
+                    "applicants": 1,
+                    "maxScore": 80,
+                    "list": [
+                        {
+                            "code": "58788",
+                            "score": 80,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2807
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 11,
+                    "applicants": 5,
+                    "maxScore": 120,
+                    "list": [
+                        {
+                            "code": "58724",
+                            "score": 120,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.32 (1), 31.08.59 (1)",
+                            "entryId": 2251
+                        },
+                        {
+                            "code": "60958",
+                            "score": 120,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2251
+                        },
+                        {
+                            "code": "60512",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.20 (2)",
+                            "entryId": 2251
+                        },
+                        {
+                            "code": "60741",
+                            "score": 100,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2251
+                        },
+                        {
+                            "code": "58788",
+                            "score": 80,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.59 (1)",
+                            "entryId": 2251
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 4,
+            "budgetEffective": 4
+        },
+        {
+            "code": "31.08.66",
+            "name": "Травматология и ортопедия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 1,
+                    "maxScore": 180,
+                    "list": [
+                        {
+                            "code": "58501",
+                            "score": 180,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.66 (1), 31.08.67 (3)",
+                            "entryId": 2252
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 11,
+                    "applicants": 1,
+                    "maxScore": 180,
+                    "list": [
+                        {
+                            "code": "58501",
+                            "score": 180,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2793
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 6,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 10,
+            "budgetEffective": 10
+        },
+        {
+            "code": "31.08.67",
+            "name": "Хирургия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 15,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 15,
+            "budgetEffective": 15
+        },
+        {
+            "code": "31.08.68",
+            "name": "Урология",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 8,
+                    "applicants": 1,
+                    "maxScore": 120,
+                    "list": [
+                        {
+                            "code": "59846",
+                            "score": 120,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.01 (1)",
+                            "entryId": 2417
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.69",
+            "name": "Челюстно-лицевая хирургия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 8,
+                    "applicants": 2,
+                    "maxScore": 20,
+                    "list": [
+                        {
+                            "code": "58695",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2418
+                        },
+                        {
+                            "code": "59010",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
+                            "entryId": 2418
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.71",
+            "name": "Организация здравоохранения и общественное здоровье",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 3,
+                    "applicants": 1,
+                    "maxScore": 20,
+                    "list": [
+                        {
+                            "code": "58496",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2643
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.72",
+            "name": "Стоматология общей практики",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 2,
+                    "maxScore": 55,
+                    "list": [
+                        {
+                            "code": "60088",
+                            "score": 55,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58870",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.72 (1), 31.08.74 (1)",
+                            "entryId": 2254
+                        }
+                    ]
+                },
+                "target": {
+                    "places": 1,
+                    "applicants": 1,
+                    "maxScore": null,
+                    "list": [
+                        {
+                            "code": "58870",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "",
+                            "entryId": 2768
+                        }
+                    ]
+                },
+                "paid": {
+                    "places": 52,
+                    "applicants": 17,
+                    "maxScore": 110,
+                    "list": [
+                        {
+                            "code": "59032",
+                            "score": 110,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58944",
+                            "score": 90,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58888",
+                            "score": 55,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "60833",
+                            "score": 55,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.74 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58499",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.73 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58831",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "59973",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "59988",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "60810",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.77 (2)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "57895",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.76 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58405",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.74 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58695",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.69 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58884",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.75 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "60824",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.75 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58729",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.77 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "58870",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.72 (1), 31.08.74 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "59822",
+                            "score": null,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.77 (1)",
+                            "entryId": 2254
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.73",
+            "name": "Стоматология терапевтическая",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 12,
+                    "applicants": 1,
+                    "maxScore": 40,
+                    "list": [
+                        {
+                            "code": "58499",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2255
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 2,
+            "budgetEffective": 2
+        },
+        {
+            "code": "31.08.74",
+            "name": "Стоматология хирургическая",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 16,
+                    "applicants": 10,
+                    "maxScore": 110,
+                    "list": [
+                        {
+                            "code": "59032",
+                            "score": 110,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58944",
+                            "score": 90,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58888",
+                            "score": 55,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "60833",
+                            "score": 55,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58988",
+                            "score": 35,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (2)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58405",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58688",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.76 (1)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58898",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (2)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "59010",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.69 (1)",
+                            "entryId": 2419
+                        },
+                        {
+                            "code": "58870",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2419
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.75",
+            "name": "Стоматология ортопедическая",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 21,
+                    "applicants": 8,
+                    "maxScore": 55,
+                    "list": [
+                        {
+                            "code": "60088",
+                            "score": 55,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "58831",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "59973",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "59988",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "58988",
+                            "score": 35,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.74 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "58884",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "58898",
+                            "score": 20,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.74 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "60824",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2420
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.76",
+            "name": "Стоматология детская",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 2,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 5,
+                    "applicants": 3,
+                    "maxScore": 40,
+                    "list": [
+                        {
+                            "code": "57895",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2256
+                        },
+                        {
+                            "code": "58688",
+                            "score": 20,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
+                            "entryId": 2256
+                        },
+                        {
+                            "code": "60023",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.77 (1)",
+                            "entryId": 2669
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 2,
+            "budgetEffective": 2
+        },
+        {
+            "code": "31.08.77",
+            "name": "Ортодонтия",
+            "forms": {
+                "budget": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 0,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 25,
+                    "applicants": 6,
+                    "maxScore": 150,
+                    "list": [
+                        {
+                            "code": "59969",
+                            "score": 150,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "58747",
+                            "score": 120,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "60810",
+                            "score": 40,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "58729",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "59822",
+                            "score": null,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.72 (2)",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "60023",
+                            "score": 40,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.76 (2)",
+                            "entryId": 2670
+                        }
+                    ]
+                }
+            },
+            "freedTargets": 0,
+            "budgetEffective": 0
+        },
+        {
+            "code": "31.08.78",
+            "name": "Физическая и реабилитационная медицина",
+            "forms": {
+                "budget": {
+                    "places": 6,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "target": {
+                    "places": 4,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                },
+                "paid": {
+                    "places": 7,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
+                }
+            },
+            "freedTargets": 4,
+            "budgetEffective": 10
+        }
+    ],
+    "applicantHits": [
+        {
+            "direction": "Эндокринология",
+            "code": "31.08.53",
+            "form": "budget",
+            "score": 100,
+            "priority": 1,
+            "consent": "Оригинал",
+            "other": "31.08.53 (1), 31.08.57 (2)",
+            "entryId": 2247
+        },
+        {
+            "direction": "Эндокринология",
+            "code": "31.08.53",
+            "form": "paid",
+            "score": 100,
+            "priority": 1,
+            "consent": "Оригинал",
+            "other": "31.08.53 (1), 31.08.57 (2)",
+            "entryId": 2247
+        },
+        {
+            "direction": "Онкология",
+            "code": "31.08.57",
+            "form": "budget",
+            "score": 100,
+            "priority": 2,
+            "consent": "Оригинал",
+            "other": "31.08.53 (1), 31.08.57 (2)",
+            "entryId": 2249
+        },
+        {
+            "direction": "Онкология",
+            "code": "31.08.57",
+            "form": "paid",
+            "score": 100,
+            "priority": 2,
+            "consent": "Оригинал",
+            "other": "31.08.53 (1), 31.08.57 (2)",
+            "entryId": 2249
+        }
+    ]
+}

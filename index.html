@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Рейтинг ординатуры КФУ 2026</title>
+<style>
+  :root {
+    --bg: #0f1420; --card: #171d2b; --line: #26304a; --fg: #e6ebf5; --mut: #8a95ad;
+    --accent: #4f8cff; --good: #2fbf71; --warn: #f0a34a; --bad: #e5544b;
+    --budget: #2fbf71; --target: #4f8cff; --paid: #f0a34a;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f4f6fb; --card:#fff; --line:#e2e7f0; --fg:#1a2333; --mut:#5c6780; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--fg); }
+  .wrap { max-width:1100px; margin:0 auto; padding:24px 16px 80px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:var(--mut); font-size:13px; margin-bottom:24px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:20px; }
+  .card h2 { font-size:16px; margin:0 0 14px; display:flex; align-items:center; gap:8px; }
+  .chip { display:inline-block; font-size:11px; font-weight:600; padding:2px 8px; border-radius:20px; }
+  .c-budget { background:color-mix(in srgb,var(--budget) 20%,transparent); color:var(--budget); }
+  .c-target { background:color-mix(in srgb,var(--target) 20%,transparent); color:var(--target); }
+  .c-paid   { background:color-mix(in srgb,var(--paid) 20%,transparent); color:var(--paid); }
+  .hit { display:grid; grid-template-columns:1fr auto; gap:6px 16px; padding:12px 0; border-top:1px solid var(--line); }
+  .hit:first-of-type { border-top:0; }
+  .hit b { font-size:15px; }
+  .verdict { font-size:14px; padding:10px 14px; border-radius:10px; margin-top:12px; }
+  .v-good { background:color-mix(in srgb,var(--good) 15%,transparent); border:1px solid var(--good); }
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; align-items:center; }
+  input[type=search] { flex:1; min-width:160px; background:var(--card); border:1px solid var(--line); color:var(--fg); padding:9px 12px; border-radius:10px; font-size:14px; }
+  .tf { display:flex; gap:4px; }
+  .tf button { background:var(--card); border:1px solid var(--line); color:var(--mut); padding:8px 12px; border-radius:8px; cursor:pointer; font-size:13px; }
+  .tf button.on { color:var(--fg); border-color:var(--accent); }
+  .tablewrap { overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table { border-collapse:collapse; width:100%; min-width:640px; font-size:14px; }
+  th, td { padding:10px 12px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { position:sticky; top:0; background:var(--card); cursor:pointer; user-select:none; font-size:12px; color:var(--mut); text-transform:uppercase; letter-spacing:.03em; }
+  th:hover { color:var(--fg); }
+  tbody tr:hover { background:color-mix(in srgb,var(--accent) 7%,transparent); }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .full { color:var(--bad); } .free { color:var(--good); }
+  .bar { display:inline-block; height:6px; border-radius:4px; background:var(--accent); vertical-align:middle; margin-left:6px; }
+  tr.trackrow { background:color-mix(in srgb,var(--warn) 14%,transparent); }
+  .foot { color:var(--mut); font-size:12px; margin-top:24px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Рейтинг ординатуры КФУ — 2026</h1>
+  <div class="sub" id="meta">Загрузка…</div>
+
+  <div class="card" id="applicantCard" style="display:none">
+    <h2>🎯 Шансы абитуриента <span id="appId"></span></h2>
+    <div id="hits"></div>
+    <div class="verdict v-good" id="verdict"></div>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Поиск по направлению…">
+    <div class="tf" id="formFilter">
+      <button data-f="all" class="on">Все формы</button>
+      <button data-f="budget">Бюджет</button>
+      <button data-f="target">Целевое</button>
+      <button data-f="paid">Коммерция</button>
+    </div>
+  </div>
+
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead><tr>
+        <th data-k="name">Направление</th>
+        <th data-k="form">Форма</th>
+        <th data-k="places" class="num">Мест</th>
+        <th data-k="applicants" class="num">Поступающих</th>
+        <th data-k="maxScore" class="num">Макс. балл</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+const TRACK = null; // подставится из data.json
+const FORM_LABEL = { budget:'Бюджет', target:'Целевое', paid:'Коммерция' };
+const FORM_CLASS = { budget:'c-budget', target:'c-target', paid:'c-paid' };
+let ROWS = [], sortK = 'name', sortDir = 1, filterForm = 'all', DATA = null;
+
+fetch('data.json').then(r => r.json()).then(d => { DATA = d; init(d); })
+  .catch(e => document.getElementById('meta').textContent = 'Не удалось загрузить data.json: ' + e);
+
+function init(d) {
+  const dt = new Date(d.generatedAt);
+  document.getElementById('meta').innerHTML =
+    `Обновлено: <b>${dt.toLocaleString('ru-RU')}</b> · направлений: <b>${d.directions.length}</b> · абитуриент: <b>${d.applicant}</b>`;
+
+  // плоские строки для таблицы
+  for (const dir of d.directions) {
+    for (const f of ['budget','target','paid']) {
+      const v = dir.forms[f];
+      const places = f==='budget' ? dir.budgetEffective : v.places; // бюджет — эффективный
+      ROWS.push({
+        name: dir.name, code: dir.code, form: f,
+        places, declaredBudget: dir.forms.budget.places, freed: dir.freedTargets,
+        applicants: v.applicants, maxScore: v.maxScore,
+        hasTrack: v.list.some(a => a.code === d.applicant),
+      });
+    }
+  }
+  renderApplicant(d);
+  bind();
+  render();
+}
+
+function renderApplicant(d) {
+  if (!d.applicantHits.length) return;
+  document.getElementById('applicantCard').style.display = '';
+  document.getElementById('appId').textContent = d.applicant;
+  const box = document.getElementById('hits');
+  // ранг в каждом списке
+  const dirByCode = Object.fromEntries(d.directions.map(x => [x.code, x]));
+  let bestBudget = null;
+  box.innerHTML = d.applicantHits.map(h => {
+    const dir = dirByCode[h.code];
+    const list = [...dir.forms[h.form].list].sort((a,b)=>(b.score??-1)-(a.score??-1));
+    const rank = list.findIndex(a => a.code === d.applicant) + 1;
+    const places = h.form==='budget' ? dir.budgetEffective : dir.forms[h.form].places;
+    const ok = rank>0 && rank<=places;
+    if (h.form==='budget' && ok && !bestBudget) bestBudget = {dir:h.direction, rank, places};
+    return `<div class="hit">
+      <div><b>${h.direction}</b> <span class="chip ${FORM_CLASS[h.form]}">${FORM_LABEL[h.form]}</span>
+        <div class="sub">приоритет ${h.priority ?? '—'} · ${h.consent||''} · «другие»: ${h.other||'—'}</div></div>
+      <div style="text-align:right">
+        балл <b>${h.score??'—'}</b><br>
+        <span class="${ok?'free':'full'}">место ${rank} из ${places}${ok?' ✓':' ✗'}</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  const v = document.getElementById('verdict');
+  if (bestBudget) {
+    v.innerHTML = `✅ <b>Проходит на бюджет</b> по направлению «${bestBudget.dir}» — место ${bestBudget.rank} из ${bestBudget.places} (с учётом освобождающихся целевых мест). Это приоритетное направление, так что вопрос закрыт.`;
+  } else {
+    v.className = 'verdict';
+    v.innerHTML = 'ℹ️ На бюджет в текущих списках не проходит — смотрите разбор по формам выше.';
+  }
+}
+
+function bind() {
+  document.getElementById('q').addEventListener('input', render);
+  document.querySelectorAll('#formFilter button').forEach(b =>
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#formFilter button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on'); filterForm = b.dataset.f; render();
+    }));
+  document.querySelectorAll('#tbl th').forEach(th =>
+    th.addEventListener('click', () => {
+      const k = th.dataset.k;
+      sortDir = (sortK===k) ? -sortDir : 1; sortK = k; render();
+    }));
+}
+
+function render() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  let rows = ROWS.filter(r =>
+    (filterForm==='all' || r.form===filterForm) &&
+    (!q || r.name.toLowerCase().includes(q) || r.code.includes(q)));
+  const maxApp = Math.max(1, ...rows.map(r=>r.applicants));
+  rows.sort((a,b) => {
+    let x=a[sortK], y=b[sortK];
+    if (sortK==='name') return a.name.localeCompare(b.name,'ru')*sortDir;
+    x=x??-1; y=y??-1; return (x-y)*sortDir;
+  });
+  document.getElementById('rows').innerHTML = rows.map(r => {
+    const tight = r.applicants > r.places;
+    const budgetNote = r.form==='budget' && r.freed>0
+      ? ` <span class="sub">(${r.declaredBudget}+${r.freed}цел.)</span>` : '';
+    return `<tr class="${r.hasTrack?'trackrow':''}">
+      <td>${r.name} <span class="sub">${r.code}</span></td>
+      <td><span class="chip ${FORM_CLASS[r.form]}">${FORM_LABEL[r.form]}</span></td>
+      <td class="num">${r.places}${budgetNote}</td>
+      <td class="num ${tight?'full':''}">${r.applicants}
+          <span class="bar" style="width:${Math.round(38*r.applicants/maxApp)}px"></span></td>
+      <td class="num">${r.maxScore??'—'}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('foot').textContent =
+    `Показано строк: ${rows.length}. «Бюджет» = объявленные места + незанятые целевые (переходят в бюджет 13.08). Строки абитуриента подсвечены.`;
+}
+</script>
+</body>
+</html>
