@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-07-10T07:11:42+00:00",
+    "generatedAt": "2026-07-10T07:31:09+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -623,7 +623,7 @@
                 },
                 "paid": {
                     "places": 31,
-                    "applicants": 12,
+                    "applicants": 11,
                     "maxScore": 306,
                     "list": [
                         {
@@ -712,14 +712,6 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.53 (2)",
-                            "entryId": 2239
-                        },
-                        {
-                            "code": "61207",
-                            "score": null,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.01 (2)",
                             "entryId": 2239
                         }
                     ]
@@ -1631,9 +1623,18 @@
                 },
                 "target": {
                     "places": 15,
-                    "applicants": 0,
-                    "maxScore": null,
-                    "list": []
+                    "applicants": 1,
+                    "maxScore": 55,
+                    "list": [
+                        {
+                            "code": "61539",
+                            "score": 55,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2776
+                        }
+                    ]
                 },
                 "paid": {
                     "places": 2,
@@ -1642,8 +1643,8 @@
                     "list": []
                 }
             },
-            "freedTargets": 15,
-            "budgetEffective": 15
+            "freedTargets": 14,
+            "budgetEffective": 14
         },
         {
             "code": "31.08.68",
