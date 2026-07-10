@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-07-10T13:08:00+00:00",
+    "generatedAt": "2026-07-10T17:11:39+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -602,11 +602,11 @@
                 "paid": {
                     "places": 6,
                     "applicants": 2,
-                    "maxScore": 145,
+                    "maxScore": 165,
                     "list": [
                         {
                             "code": "61891",
-                            "score": 145,
+                            "score": 165,
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.49 (2)",
