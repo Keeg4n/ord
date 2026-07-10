@@ -17,7 +17,8 @@
   body { margin:0; font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--fg); }
   .wrap { max-width:1100px; margin:0 auto; padding:24px 16px 80px; }
   h1 { font-size:22px; margin:0 0 4px; }
-  .sub { color:var(--mut); font-size:13px; margin-bottom:24px; }
+  .sub { color:var(--mut); font-size:13px; }
+  #meta { margin-bottom:24px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:20px; }
   .card h2 { font-size:16px; margin:0 0 14px; display:flex; align-items:center; gap:8px; }
   .chip { display:inline-block; font-size:11px; font-weight:600; padding:2px 8px; border-radius:20px; }
@@ -26,11 +27,14 @@
   .c-paid   { background:color-mix(in srgb,var(--paid) 20%,transparent); color:var(--paid); }
   .hit { display:grid; grid-template-columns:1fr auto; gap:6px 16px; padding:12px 0; border-top:1px solid var(--line); }
   .hit:first-of-type { border-top:0; }
-  .hit b { font-size:15px; }
   .verdict { font-size:14px; padding:10px 14px; border-radius:10px; margin-top:12px; }
   .v-good { background:color-mix(in srgb,var(--good) 15%,transparent); border:1px solid var(--good); }
+  .v-warn { background:color-mix(in srgb,var(--warn) 15%,transparent); border:1px solid var(--warn); }
+  .v-bad  { background:color-mix(in srgb,var(--bad) 15%,transparent); border:1px solid var(--bad); }
+  input[type=search], input[type=text] { background:var(--bg); border:1px solid var(--line); color:var(--fg); padding:9px 12px; border-radius:10px; font-size:14px; }
+  #appSearch { width:100%; margin-bottom:12px; font-size:16px; letter-spacing:.03em; }
   .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; align-items:center; }
-  input[type=search] { flex:1; min-width:160px; background:var(--card); border:1px solid var(--line); color:var(--fg); padding:9px 12px; border-radius:10px; font-size:14px; }
+  .toolbar input[type=search] { flex:1; min-width:160px; }
   .tf { display:flex; gap:4px; }
   .tf button { background:var(--card); border:1px solid var(--line); color:var(--mut); padding:8px 12px; border-radius:8px; cursor:pointer; font-size:13px; }
   .tf button.on { color:var(--fg); border-color:var(--accent); }
@@ -43,9 +47,10 @@
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
   .full { color:var(--bad); } .free { color:var(--good); }
   .bar { display:inline-block; height:6px; border-radius:4px; background:var(--accent); vertical-align:middle; margin-left:6px; }
-  tr.trackrow { background:color-mix(in srgb,var(--warn) 14%,transparent); }
+  tr.trackrow { background:color-mix(in srgb,var(--warn) 16%,transparent); }
   .foot { color:var(--mut); font-size:12px; margin-top:24px; }
   a { color:var(--accent); }
+  .muted-note { color:var(--mut); font-size:13px; }
 </style>
 </head>
 <body>
@@ -53,10 +58,12 @@
   <h1>Рейтинг ординатуры КФУ — 2026</h1>
   <div class="sub" id="meta">Загрузка…</div>
 
-  <div class="card" id="applicantCard" style="display:none">
-    <h2>🎯 Шансы абитуриента <span id="appId"></span></h2>
+  <div class="card">
+    <h2>🎯 Шансы абитуриента</h2>
+    <input type="text" id="appSearch" inputmode="numeric" autocomplete="off"
+           placeholder="Введите код абитуриента, например 58490">
     <div id="hits"></div>
-    <div class="verdict v-good" id="verdict"></div>
+    <div class="verdict" id="verdict" style="display:none"></div>
   </div>
 
   <div class="toolbar">
@@ -86,72 +93,116 @@
 </div>
 
 <script>
-const TRACK = null; // подставится из data.json
 const FORM_LABEL = { budget:'Бюджет', target:'Целевое', paid:'Коммерция' };
 const FORM_CLASS = { budget:'c-budget', target:'c-target', paid:'c-paid' };
-let ROWS = [], sortK = 'name', sortDir = 1, filterForm = 'all', DATA = null;
+let ROWS = [], sortK = 'name', sortDir = 1, filterForm = 'all', DATA = null, currentCode = '';
 
-fetch('data.json').then(r => r.json()).then(d => { DATA = d; init(d); })
+// анти-кэш: при каждой перезагрузке страницы тянем свежий data.json
+fetch('data.json?t=' + Date.now(), { cache: 'no-store' })
+  .then(r => r.json()).then(d => { DATA = d; init(d); })
   .catch(e => document.getElementById('meta').textContent = 'Не удалось загрузить data.json: ' + e);
 
 function init(d) {
   const dt = new Date(d.generatedAt);
   document.getElementById('meta').innerHTML =
-    `Обновлено: <b>${dt.toLocaleString('ru-RU')}</b> · направлений: <b>${d.directions.length}</b> · абитуриент: <b>${d.applicant}</b>`;
+    `Данные обновлены: <b>${dt.toLocaleString('ru-RU')}</b> · направлений: <b>${d.directions.length}</b>`;
 
-  // плоские строки для таблицы
+  // плоские строки таблицы (+ множество кодов на строку — для подсветки поиска)
   for (const dir of d.directions) {
     for (const f of ['budget','target','paid']) {
       const v = dir.forms[f];
-      const places = f==='budget' ? dir.budgetEffective : v.places; // бюджет — эффективный
       ROWS.push({
         name: dir.name, code: dir.code, form: f,
-        places, declaredBudget: dir.forms.budget.places, freed: dir.freedTargets,
+        places: f==='budget' ? dir.budgetEffective : v.places,
+        declaredBudget: dir.forms.budget.places, freed: dir.freedTargets,
         applicants: v.applicants, maxScore: v.maxScore,
-        hasTrack: v.list.some(a => a.code === d.applicant),
+        codes: new Set(v.list.map(a => a.code)),
       });
     }
   }
-  renderApplicant(d);
   bind();
   render();
+  setApplicant(d.applicant || '58490'); // абитуриент по умолчанию
 }
 
-function renderApplicant(d) {
-  if (!d.applicantHits.length) return;
-  document.getElementById('applicantCard').style.display = '';
-  document.getElementById('appId').textContent = d.applicant;
-  const box = document.getElementById('hits');
-  // ранг в каждом списке
-  const dirByCode = Object.fromEntries(d.directions.map(x => [x.code, x]));
-  let bestBudget = null;
-  box.innerHTML = d.applicantHits.map(h => {
-    const dir = dirByCode[h.code];
-    const list = [...dir.forms[h.form].list].sort((a,b)=>(b.score??-1)-(a.score??-1));
-    const rank = list.findIndex(a => a.code === d.applicant) + 1;
-    const places = h.form==='budget' ? dir.budgetEffective : dir.forms[h.form].places;
-    const ok = rank>0 && rank<=places;
-    if (h.form==='budget' && ok && !bestBudget) bestBudget = {dir:h.direction, rank, places};
-    return `<div class="hit">
-      <div><b>${h.direction}</b> <span class="chip ${FORM_CLASS[h.form]}">${FORM_LABEL[h.form]}</span>
-        <div class="sub">приоритет ${h.priority ?? '—'} · ${h.consent||''} · «другие»: ${h.other||'—'}</div></div>
-      <div style="text-align:right">
-        балл <b>${h.score??'—'}</b><br>
-        <span class="${ok?'free':'full'}">место ${rank} из ${places}${ok?' ✓':' ✗'}</span>
-      </div>
-    </div>`;
-  }).join('');
+/** Собрать все попадания кода по направлениям/формам с рангом (по порядку официального списка). */
+function computeHits(code) {
+  const hits = [];
+  for (const dir of DATA.directions) {
+    for (const f of ['budget','target','paid']) {
+      const list = dir.forms[f].list;
+      const idx = list.findIndex(a => a.code === code);
+      if (idx < 0) continue;
+      const a = list[idx];
+      const places = f==='budget' ? dir.budgetEffective : dir.forms[f].places;
+      hits.push({
+        direction: dir.name, code: dir.code, form: f,
+        rank: idx + 1, places,
+        pass: idx + 1 <= places,
+        score: a.score, priority: a.priority, consent: a.consent, other: a.other,
+        declaredBudget: dir.forms.budget.places, freed: dir.freedTargets,
+      });
+    }
+  }
+  // сортировка: приоритет ↑, затем бюджет→целевое→коммерция
+  const ord = { budget:0, target:1, paid:2 };
+  hits.sort((x,y) => (x.priority??99)-(y.priority??99) || ord[x.form]-ord[y.form]);
+  return hits;
+}
 
-  const v = document.getElementById('verdict');
+function setApplicant(code) {
+  code = String(code).trim();
+  currentCode = code;
+  if (document.getElementById('appSearch').value !== code)
+    document.getElementById('appSearch').value = code;
+  renderApplicant(code);
+  render(); // обновить подсветку в таблице
+}
+
+function renderApplicant(code) {
+  const box = document.getElementById('hits');
+  const vEl = document.getElementById('verdict');
+  if (!code) { box.innerHTML = '<div class="muted-note">Введите код, чтобы увидеть шансы.</div>'; vEl.style.display='none'; return; }
+
+  const hits = computeHits(code);
+  if (!hits.length) {
+    box.innerHTML = `<div class="muted-note">Абитуриент <b>${code}</b> не найден ни в одном списке ординатуры.</div>`;
+    vEl.style.display = 'none';
+    return;
+  }
+
+  box.innerHTML = hits.map(h => `
+    <div class="hit">
+      <div><b>${h.direction}</b> <span class="chip ${FORM_CLASS[h.form]}">${FORM_LABEL[h.form]}</span>
+        <div class="sub">приоритет ${h.priority ?? '—'} · ${h.consent||'—'}${h.form==='budget'&&h.freed>0?` · бюджет ${h.declaredBudget}+${h.freed} целевых`:''}</div></div>
+      <div style="text-align:right">
+        балл <b>${h.score ?? '—'}</b><br>
+        <span class="${h.pass?'free':'full'}">место ${h.rank} из ${h.places} ${h.pass?'✓':'✗'}</span>
+      </div>
+    </div>`).join('');
+
+  // вердикт
+  const bestBudget = hits.find(h => h.form==='budget' && h.pass);
+  const bestPaid   = hits.find(h => h.form==='paid'   && h.pass);
+  const bestTarget = hits.find(h => h.form==='target' && h.pass);
+  vEl.style.display = '';
   if (bestBudget) {
-    v.innerHTML = `✅ <b>Проходит на бюджет</b> по направлению «${bestBudget.dir}» — место ${bestBudget.rank} из ${bestBudget.places} (с учётом освобождающихся целевых мест). Это приоритетное направление, так что вопрос закрыт.`;
+    vEl.className = 'verdict v-good';
+    vEl.innerHTML = `✅ <b>Проходит на бюджет</b> — «${bestBudget.direction}», место ${bestBudget.rank} из ${bestBudget.places} (с учётом освобождающихся целевых мест), приоритет ${bestBudget.priority}.`;
+  } else if (bestTarget) {
+    vEl.className = 'verdict v-good';
+    vEl.innerHTML = `✅ <b>Проходит по целевому</b> — «${bestTarget.direction}», место ${bestTarget.rank} из ${bestTarget.places}.`;
+  } else if (bestPaid) {
+    vEl.className = 'verdict v-warn';
+    vEl.innerHTML = `⚠️ На бюджет пока не проходит, но <b>проходит на коммерцию</b> — «${bestPaid.direction}», место ${bestPaid.rank} из ${bestPaid.places}.`;
   } else {
-    v.className = 'verdict';
-    v.innerHTML = 'ℹ️ На бюджет в текущих списках не проходит — смотрите разбор по формам выше.';
+    vEl.className = 'verdict v-bad';
+    vEl.innerHTML = `❌ В текущих списках на места <b>не проходит</b> ни по одной форме. Смотрите позиции выше.`;
   }
 }
 
 function bind() {
+  document.getElementById('appSearch').addEventListener('input', e => setApplicant(e.target.value));
   document.getElementById('q').addEventListener('input', render);
   document.querySelectorAll('#formFilter button').forEach(b =>
     b.addEventListener('click', () => {
@@ -172,15 +223,15 @@ function render() {
     (!q || r.name.toLowerCase().includes(q) || r.code.includes(q)));
   const maxApp = Math.max(1, ...rows.map(r=>r.applicants));
   rows.sort((a,b) => {
-    let x=a[sortK], y=b[sortK];
     if (sortK==='name') return a.name.localeCompare(b.name,'ru')*sortDir;
-    x=x??-1; y=y??-1; return (x-y)*sortDir;
+    let x=a[sortK]??-1, y=b[sortK]??-1; return (x-y)*sortDir;
   });
   document.getElementById('rows').innerHTML = rows.map(r => {
     const tight = r.applicants > r.places;
+    const hasTrack = currentCode && r.codes.has(currentCode);
     const budgetNote = r.form==='budget' && r.freed>0
       ? ` <span class="sub">(${r.declaredBudget}+${r.freed}цел.)</span>` : '';
-    return `<tr class="${r.hasTrack?'trackrow':''}">
+    return `<tr class="${hasTrack?'trackrow':''}">
       <td>${r.name} <span class="sub">${r.code}</span></td>
       <td><span class="chip ${FORM_CLASS[r.form]}">${FORM_LABEL[r.form]}</span></td>
       <td class="num">${r.places}${budgetNote}</td>
@@ -190,7 +241,8 @@ function render() {
     </tr>`;
   }).join('');
   document.getElementById('foot').textContent =
-    `Показано строк: ${rows.length}. «Бюджет» = объявленные места + незанятые целевые (переходят в бюджет 13.08). Строки абитуриента подсвечены.`;
+    `Показано строк: ${rows.length}. «Бюджет» = объявленные места + незанятые целевые (переходят в бюджет 13.08).` +
+    (currentCode ? ` Подсвечены строки, где есть абитуриент ${currentCode}.` : '');
 }
 </script>
 </body>

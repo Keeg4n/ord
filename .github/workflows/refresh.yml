@@ -1,0 +1,41 @@
+name: refresh-data
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # каждые 30 минут (UTC)
+  workflow_dispatch:           # и вручную из вкладки Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: curl, dom, mbstring
+
+      - name: Collect ratings
+        run: php collect.php
+
+      - name: Commit if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json enroll_1_8.json
+          if git diff --cached --quiet; then
+            echo "Нет изменений в данных"
+          else
+            git commit -m "refresh data ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi
