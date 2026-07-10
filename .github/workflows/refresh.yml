@@ -2,8 +2,13 @@ name: refresh-data
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # каждые 30 минут (UTC)
+    # каждые 3 часа в рабочее окно 09–18 МСК (МСК = UTC+3): 06,09,12,15 UTC = 09,12,15,18 МСК
+    - cron: '0 6,9,12,15 * * *'
   workflow_dispatch:           # и вручную из вкладки Actions
+  push:                        # и при пуше кода (кроме коммитов с данными — чтобы не зациклить)
+    paths-ignore:
+      - 'data.json'
+      - 'enroll_1_8.json'
 
 permissions:
   contents: write
@@ -15,7 +20,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 

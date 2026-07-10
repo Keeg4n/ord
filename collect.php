@@ -26,7 +26,7 @@ function http(string $url, $post = null): ?array {
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_TIMEOUT => 40,
+        CURLOPT_TIMEOUT => 25,
         CURLOPT_ENCODING => '',
         CURLOPT_COOKIEJAR => $cookie,
         CURLOPT_COOKIEFILE => $cookie,
@@ -54,7 +54,7 @@ function http(string $url, $post = null): ?array {
  * пришёл FastReport (в разметке есть его же классы fr{rid}s…), с ретраями.
  */
 function fetch_report(int $spec, int $source): ?string {
-    for ($try = 1; $try <= 4; $try++) {
+    for ($try = 1; $try <= 2; $try++) {
         $list = http(BASE . "/api/freports/list/$spec/$source/2");
         if ($list && $list['code'] === 200 && preg_match_all('/[a-f0-9]{32}/i', $list['body'], $mm)) {
             foreach (array_unique($mm[0]) as $rid) {
@@ -241,6 +241,7 @@ foreach ($dirs as $code => $dir) {
         foreach ($queries as [$id, $src, $form]) {
             $forms[$form]['places'] += ($form === 'budget' ? $e['budget'] : ($form === 'target' ? $e['target'] : $e['paid']));
             fwrite(STDERR, "  $code id=$id src=$src ($form)... ");
+            usleep(250000); // 0.25с — вежливая пауза, чтобы не выглядеть как DoS
             $html = fetch_report($id, $src);
             if (!$html) { fwrite(STDERR, "нет отчёта\n"); continue; }
             $rep = parse_report($html);
