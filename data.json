@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-07-10T09:05:45+00:00",
+    "generatedAt": "2026-07-10T09:18:59+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -395,7 +395,7 @@
                             "score": 80,
                             "priority": 2,
                             "consent": "Оригинал",
-                            "other": "31.08.19 (1)",
+                            "other": "31.08.19 (1), 31.08.28 (3)",
                             "entryId": 2149
                         },
                         {
@@ -531,7 +531,7 @@
             "forms": {
                 "budget": {
                     "places": 4,
-                    "applicants": 1,
+                    "applicants": 2,
                     "maxScore": 100,
                     "list": [
                         {
@@ -540,6 +540,14 @@
                             "priority": 3,
                             "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.28 (2)",
+                            "entryId": 2151
+                        },
+                        {
+                            "code": "61670",
+                            "score": 80,
+                            "priority": 3,
+                            "consent": "Оригинал",
+                            "other": "31.08.19 (1)",
                             "entryId": 2151
                         }
                     ]
