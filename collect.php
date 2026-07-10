@@ -47,15 +47,26 @@ function http(string $url, $post = null): ?array {
     return $body === false ? null : ['code' => $code, 'body' => $body];
 }
 
-/** Получить HTML отчёта FastReport для (specialtyId, sourceId). */
+/**
+ * Получить HTML отчёта FastReport для (specialtyId, sourceId).
+ * Надёжно: в ответе freports/list бывает несколько 32-hex (id ресурсов, CSS-хэши),
+ * поэтому перебираем всех кандидатов и оставляем только тот getReport, где реально
+ * пришёл FastReport (в разметке есть его же классы fr{rid}s…), с ретраями.
+ */
 function fetch_report(int $spec, int $source): ?string {
-    $list = http(BASE . "/api/freports/list/$spec/$source/2");
-    if (!$list || $list['code'] !== 200) return null;
-    if (!preg_match('/[a-f0-9]{32}/i', $list['body'], $m)) return null;
-    $rid = $m[0];
-    $rep = http(BASE . "/_fr/preview.getReport?reportId=$rid&renderBody=yes",
-                ['reportId' => $rid, 'renderBody' => 'yes']);
-    return ($rep && $rep['code'] === 200) ? $rep['body'] : null;
+    for ($try = 1; $try <= 4; $try++) {
+        $list = http(BASE . "/api/freports/list/$spec/$source/2");
+        if ($list && $list['code'] === 200 && preg_match_all('/[a-f0-9]{32}/i', $list['body'], $mm)) {
+            foreach (array_unique($mm[0]) as $rid) {
+                $rep = http(BASE . "/_fr/preview.getReport?reportId=$rid&renderBody=yes",
+                            ['reportId' => $rid, 'renderBody' => 'yes']);
+                if ($rep && $rep['code'] === 200 && strpos($rep['body'], "fr{$rid}s") !== false)
+                    return $rep['body'];
+            }
+        }
+        usleep(400000); // 0.4с перед повтором
+    }
+    return null;
 }
 
 /**
