@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-07-10T17:11:39+00:00",
+    "generatedAt": "2026-07-11T08:16:06+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -632,18 +632,9 @@
             "forms": {
                 "budget": {
                     "places": 2,
-                    "applicants": 1,
-                    "maxScore": 180,
-                    "list": [
-                        {
-                            "code": "58345",
-                            "score": 180,
-                            "priority": 2,
-                            "consent": "Оригинал",
-                            "other": "31.08.29 (1), 31.08.49 (1)",
-                            "entryId": 2571
-                        }
-                    ]
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
                 },
                 "target": {
                     "places": 0,
