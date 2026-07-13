@@ -26,7 +26,8 @@ function http(string $url, $post = null): ?array {
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_TIMEOUT => 25,
+        CURLOPT_CONNECTTIMEOUT => 8,
+        CURLOPT_TIMEOUT => 12,
         CURLOPT_ENCODING => '',
         CURLOPT_COOKIEJAR => $cookie,
         CURLOPT_COOKIEFILE => $cookie,
@@ -219,12 +220,34 @@ foreach ($enroll as $s) {
 
 $out = ['generatedAt' => date('c'), 'applicant' => TRACK, 'directions' => [], 'applicantHits' => []];
 
+// Бюджет времени: за него точно уложимся в таймаут воркфлоу (25 мин).
+// Что не успели собрать — берём из прошлого data.json (помечаем stale), чтобы не терять данные.
+$START  = time();
+$BUDGET = (int)(getenv('COLLECT_BUDGET') ?: 1000); // сек (~16.7 мин)
+$prev = @json_decode(@file_get_contents(__DIR__ . '/data.json'), true);
+$prevByCode = [];
+if (is_array($prev) && !empty($prev['directions']))
+    foreach ($prev['directions'] as $d) $prevByCode[$d['code']] = $d;
+$carried = 0;
+
 foreach ($dirs as $code => $dir) {
+    // бюджет исчерпан — переносим направление из прошлого запуска
+    if (time() - $START > $BUDGET) {
+        if (isset($prevByCode[$code])) {
+            $old = $prevByCode[$code];
+            $old['stale'] = true;
+            $out['directions'][] = $old;
+            $carried++;
+            fwrite(STDERR, ">> $code перенесено из прошлых данных (бюджет времени исчерпан)\n");
+        }
+        continue;
+    }
     $forms = [
         'budget' => ['places' => 0, 'applicants' => 0, 'maxScore' => null, 'list' => []],
         'target' => ['places' => 0, 'applicants' => 0, 'maxScore' => null, 'list' => []],
         'paid'   => ['places' => 0, 'applicants' => 0, 'maxScore' => null, 'list' => []],
     ];
+    $failed = false; // хоть один отчёт не скачался -> данным по направлению не доверяем
     // основное направление (для общих оснований/бюджета): с бюджетом, иначе с коммерцией
     $primary = null;
     foreach ($dir['entries'] as $e) if ($e['budget'] > 0) { $primary = $e['id']; break; }
@@ -243,7 +266,7 @@ foreach ($dirs as $code => $dir) {
             fwrite(STDERR, "  $code id=$id src=$src ($form)... ");
             usleep(250000); // 0.25с — вежливая пауза, чтобы не выглядеть как DoS
             $html = fetch_report($id, $src);
-            if (!$html) { fwrite(STDERR, "нет отчёта\n"); continue; }
+            if (!$html) { fwrite(STDERR, "нет отчёта\n"); $failed = true; continue; }
             $rep = parse_report($html);
             $apps = $rep['applicants'];
             fwrite(STDERR, count($apps) . " заявл.\n");
@@ -251,18 +274,21 @@ foreach ($dirs as $code => $dir) {
                 $forms[$form]['list'][] = $a + ['entryId' => $id];
                 if ($a['score'] !== null)
                     $forms[$form]['maxScore'] = max($forms[$form]['maxScore'] ?? -1, $a['score']);
-                if ($a['code'] === TRACK) {
-                    $out['applicantHits'][] = [
-                        'direction' => $dir['name'], 'code' => $code, 'form' => $form,
-                        'score' => $a['score'], 'priority' => $a['priority'],
-                        'consent' => $a['consent'], 'other' => $a['other'], 'entryId' => $id,
-                    ];
-                }
             }
         }
     }
     foreach ($forms as $f => &$v) $v['applicants'] = count($v['list']);
     unset($v);
+
+    // если сбор по направлению не удался — не затираем хорошие данные, берём прошлые
+    if ($failed && isset($prevByCode[$code])) {
+        $old = $prevByCode[$code];
+        $old['stale'] = true;
+        $out['directions'][] = $old;
+        $carried++;
+        fwrite(STDERR, ">> $code {$dir['name']}: отчёт не скачался — оставлены прошлые данные (stale)\n");
+        continue;
+    }
 
     // эффективный бюджет = бюджет + незанятые целевые места
     $targetPlaces = $forms['target']['places'];
@@ -275,10 +301,33 @@ foreach ($dirs as $code => $dir) {
         'forms' => $forms,
         'freedTargets' => $freedTargets,
         'budgetEffective' => $budgetEff,
+        'fetchedAt' => date('c'),
+        'stale' => false,
     ];
     fwrite(STDERR, ">> $code {$dir['name']}: budget={$forms['budget']['places']} (eff $budgetEff) target=$targetPlaces paid={$forms['paid']['places']}\n");
 }
 
+// сохранить порядок направлений как в каталоге
+usort($out['directions'], fn($a, $b) => strcmp($a['code'], $b['code']));
+
+// попадания отслеживаемого абитуриента — пересчитываем по финальному набору (вкл. перенесённые)
+$out['applicantHits'] = [];
+foreach ($out['directions'] as $d) {
+    foreach (['budget', 'target', 'paid'] as $f) {
+        foreach ($d['forms'][$f]['list'] as $a) {
+            if (($a['code'] ?? null) === TRACK) {
+                $out['applicantHits'][] = [
+                    'direction' => $d['name'], 'code' => $d['code'], 'form' => $f,
+                    'score' => $a['score'], 'priority' => $a['priority'],
+                    'consent' => $a['consent'], 'other' => $a['other'], 'entryId' => $a['entryId'] ?? null,
+                ];
+            }
+        }
+    }
+}
+
+$fresh = count($out['directions']) - $carried;
 file_put_contents(__DIR__ . '/data.json', json_encode($out, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-fwrite(STDERR, "\nСохранено: data.json (" . count($out['directions']) . " направлений, "
-    . count($out['applicantHits']) . " попаданий абитуриента " . TRACK . ")\n");
+fwrite(STDERR, "\nСохранено: data.json — направлений " . count($out['directions'])
+    . " (свежих $fresh, перенесённых $carried), попаданий " . TRACK . ": "
+    . count($out['applicantHits']) . "\n");

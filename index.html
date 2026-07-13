@@ -102,10 +102,13 @@ fetch('data.json?t=' + Date.now(), { cache: 'no-store' })
   .then(r => r.json()).then(d => { DATA = d; init(d); })
   .catch(e => document.getElementById('meta').textContent = 'Не удалось загрузить data.json: ' + e);
 
+function staleCount(d) { return d.directions.filter(x => x.stale).length; }
+
 function init(d) {
   const dt = new Date(d.generatedAt);
   document.getElementById('meta').innerHTML =
-    `Данные обновлены: <b>${dt.toLocaleString('ru-RU')}</b> · направлений: <b>${d.directions.length}</b>`;
+    `Данные обновлены: <b>${dt.toLocaleString('ru-RU')}</b> · направлений: <b>${d.directions.length}</b>` +
+    (staleCount(d) ? ` · <span title="эти направления в этот раз не пересобрались (медленный сайт) — показаны прошлые данные">⌛ устаревших: <b>${staleCount(d)}</b></span>` : '');
 
   // плоские строки таблицы (+ множество кодов на строку — для подсветки поиска)
   for (const dir of d.directions) {
@@ -117,6 +120,7 @@ function init(d) {
         declaredBudget: dir.forms.budget.places, freed: dir.freedTargets,
         applicants: v.applicants, maxScore: v.maxScore,
         codes: new Set(v.list.map(a => a.code)),
+        stale: !!dir.stale, fetchedAt: dir.fetchedAt || null,
       });
     }
   }
@@ -231,8 +235,10 @@ function render() {
     const hasTrack = currentCode && r.codes.has(currentCode);
     const budgetNote = r.form==='budget' && r.freed>0
       ? ` <span class="sub">(${r.declaredBudget}+${r.freed}цел.)</span>` : '';
+    const staleMark = r.stale
+      ? ` <span class="sub" title="прошлые данные${r.fetchedAt?' от '+new Date(r.fetchedAt).toLocaleString('ru-RU'):''} — в этот раз не пересобралось">⌛</span>` : '';
     return `<tr class="${hasTrack?'trackrow':''}">
-      <td>${r.name} <span class="sub">${r.code}</span></td>
+      <td>${r.name} <span class="sub">${r.code}</span>${staleMark}</td>
       <td><span class="chip ${FORM_CLASS[r.form]}">${FORM_LABEL[r.form]}</span></td>
       <td class="num">${r.places}${budgetNote}</td>
       <td class="num ${tight?'full':''}">${r.applicants}
