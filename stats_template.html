@@ -39,27 +39,33 @@
   .sub { color:var(--text-secondary); font-size:13px; }
   .card { background:var(--surface-1); border:1px solid var(--border);
           border-radius:14px; padding:18px 20px; margin:20px 0; }
+  /* глобальный переключатель форм */
+  .switch { position:sticky; top:0; z-index:5; background:var(--page);
+            padding:12px 0 10px; margin-top:16px; border-bottom:1px solid var(--border); }
+  .seg { display:inline-flex; gap:4px; background:var(--surface-1);
+         border:1px solid var(--border); border-radius:11px; padding:4px; flex-wrap:wrap; }
+  .seg button { border:0; background:transparent; color:var(--text-secondary);
+                font:inherit; font-size:14px; padding:7px 15px; border-radius:8px; cursor:pointer; }
+  .seg button:hover { color:var(--text-primary); }
+  .seg button[aria-pressed="true"] { background:var(--series-1); color:#fff; font-weight:600; }
+  .switch .hint { color:var(--muted); font-size:12px; margin-left:10px; }
   /* stat tiles */
-  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:20px; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:16px; }
   .tile { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
   .tile .v { font-size:26px; font-weight:600; line-height:1.15; }
   .tile .l { color:var(--text-secondary); font-size:12px; margin-top:2px; }
   .up { color:var(--good); font-size:12px; }
-  /* legend */
-  .legend { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:6px; }
+  .legend { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:6px; min-height:20px; }
   .legend span { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--text-secondary); }
   .swatch { width:11px; height:11px; border-radius:3px; }
-  /* chart */
   .chartbox { position:relative; }
   svg { display:block; width:100%; height:auto; }
   .tip { position:absolute; pointer-events:none; background:var(--surface-1);
          border:1px solid var(--border); border-radius:9px; padding:8px 10px;
          font-size:12px; box-shadow:0 6px 20px rgba(0,0,0,.14); opacity:0; transition:opacity .1s; }
-  .tip b { font-size:13px; }
   .tip .row { display:flex; align-items:center; gap:6px; margin-top:3px; color:var(--text-secondary); }
   .tip .row i { width:9px; height:9px; border-radius:2px; display:inline-block; font-style:normal; }
   .tip .row u { text-decoration:none; color:var(--text-primary); font-variant-numeric:tabular-nums; margin-left:auto; }
-  /* tables */
   .scroll { overflow-x:auto; border:1px solid var(--border); border-radius:12px; }
   table { border-collapse:collapse; width:100%; font-size:13px; }
   th,td { padding:7px 10px; text-align:left; white-space:nowrap; border-bottom:1px solid var(--grid); }
@@ -81,27 +87,31 @@
   <h1>Статистика подач — ординатура КФУ 2026</h1>
   <div class="sub" id="meta"></div>
 
+  <div class="switch">
+    <div class="seg" id="seg" role="group" aria-label="Форма обучения"></div>
+    <span class="hint">переключает все графики и таблицы ниже</span>
+  </div>
+
   <div class="tiles" id="tiles"></div>
 
   <div class="card">
-    <h2>Динамика заявлений по дням</h2>
+    <h2 id="chartTitle">Динамика заявлений по дням</h2>
     <div class="legend" id="legend"></div>
     <div class="chartbox">
-      <svg id="chart" viewBox="0 0 900 320" preserveAspectRatio="none" role="img"
-           aria-label="Заявления по формам обучения по дням"></svg>
+      <svg id="chart" viewBox="0 0 900 320" role="img" aria-label="Заявления по дням"></svg>
       <div class="tip" id="tip"></div>
     </div>
-    <div class="note">Числа по дням — последний удачный снимок за день. Полные значения см. в таблице ниже.</div>
+    <div class="note">По дням берётся последний удачный снимок. Точные значения — в таблице ниже.</div>
   </div>
 
   <div class="card">
-    <h2>Заявления по направлениям и дням</h2>
+    <h2 id="heatTitle">Заявления по направлениям и дням</h2>
     <div class="scroll"><table id="heat"></table></div>
-    <div class="note">Насыщенность заливки — количество заявлений. Отсортировано по текущему числу заявлений.</div>
+    <div class="note">Насыщенность заливки — количество заявлений. Сортировка по текущему числу.</div>
   </div>
 
   <div class="card">
-    <h2>Смена направлений</h2>
+    <h2 id="moversTitle">Смена направлений</h2>
     <div id="moversWrap"></div>
   </div>
 
@@ -117,126 +127,145 @@
 const D = /*__DATA__*/null;
 const FORMS = ['budget','target','paid'];
 const SC = { budget:'var(--series-1)', target:'var(--series-2)', paid:'var(--series-3)' };
+const colorOf = f => f==='all' ? 'var(--series-1)' : SC[f];
 const fmtDay = s => { const [y,m,d]=s.split('-'); return d+'.'+m; };
+let active = 'all';
 
-/* ── meta + tiles ─────────────────────────────────────────────── */
-const st = D.stats;
 document.getElementById('meta').textContent =
-  `Период ${fmtDay(st.period[0])}–${fmtDay(st.period[1])} · снимков: ${st.used} из ${st.snapshots} · направлений: ${st.directions}`;
-document.getElementById('tiles').innerHTML = [
-  [`${st.totalNow}`, 'заявлений сейчас', `+${st.growth} за период`],
-  [`${st.people}`, 'уникальных абитуриентов', ''],
-  [`${st.movers}`, 'меняли направления', ''],
-  [`${st.directions}`, 'направлений', ''],
-].map(([v,l,u]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div>${u?`<div class="up">${u}</div>`:''}</div>`).join('');
+  `Период ${fmtDay(D.meta.period[0])}–${fmtDay(D.meta.period[1])} · снимков: ${D.meta.used} из ${D.meta.snapshots} · направлений: ${D.meta.directions}`;
 
-document.getElementById('legend').innerHTML = FORMS.map(f =>
-  `<span><i class="swatch" style="background:${SC[f]}"></i>${D.formRu[f]}</span>`).join('');
+/* переключатель */
+document.getElementById('seg').innerHTML = D.keys.map(k =>
+  `<button data-k="${k}" aria-pressed="${k===active}">${D.formRu[k]}</button>`).join('');
+document.getElementById('seg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  active = b.dataset.k;
+  document.querySelectorAll('#seg button').forEach(x =>
+    x.setAttribute('aria-pressed', x.dataset.k === active));
+  renderAll();
+});
 
-/* ── line chart ───────────────────────────────────────────────── */
-(function(){
-  const W=900,H=320,P={t:16,r:16,b:34,l:44};
+function renderAll(){ tiles(); chart(); heat(); movers(); flow(); titles(); }
+
+function titles(){
+  const suffix = active==='all' ? '' : ` — ${D.formRu[active].toLowerCase()}`;
+  document.getElementById('chartTitle').textContent = 'Динамика заявлений по дням' + suffix;
+  document.getElementById('heatTitle').textContent = 'Заявления по направлениям и дням' + suffix;
+  document.getElementById('moversTitle').textContent = 'Смена направлений' + suffix;
+}
+
+function tiles(){
+  const s = D.byForm[active].stats;
+  document.getElementById('tiles').innerHTML = [
+    [s.totalNow, 'заявлений сейчас', s.growth>0?`+${s.growth} за период`:''],
+    [s.people, 'уникальных абитуриентов', ''],
+    [s.movers, 'меняли направления', ''],
+    [s.directions, 'направлений с заявлениями', ''],
+  ].map(([v,l,u]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div>${u?`<div class="up">${u}</div>`:''}</div>`).join('');
+}
+
+function chart(){
+  const W=900,H=320,P={t:16,r:16,b:34,l:48};
   const n=D.days.length;
-  const max=Math.max(...FORMS.map(f=>Math.max(...D.series[f])),1);
-  const nice=Math.ceil(max/50)*50||50;
+  // «Все формы» -> три ряда; конкретная форма -> один ряд
+  const ser = active==='all'
+    ? FORMS.map(f=>({key:f, label:D.formRu[f], color:SC[f], data:D.seriesAll[f]}))
+    : [{key:active, label:D.formRu[active], color:colorOf(active), data:D.byForm[active].totals}];
+  const max=Math.max(...ser.flatMap(s=>s.data),1);
+  const mag=Math.pow(10,Math.floor(Math.log10(max)));
+  const nice=Math.ceil(max/(mag/2))*(mag/2)||1;
   const x=i=> P.l + (n<2?0:i*(W-P.l-P.r)/(n-1));
   const y=v=> H-P.b - v/nice*(H-P.t-P.b);
   let s='';
-  // gridlines + y ticks
   for(let k=0;k<=4;k++){
     const v=nice*k/4, yy=y(v);
     s+=`<line x1="${P.l}" y1="${yy}" x2="${W-P.r}" y2="${yy}" stroke="var(--grid)" stroke-width="1"/>`;
-    s+=`<text x="${P.l-8}" y="${yy+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v}</text>`;
+    s+=`<text x="${P.l-8}" y="${yy+4}" text-anchor="end" font-size="11" fill="var(--muted)">${Math.round(v)}</text>`;
   }
-  // x labels (прореживаем)
   const step=Math.ceil(n/8);
   D.days.forEach((d,i)=>{ if(i%step===0||i===n-1)
     s+=`<text x="${x(i)}" y="${H-P.b+18}" text-anchor="middle" font-size="11" fill="var(--muted)">${fmtDay(d)}</text>`; });
   s+=`<line x1="${P.l}" y1="${H-P.b}" x2="${W-P.r}" y2="${H-P.b}" stroke="var(--axis)" stroke-width="1"/>`;
-  // series
-  FORMS.forEach(f=>{
-    const pts=D.series[f].map((v,i)=>`${x(i)},${y(v)}`).join(' ');
-    s+=`<polyline points="${pts}" fill="none" stroke="${SC[f]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  ser.forEach(o=>{
+    s+=`<polyline points="${o.data.map((v,i)=>`${x(i)},${y(v)}`).join(' ')}" fill="none" stroke="${o.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
   });
   s+=`<line id="cross" x1="0" y1="${P.t}" x2="0" y2="${H-P.b}" stroke="var(--axis)" stroke-width="1" opacity="0"/>`;
-  FORMS.forEach(f=>{ s+=`<circle class="mk mk-${f}" r="5" fill="${SC[f]}" stroke="var(--surface-1)" stroke-width="2" opacity="0"/>`; });
-  s+=`<rect x="${P.l}" y="${P.t}" width="${W-P.l-P.r}" height="${H-P.t-P.b}" fill="transparent" id="hit"/>`;
+  ser.forEach((o,k)=>{ s+=`<circle class="mk" data-k="${k}" r="5" fill="${o.color}" stroke="var(--surface-1)" stroke-width="2" opacity="0"/>`; });
   const svg=document.getElementById('chart'); svg.innerHTML=s;
 
+  // легенда: только когда рядов 2+ (один ряд назван заголовком)
+  document.getElementById('legend').innerHTML = ser.length>1
+    ? ser.map(o=>`<span><i class="swatch" style="background:${o.color}"></i>${o.label}</span>`).join('') : '';
+
   const tip=document.getElementById('tip'), cross=svg.querySelector('#cross');
-  const mks=Object.fromEntries(FORMS.map(f=>[f,svg.querySelector('.mk-'+f)]));
-  svg.addEventListener('pointermove',e=>{
+  const mks=[...svg.querySelectorAll('.mk')];
+  svg.onpointermove=e=>{
     const r=svg.getBoundingClientRect();
-    const px=(e.clientX-r.left)/r.width*W;
-    let i=Math.round((px-P.l)/((W-P.l-P.r)/Math.max(n-1,1)));
+    let i=Math.round(((e.clientX-r.left)/r.width*W-P.l)/((W-P.l-P.r)/Math.max(n-1,1)));
     i=Math.max(0,Math.min(n-1,i));
     cross.setAttribute('x1',x(i)); cross.setAttribute('x2',x(i)); cross.setAttribute('opacity','1');
-    FORMS.forEach(f=>{ const m=mks[f]; m.setAttribute('cx',x(i)); m.setAttribute('cy',y(D.series[f][i])); m.setAttribute('opacity','1'); });
-    tip.innerHTML=`<b>${fmtDay(D.days[i])}</b>`+FORMS.map(f=>
-      `<div class="row"><i style="background:${SC[f]}"></i>${D.formRu[f]}<u>${D.series[f][i]}</u></div>`).join('')
-      +`<div class="row"><i style="background:transparent"></i>Всего<u>${D.totals[i]}</u></div>`;
-    tip.style.opacity='1';
-    const left=x(i)/W*r.width;
-    tip.style.left=Math.min(Math.max(left+12,0),r.width-150)+'px';
+    mks.forEach((m,k)=>{ m.setAttribute('cx',x(i)); m.setAttribute('cy',y(ser[k].data[i])); m.setAttribute('opacity','1'); });
+    let html=`<b>${fmtDay(D.days[i])}</b>`+ser.map(o=>
+      `<div class="row"><i style="background:${o.color}"></i>${o.label}<u>${o.data[i]}</u></div>`).join('');
+    if(ser.length>1) html+=`<div class="row"><i style="background:transparent"></i>Всего<u>${D.byForm.all.totals[i]}</u></div>`;
+    tip.innerHTML=html; tip.style.opacity='1';
+    tip.style.left=Math.min(Math.max(x(i)/W*r.width+12,0),r.width-160)+'px';
     tip.style.top='10px';
-  });
-  svg.addEventListener('pointerleave',()=>{
-    tip.style.opacity='0'; cross.setAttribute('opacity','0');
-    FORMS.forEach(f=>mks[f].setAttribute('opacity','0'));
-  });
-})();
+  };
+  svg.onpointerleave=()=>{ tip.style.opacity='0'; cross.setAttribute('opacity','0');
+    mks.forEach(m=>m.setAttribute('opacity','0')); };
+}
 
-/* ── heatmap ──────────────────────────────────────────────────── */
-(function(){
-  const max=Math.max(...D.dirRows.map(r=>Math.max(...r.counts)),1);
+function heat(){
+  const rows=D.byForm[active].dirRows.filter(r=>r.counts.some(v=>v>0));
+  const max=Math.max(...rows.flatMap(r=>r.counts),1);
   const head='<thead><tr><th class="name">Направление</th>'
-    + D.days.map(d=>`<th class="n">${fmtDay(d)}</th>`).join('')
-    + '<th class="n">Δ</th></tr></thead>';
-  const body='<tbody>'+D.dirRows.map(r=>{
+    + D.days.map(d=>`<th class="n">${fmtDay(d)}</th>`).join('') + '<th class="n">Δ</th></tr></thead>';
+  const body='<tbody>'+(rows.length?rows.map(r=>{
     const cells=r.counts.map(v=>{
       if(!v) return `<td class="cell" style="color:var(--muted)">·</td>`;
       const p=Math.round(v/max*100);
-      const ink=p>55?'#fff':'var(--text-primary)';
-      return `<td class="cell" style="background:color-mix(in srgb, var(--series-1) ${Math.max(p,8)}%, var(--surface-1)); color:${ink}">${v}</td>`;
+      return `<td class="cell" style="background:color-mix(in srgb, ${colorOf(active)} ${Math.max(p,8)}%, var(--surface-1)); color:${p>55?'#fff':'var(--text-primary)'}">${v}</td>`;
     }).join('');
     return `<tr><td class="name">${r.name} <span class="sub">${r.code}</span></td>${cells}`
       + `<td class="n" style="color:${r.delta>0?'var(--good)':'var(--muted)'}">${r.delta>0?'+'+r.delta:r.delta}</td></tr>`;
-  }).join('')+'</tbody>';
+  }).join('') : `<tr><td colspan="${D.days.length+2}" class="sub">Нет заявлений по этой форме.</td></tr>`)+'</tbody>';
   document.getElementById('heat').innerHTML=head+body;
-})();
+}
 
-/* ── movers ───────────────────────────────────────────────────── */
-(function(){
-  const w=document.getElementById('moversWrap');
-  if(!D.movers.length){ w.innerHTML='<div class="sub">За период никто не менял набор направлений.</div>'; return; }
-  const rows=D.movers.map(m=>{
+function movers(){
+  const list=D.byForm[active].movers, w=document.getElementById('moversWrap');
+  if(!list.length){ w.innerHTML='<div class="sub">По этой форме никто не менял набор направлений.</div>'; return; }
+  const rows=list.map(m=>{
     const ev=m.events.map(e=>{
       const a=e.added.map(c=>`<span class="add">+${D.dirNames[c]||c}</span>`).join(' ');
       const d=e.dropped.map(c=>`<span class="drop">−${D.dirNames[c]||c}</span>`).join(' ');
       return `<div>${fmtDay(e.day)}: ${a} ${d}</div>`;
     }).join('');
-    const now=m.now.map(c=>`<span class="chip">${D.dirNames[c]||c}</span>`).join(' ');
+    const now=m.now.map(c=>`<span class="chip">${D.dirNames[c]||c}</span>`).join(' ') || '—';
     return `<tr><td><b>${m.code}</b></td><td class="n">${m.n}</td><td>${ev}</td><td>${now}</td><td class="n">${m.score??'—'}</td></tr>`;
   }).join('');
   w.innerHTML='<div class="scroll"><table><thead><tr><th>Код</th><th class="n">Смен</th>'
     +'<th>Что менялось</th><th>Сейчас подан на</th><th class="n">Балл</th></tr></thead><tbody>'
     +rows+'</tbody></table></div>'
-    +`<div class="note">«+» — направление добавлено, «−» — снято. Учитываются только те, кто присутствовал в списках и до, и после изменения.</div>`;
-})();
+    +'<div class="note">«+» — направление добавлено, «−» — снято. Учитываются те, кто был в списках и до, и после изменения.</div>';
+}
 
-/* ── flow ─────────────────────────────────────────────────────── */
-(function(){
+function flow(){
+  const b=D.byForm[active];
   const rows=D.days.map((d,i)=> i===0?'':
-    `<tr><td>${fmtDay(d)}</td><td class="n" style="color:var(--good)">+${D.arrivals[i]}</td>`
-    +`<td class="n" style="color:${D.departures[i]?'var(--critical)':'var(--muted)'}">−${D.departures[i]}</td>`
-    +`<td class="n">${D.totals[i]}</td></tr>`).join('');
+    `<tr><td>${fmtDay(d)}</td><td class="n" style="color:${b.arrivals[i]?'var(--good)':'var(--muted)'}">+${b.arrivals[i]}</td>`
+    +`<td class="n" style="color:${b.departures[i]?'var(--critical)':'var(--muted)'}">−${b.departures[i]}</td>`
+    +`<td class="n">${b.totals[i]}</td></tr>`).join('');
   document.getElementById('flow').innerHTML=
     '<thead><tr><th>День</th><th class="n">Новых</th><th class="n">Ушло</th><th class="n">Всего заявлений</th></tr></thead><tbody>'+rows+'</tbody>';
-})();
+}
 
-document.getElementById('excl').textContent = st.excluded
-  ? `Исключено ${st.excluded} повреждённых снимка (недокачанные отчёты): ${st.excludedList.join(', ')}.`
+document.getElementById('excl').textContent = D.meta.excluded
+  ? `Исключено ${D.meta.excluded} повреждённых снимка (недокачанные отчёты): ${D.meta.excludedList.join(', ')}.`
   : '';
+
+renderAll();
 </script>
 </body>
 </html>
