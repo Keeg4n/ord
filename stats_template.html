@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Статистика подач — ординатура КФУ 2026</title>
+<style>
+  .viz-root, body {
+    color-scheme: light;
+    --surface-1:#fcfcfb; --page:#f9f9f7;
+    --text-primary:#0b0b0b; --text-secondary:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a;
+    --good:#0ca30c; --critical:#d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root,
+    :root:where(:not([data-theme="light"])) body {
+      color-scheme: dark;
+      --surface-1:#1a1a19; --page:#0d0d0d;
+      --text-primary:#ffffff; --text-secondary:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+      --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+    }
+  }
+  :root[data-theme="dark"] .viz-root, :root[data-theme="dark"] body {
+    color-scheme: dark;
+    --surface-1:#1a1a19; --page:#0d0d0d;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--page); color:var(--text-primary);
+         font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width:1120px; margin:0 auto; padding:28px 16px 80px; }
+  h1 { font-size:23px; margin:0 0 4px; }
+  h2 { font-size:16px; margin:0 0 14px; }
+  .sub { color:var(--text-secondary); font-size:13px; }
+  .card { background:var(--surface-1); border:1px solid var(--border);
+          border-radius:14px; padding:18px 20px; margin:20px 0; }
+  /* stat tiles */
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:20px; }
+  .tile { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
+  .tile .v { font-size:26px; font-weight:600; line-height:1.15; }
+  .tile .l { color:var(--text-secondary); font-size:12px; margin-top:2px; }
+  .up { color:var(--good); font-size:12px; }
+  /* legend */
+  .legend { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:6px; }
+  .legend span { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--text-secondary); }
+  .swatch { width:11px; height:11px; border-radius:3px; }
+  /* chart */
+  .chartbox { position:relative; }
+  svg { display:block; width:100%; height:auto; }
+  .tip { position:absolute; pointer-events:none; background:var(--surface-1);
+         border:1px solid var(--border); border-radius:9px; padding:8px 10px;
+         font-size:12px; box-shadow:0 6px 20px rgba(0,0,0,.14); opacity:0; transition:opacity .1s; }
+  .tip b { font-size:13px; }
+  .tip .row { display:flex; align-items:center; gap:6px; margin-top:3px; color:var(--text-secondary); }
+  .tip .row i { width:9px; height:9px; border-radius:2px; display:inline-block; font-style:normal; }
+  .tip .row u { text-decoration:none; color:var(--text-primary); font-variant-numeric:tabular-nums; margin-left:auto; }
+  /* tables */
+  .scroll { overflow-x:auto; border:1px solid var(--border); border-radius:12px; }
+  table { border-collapse:collapse; width:100%; font-size:13px; }
+  th,td { padding:7px 10px; text-align:left; white-space:nowrap; border-bottom:1px solid var(--grid); }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.04em;
+       font-weight:600; position:sticky; top:0; background:var(--surface-1); }
+  td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
+  tbody tr:last-child td { border-bottom:0; }
+  .name { position:sticky; left:0; background:var(--surface-1); z-index:1; }
+  .cell { text-align:center; font-variant-numeric:tabular-nums; }
+  .chip { display:inline-block; font-size:11px; padding:1px 7px; border-radius:20px;
+          border:1px solid var(--border); color:var(--text-secondary); }
+  .add { color:var(--good); } .drop { color:var(--critical); }
+  .note { color:var(--text-secondary); font-size:12px; margin-top:10px; }
+  a { color:var(--series-1); }
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <h1>Статистика подач — ординатура КФУ 2026</h1>
+  <div class="sub" id="meta"></div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="card">
+    <h2>Динамика заявлений по дням</h2>
+    <div class="legend" id="legend"></div>
+    <div class="chartbox">
+      <svg id="chart" viewBox="0 0 900 320" preserveAspectRatio="none" role="img"
+           aria-label="Заявления по формам обучения по дням"></svg>
+      <div class="tip" id="tip"></div>
+    </div>
+    <div class="note">Числа по дням — последний удачный снимок за день. Полные значения см. в таблице ниже.</div>
+  </div>
+
+  <div class="card">
+    <h2>Заявления по направлениям и дням</h2>
+    <div class="scroll"><table id="heat"></table></div>
+    <div class="note">Насыщенность заливки — количество заявлений. Отсортировано по текущему числу заявлений.</div>
+  </div>
+
+  <div class="card">
+    <h2>Смена направлений</h2>
+    <div id="moversWrap"></div>
+  </div>
+
+  <div class="card">
+    <h2>Приход и уход по дням</h2>
+    <div class="scroll"><table id="flow"></table></div>
+  </div>
+
+  <div class="note" id="excl"></div>
+</div>
+
+<script>
+const D = /*__DATA__*/null;
+const FORMS = ['budget','target','paid'];
+const SC = { budget:'var(--series-1)', target:'var(--series-2)', paid:'var(--series-3)' };
+const fmtDay = s => { const [y,m,d]=s.split('-'); return d+'.'+m; };
+
+/* ── meta + tiles ─────────────────────────────────────────────── */
+const st = D.stats;
+document.getElementById('meta').textContent =
+  `Период ${fmtDay(st.period[0])}–${fmtDay(st.period[1])} · снимков: ${st.used} из ${st.snapshots} · направлений: ${st.directions}`;
+document.getElementById('tiles').innerHTML = [
+  [`${st.totalNow}`, 'заявлений сейчас', `+${st.growth} за период`],
+  [`${st.people}`, 'уникальных абитуриентов', ''],
+  [`${st.movers}`, 'меняли направления', ''],
+  [`${st.directions}`, 'направлений', ''],
+].map(([v,l,u]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div>${u?`<div class="up">${u}</div>`:''}</div>`).join('');
+
+document.getElementById('legend').innerHTML = FORMS.map(f =>
+  `<span><i class="swatch" style="background:${SC[f]}"></i>${D.formRu[f]}</span>`).join('');
+
+/* ── line chart ───────────────────────────────────────────────── */
+(function(){
+  const W=900,H=320,P={t:16,r:16,b:34,l:44};
+  const n=D.days.length;
+  const max=Math.max(...FORMS.map(f=>Math.max(...D.series[f])),1);
+  const nice=Math.ceil(max/50)*50||50;
+  const x=i=> P.l + (n<2?0:i*(W-P.l-P.r)/(n-1));
+  const y=v=> H-P.b - v/nice*(H-P.t-P.b);
+  let s='';
+  // gridlines + y ticks
+  for(let k=0;k<=4;k++){
+    const v=nice*k/4, yy=y(v);
+    s+=`<line x1="${P.l}" y1="${yy}" x2="${W-P.r}" y2="${yy}" stroke="var(--grid)" stroke-width="1"/>`;
+    s+=`<text x="${P.l-8}" y="${yy+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v}</text>`;
+  }
+  // x labels (прореживаем)
+  const step=Math.ceil(n/8);
+  D.days.forEach((d,i)=>{ if(i%step===0||i===n-1)
+    s+=`<text x="${x(i)}" y="${H-P.b+18}" text-anchor="middle" font-size="11" fill="var(--muted)">${fmtDay(d)}</text>`; });
+  s+=`<line x1="${P.l}" y1="${H-P.b}" x2="${W-P.r}" y2="${H-P.b}" stroke="var(--axis)" stroke-width="1"/>`;
+  // series
+  FORMS.forEach(f=>{
+    const pts=D.series[f].map((v,i)=>`${x(i)},${y(v)}`).join(' ');
+    s+=`<polyline points="${pts}" fill="none" stroke="${SC[f]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  });
+  s+=`<line id="cross" x1="0" y1="${P.t}" x2="0" y2="${H-P.b}" stroke="var(--axis)" stroke-width="1" opacity="0"/>`;
+  FORMS.forEach(f=>{ s+=`<circle class="mk mk-${f}" r="5" fill="${SC[f]}" stroke="var(--surface-1)" stroke-width="2" opacity="0"/>`; });
+  s+=`<rect x="${P.l}" y="${P.t}" width="${W-P.l-P.r}" height="${H-P.t-P.b}" fill="transparent" id="hit"/>`;
+  const svg=document.getElementById('chart'); svg.innerHTML=s;
+
+  const tip=document.getElementById('tip'), cross=svg.querySelector('#cross');
+  const mks=Object.fromEntries(FORMS.map(f=>[f,svg.querySelector('.mk-'+f)]));
+  svg.addEventListener('pointermove',e=>{
+    const r=svg.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width*W;
+    let i=Math.round((px-P.l)/((W-P.l-P.r)/Math.max(n-1,1)));
+    i=Math.max(0,Math.min(n-1,i));
+    cross.setAttribute('x1',x(i)); cross.setAttribute('x2',x(i)); cross.setAttribute('opacity','1');
+    FORMS.forEach(f=>{ const m=mks[f]; m.setAttribute('cx',x(i)); m.setAttribute('cy',y(D.series[f][i])); m.setAttribute('opacity','1'); });
+    tip.innerHTML=`<b>${fmtDay(D.days[i])}</b>`+FORMS.map(f=>
+      `<div class="row"><i style="background:${SC[f]}"></i>${D.formRu[f]}<u>${D.series[f][i]}</u></div>`).join('')
+      +`<div class="row"><i style="background:transparent"></i>Всего<u>${D.totals[i]}</u></div>`;
+    tip.style.opacity='1';
+    const left=x(i)/W*r.width;
+    tip.style.left=Math.min(Math.max(left+12,0),r.width-150)+'px';
+    tip.style.top='10px';
+  });
+  svg.addEventListener('pointerleave',()=>{
+    tip.style.opacity='0'; cross.setAttribute('opacity','0');
+    FORMS.forEach(f=>mks[f].setAttribute('opacity','0'));
+  });
+})();
+
+/* ── heatmap ──────────────────────────────────────────────────── */
+(function(){
+  const max=Math.max(...D.dirRows.map(r=>Math.max(...r.counts)),1);
+  const head='<thead><tr><th class="name">Направление</th>'
+    + D.days.map(d=>`<th class="n">${fmtDay(d)}</th>`).join('')
+    + '<th class="n">Δ</th></tr></thead>';
+  const body='<tbody>'+D.dirRows.map(r=>{
+    const cells=r.counts.map(v=>{
+      if(!v) return `<td class="cell" style="color:var(--muted)">·</td>`;
+      const p=Math.round(v/max*100);
+      const ink=p>55?'#fff':'var(--text-primary)';
+      return `<td class="cell" style="background:color-mix(in srgb, var(--series-1) ${Math.max(p,8)}%, var(--surface-1)); color:${ink}">${v}</td>`;
+    }).join('');
+    return `<tr><td class="name">${r.name} <span class="sub">${r.code}</span></td>${cells}`
+      + `<td class="n" style="color:${r.delta>0?'var(--good)':'var(--muted)'}">${r.delta>0?'+'+r.delta:r.delta}</td></tr>`;
+  }).join('')+'</tbody>';
+  document.getElementById('heat').innerHTML=head+body;
+})();
+
+/* ── movers ───────────────────────────────────────────────────── */
+(function(){
+  const w=document.getElementById('moversWrap');
+  if(!D.movers.length){ w.innerHTML='<div class="sub">За период никто не менял набор направлений.</div>'; return; }
+  const rows=D.movers.map(m=>{
+    const ev=m.events.map(e=>{
+      const a=e.added.map(c=>`<span class="add">+${D.dirNames[c]||c}</span>`).join(' ');
+      const d=e.dropped.map(c=>`<span class="drop">−${D.dirNames[c]||c}</span>`).join(' ');
+      return `<div>${fmtDay(e.day)}: ${a} ${d}</div>`;
+    }).join('');
+    const now=m.now.map(c=>`<span class="chip">${D.dirNames[c]||c}</span>`).join(' ');
+    return `<tr><td><b>${m.code}</b></td><td class="n">${m.n}</td><td>${ev}</td><td>${now}</td><td class="n">${m.score??'—'}</td></tr>`;
+  }).join('');
+  w.innerHTML='<div class="scroll"><table><thead><tr><th>Код</th><th class="n">Смен</th>'
+    +'<th>Что менялось</th><th>Сейчас подан на</th><th class="n">Балл</th></tr></thead><tbody>'
+    +rows+'</tbody></table></div>'
+    +`<div class="note">«+» — направление добавлено, «−» — снято. Учитываются только те, кто присутствовал в списках и до, и после изменения.</div>`;
+})();
+
+/* ── flow ─────────────────────────────────────────────────────── */
+(function(){
+  const rows=D.days.map((d,i)=> i===0?'':
+    `<tr><td>${fmtDay(d)}</td><td class="n" style="color:var(--good)">+${D.arrivals[i]}</td>`
+    +`<td class="n" style="color:${D.departures[i]?'var(--critical)':'var(--muted)'}">−${D.departures[i]}</td>`
+    +`<td class="n">${D.totals[i]}</td></tr>`).join('');
+  document.getElementById('flow').innerHTML=
+    '<thead><tr><th>День</th><th class="n">Новых</th><th class="n">Ушло</th><th class="n">Всего заявлений</th></tr></thead><tbody>'+rows+'</tbody>';
+})();
+
+document.getElementById('excl').textContent = st.excluded
+  ? `Исключено ${st.excluded} повреждённых снимка (недокачанные отчёты): ${st.excludedList.join(', ')}.`
+  : '';
+</script>
+</body>
+</html>
