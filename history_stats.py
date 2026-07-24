@@ -111,6 +111,7 @@ payload = {
     'meta': {'snapshots': len(snaps), 'used': len(good), 'excluded': len(excluded),
              'excludedList': [s['ts'][:16] for s in excluded],
              'period': [days[0], days[-1]] if days else ['', ''],
+             'lastSnap': good[-1]['ts'][:16] if good else '',
              'directions': len(dir_names)},
 }
 

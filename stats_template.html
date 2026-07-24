@@ -79,6 +79,9 @@
           border:1px solid var(--border); color:var(--text-secondary); }
   .add { color:var(--good); } .drop { color:var(--critical); }
   .note { color:var(--text-secondary); font-size:12px; margin-top:10px; }
+  .banner { margin-top:12px; padding:10px 14px; border-radius:10px; font-size:13px;
+            background:color-mix(in srgb, var(--good) 14%, transparent);
+            border:1px solid var(--good); }
   a { color:var(--series-1); }
 </style>
 </head>
@@ -86,6 +89,7 @@
 <div class="wrap">
   <h1>Статистика подач — ординатура КФУ 2026</h1>
   <div class="sub" id="meta"></div>
+  <div class="banner" id="banner"></div>
 
   <div class="switch">
     <div class="seg" id="seg" role="group" aria-label="Форма обучения"></div>
@@ -133,6 +137,9 @@ let active = 'all';
 
 document.getElementById('meta').textContent =
   `Период ${fmtDay(D.meta.period[0])}–${fmtDay(D.meta.period[1])} · снимков: ${D.meta.used} из ${D.meta.snapshots} · направлений: ${D.meta.directions}`;
+document.getElementById('banner').innerHTML =
+  `🏁 <b>Итог основного приёма.</b> Данные на ${D.meta.lastSnap} UTC (последний срез ${fmtDay(D.meta.period[1])}). ` +
+  `Всего <b>${D.byForm.all.stats.totalNow}</b> заявлений от <b>${D.byForm.all.stats.people}</b> абитуриентов.`;
 
 /* переключатель */
 document.getElementById('seg').innerHTML = D.keys.map(k =>
