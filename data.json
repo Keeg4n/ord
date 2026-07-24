@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-07-24T14:15:05+00:00",
+    "generatedAt": "2026-07-24T16:59:20+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -470,7 +470,7 @@
             },
             "freedTargets": 7,
             "budgetEffective": 7,
-            "fetchedAt": "2026-07-24T14:15:18+00:00",
+            "fetchedAt": "2026-07-24T16:59:36+00:00",
             "stale": false
         },
         {
@@ -957,7 +957,7 @@
             },
             "freedTargets": 8,
             "budgetEffective": 8,
-            "fetchedAt": "2026-07-24T14:15:32+00:00",
+            "fetchedAt": "2026-07-24T16:59:51+00:00",
             "stale": false
         },
         {
@@ -1003,7 +1003,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 2,
-            "fetchedAt": "2026-07-24T14:15:37+00:00",
+            "fetchedAt": "2026-07-24T16:59:56+00:00",
             "stale": false
         },
         {
@@ -1074,7 +1074,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-07-24T14:15:43+00:00",
+            "fetchedAt": "2026-07-24T17:00:05+00:00",
             "stale": false
         },
         {
@@ -1697,7 +1697,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:15:56+00:00",
+            "fetchedAt": "2026-07-24T17:00:19+00:00",
             "stale": false
         },
         {
@@ -1743,7 +1743,7 @@
             },
             "freedTargets": 5,
             "budgetEffective": 5,
-            "fetchedAt": "2026-07-24T14:16:02+00:00",
+            "fetchedAt": "2026-07-24T17:00:25+00:00",
             "stale": false
         },
         {
@@ -1821,7 +1821,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-07-24T14:16:07+00:00",
+            "fetchedAt": "2026-07-24T17:00:29+00:00",
             "stale": false
         },
         {
@@ -1858,7 +1858,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-07-24T14:16:18+00:00",
+            "fetchedAt": "2026-07-24T17:00:39+00:00",
             "stale": false
         },
         {
@@ -1959,7 +1959,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:16:22+00:00",
+            "fetchedAt": "2026-07-24T17:00:43+00:00",
             "stale": false
         },
         {
@@ -1996,7 +1996,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-07-24T14:16:29+00:00",
+            "fetchedAt": "2026-07-24T17:00:55+00:00",
             "stale": false
         },
         {
@@ -2227,7 +2227,7 @@
             },
             "freedTargets": 14,
             "budgetEffective": 14,
-            "fetchedAt": "2026-07-24T14:16:38+00:00",
+            "fetchedAt": "2026-07-24T17:01:06+00:00",
             "stale": false
         },
         {
@@ -2530,7 +2530,7 @@
             },
             "freedTargets": 11,
             "budgetEffective": 11,
-            "fetchedAt": "2026-07-24T14:16:47+00:00",
+            "fetchedAt": "2026-07-24T17:01:18+00:00",
             "stale": false
         },
         {
@@ -2817,7 +2817,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-07-24T14:16:54+00:00",
+            "fetchedAt": "2026-07-24T17:01:27+00:00",
             "stale": false
         },
         {
@@ -2838,6 +2838,14 @@
                             "entryId": 2571
                         },
                         {
+                            "code": "66880",
+                            "score": 191,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.57 (2)",
+                            "entryId": 2571
+                        },
+                        {
                             "code": "66322",
                             "score": 140,
                             "priority": 1,
@@ -2851,14 +2859,6 @@
                             "priority": 2,
                             "consent": "Оригинал",
                             "other": "31.08.29 (1), 31.08.49 (1)",
-                            "entryId": 2571
-                        },
-                        {
-                            "code": "66880",
-                            "score": 100,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.57 (2)",
                             "entryId": 2571
                         }
                     ]
@@ -2927,7 +2927,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-07-24T14:16:58+00:00",
+            "fetchedAt": "2026-07-24T17:01:33+00:00",
             "stale": false
         },
         {
@@ -2953,6 +2953,14 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.32 (1), 31.08.01 (2)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "66877",
+                            "score": 218,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1), 31.08.57 (2)",
                             "entryId": 2239
                         },
                         {
@@ -3060,14 +3068,6 @@
                             "entryId": 2239
                         },
                         {
-                            "code": "66877",
-                            "score": 120,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.32 (1), 31.08.57 (2)",
-                            "entryId": 2239
-                        },
-                        {
                             "code": "62760",
                             "score": 40,
                             "priority": 1,
@@ -3145,11 +3145,27 @@
                             "entryId": 2239
                         },
                         {
+                            "code": "66877",
+                            "score": 218,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1), 31.08.57 (2)",
+                            "entryId": 2239
+                        },
+                        {
                             "code": "60286",
                             "score": 218,
                             "priority": 1,
                             "consent": "Оригинал",
                             "other": "31.08.32 (1)",
+                            "entryId": 2239
+                        },
+                        {
+                            "code": "66955",
+                            "score": 217,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.53 (1)",
                             "entryId": 2239
                         },
                         {
@@ -3337,6 +3353,14 @@
                             "entryId": 2239
                         },
                         {
+                            "code": "66873",
+                            "score": 153,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
+                            "entryId": 2239
+                        },
+                        {
                             "code": "63939",
                             "score": 153,
                             "priority": 1,
@@ -3441,6 +3465,14 @@
                             "entryId": 2239
                         },
                         {
+                            "code": "64067",
+                            "score": 97,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.69 (2)",
+                            "entryId": 2239
+                        },
+                        {
                             "code": "65835",
                             "score": 96,
                             "priority": 1,
@@ -3521,30 +3553,6 @@
                             "entryId": 2239
                         },
                         {
-                            "code": "66955",
-                            "score": 125,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.53 (1)",
-                            "entryId": 2239
-                        },
-                        {
-                            "code": "66877",
-                            "score": 120,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.32 (1), 31.08.57 (2)",
-                            "entryId": 2239
-                        },
-                        {
-                            "code": "66873",
-                            "score": 55,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "",
-                            "entryId": 2239
-                        },
-                        {
                             "code": "60643",
                             "score": 40,
                             "priority": 1,
@@ -3593,14 +3601,6 @@
                             "entryId": 2239
                         },
                         {
-                            "code": "64067",
-                            "score": null,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.69 (2)",
-                            "entryId": 2239
-                        },
-                        {
                             "code": "64096",
                             "score": null,
                             "priority": 1,
@@ -3613,7 +3613,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-07-24T14:17:06+00:00",
+            "fetchedAt": "2026-07-24T17:01:43+00:00",
             "stale": false
         },
         {
@@ -3731,7 +3731,7 @@
             },
             "freedTargets": 4,
             "budgetEffective": 4,
-            "fetchedAt": "2026-07-24T14:17:10+00:00",
+            "fetchedAt": "2026-07-24T17:01:47+00:00",
             "stale": false
         },
         {
@@ -4022,6 +4022,14 @@
                             "entryId": 2241
                         },
                         {
+                            "code": "66722",
+                            "score": 97,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.58 (2)",
+                            "entryId": 2241
+                        },
+                        {
                             "code": "66119",
                             "score": 90,
                             "priority": 1,
@@ -4044,21 +4052,13 @@
                             "consent": "Копия",
                             "other": "31.08.53 (2)",
                             "entryId": 2241
-                        },
-                        {
-                            "code": "66722",
-                            "score": 20,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.58 (2)",
-                            "entryId": 2241
                         }
                     ]
                 }
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-07-24T14:17:23+00:00",
+            "fetchedAt": "2026-07-24T17:02:01+00:00",
             "stale": false
         },
         {
@@ -4159,19 +4159,19 @@
                             "entryId": 2242
                         },
                         {
+                            "code": "66894",
+                            "score": 148,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.01 (1), 31.08.42 (1)",
+                            "entryId": 2242
+                        },
+                        {
                             "code": "63263",
                             "score": 97,
                             "priority": 2,
                             "consent": "Оригинал",
                             "other": "31.08.42 (1)",
-                            "entryId": 2242
-                        },
-                        {
-                            "code": "66894",
-                            "score": 55,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.01 (1), 31.08.42 (1)",
                             "entryId": 2242
                         },
                         {
@@ -4381,6 +4381,14 @@
                             "entryId": 2242
                         },
                         {
+                            "code": "66894",
+                            "score": 148,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.01 (1), 31.08.42 (2)",
+                            "entryId": 2242
+                        },
+                        {
                             "code": "63881",
                             "score": 118,
                             "priority": 2,
@@ -4437,14 +4445,6 @@
                             "entryId": 2242
                         },
                         {
-                            "code": "66894",
-                            "score": 55,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.01 (1), 31.08.42 (2)",
-                            "entryId": 2242
-                        },
-                        {
                             "code": "60112",
                             "score": null,
                             "priority": 1,
@@ -4457,7 +4457,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-07-24T14:17:31+00:00",
+            "fetchedAt": "2026-07-24T17:02:09+00:00",
             "stale": false
         },
         {
@@ -4527,7 +4527,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 4,
-            "fetchedAt": "2026-07-24T14:17:36+00:00",
+            "fetchedAt": "2026-07-24T17:02:17+00:00",
             "stale": false
         },
         {
@@ -4622,7 +4622,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-07-24T14:17:44+00:00",
+            "fetchedAt": "2026-07-24T17:02:25+00:00",
             "stale": false
         },
         {
@@ -4659,7 +4659,7 @@
             },
             "freedTargets": 8,
             "budgetEffective": 8,
-            "fetchedAt": "2026-07-24T14:17:49+00:00",
+            "fetchedAt": "2026-07-24T17:02:33+00:00",
             "stale": false
         },
         {
@@ -4669,16 +4669,8 @@
                 "budget": {
                     "places": 0,
                     "applicants": 30,
-                    "maxScore": 258,
+                    "maxScore": 238,
                     "list": [
-                        {
-                            "code": "58711",
-                            "score": 258,
-                            "priority": 1,
-                            "consent": "Оригинал",
-                            "other": "31.08.54 (2)",
-                            "entryId": 2245
-                        },
                         {
                             "code": "66164",
                             "score": 238,
@@ -4861,6 +4853,14 @@
                             "priority": 1,
                             "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.35 (2)",
+                            "entryId": 2245
+                        },
+                        {
+                            "code": "58711",
+                            "score": 175,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.54 (2)",
                             "entryId": 2245
                         },
                         {
@@ -5306,7 +5306,7 @@
             },
             "freedTargets": 10,
             "budgetEffective": 10,
-            "fetchedAt": "2026-07-24T14:18:01+00:00",
+            "fetchedAt": "2026-07-24T17:02:46+00:00",
             "stale": false
         },
         {
@@ -5343,7 +5343,7 @@
             },
             "freedTargets": 7,
             "budgetEffective": 7,
-            "fetchedAt": "2026-07-24T14:18:12+00:00",
+            "fetchedAt": "2026-07-24T17:03:00+00:00",
             "stale": false
         },
         {
@@ -5510,6 +5510,14 @@
                             "priority": 2,
                             "consent": "Копия",
                             "other": "31.08.01 (1)",
+                            "entryId": 2247
+                        },
+                        {
+                            "code": "66955",
+                            "score": 217,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.32 (2)",
                             "entryId": 2247
                         },
                         {
@@ -5697,14 +5705,6 @@
                             "entryId": 2247
                         },
                         {
-                            "code": "66955",
-                            "score": 125,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.32 (2)",
-                            "entryId": 2247
-                        },
-                        {
                             "code": "58869",
                             "score": 110,
                             "priority": 2,
@@ -5741,7 +5741,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 6,
-            "fetchedAt": "2026-07-24T14:18:21+00:00",
+            "fetchedAt": "2026-07-24T17:03:12+00:00",
             "stale": false
         },
         {
@@ -5751,16 +5751,8 @@
                 "budget": {
                     "places": 3,
                     "applicants": 11,
-                    "maxScore": 258,
+                    "maxScore": 196,
                     "list": [
-                        {
-                            "code": "58711",
-                            "score": 258,
-                            "priority": 2,
-                            "consent": "Оригинал",
-                            "other": "31.08.49 (1)",
-                            "entryId": 2248
-                        },
                         {
                             "code": "58707",
                             "score": 196,
@@ -5799,6 +5791,14 @@
                             "priority": 2,
                             "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.54 (2)",
+                            "entryId": 2248
+                        },
+                        {
+                            "code": "58711",
+                            "score": 175,
+                            "priority": 2,
+                            "consent": "Оригинал",
+                            "other": "31.08.49 (1)",
                             "entryId": 2248
                         },
                         {
@@ -5988,7 +5988,7 @@
             },
             "freedTargets": 12,
             "budgetEffective": 15,
-            "fetchedAt": "2026-07-24T14:18:32+00:00",
+            "fetchedAt": "2026-07-24T17:03:24+00:00",
             "stale": false
         },
         {
@@ -6018,6 +6018,14 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.42 (2)",
+                            "entryId": 2416
+                        },
+                        {
+                            "code": "66721",
+                            "score": 166,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "",
                             "entryId": 2416
                         },
                         {
@@ -6067,21 +6075,13 @@
                             "consent": "Копия",
                             "other": "31.08.69 (1)",
                             "entryId": 2416
-                        },
-                        {
-                            "code": "66721",
-                            "score": 80,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "",
-                            "entryId": 2416
                         }
                     ]
                 }
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:18:37+00:00",
+            "fetchedAt": "2026-07-24T17:03:32+00:00",
             "stale": false
         },
         {
@@ -6118,6 +6118,14 @@
                             "entryId": 2249
                         },
                         {
+                            "code": "66877",
+                            "score": 218,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1), 31.08.57 (2)",
+                            "entryId": 2249
+                        },
+                        {
                             "code": "62739",
                             "score": 210,
                             "priority": 2,
@@ -6150,6 +6158,14 @@
                             "entryId": 2249
                         },
                         {
+                            "code": "66880",
+                            "score": 191,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.29 (1)",
+                            "entryId": 2249
+                        },
+                        {
                             "code": "65628",
                             "score": 88,
                             "priority": 1,
@@ -6163,22 +6179,6 @@
                             "priority": 1,
                             "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.36 (2)",
-                            "entryId": 2249
-                        },
-                        {
-                            "code": "66877",
-                            "score": 120,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.32 (1), 31.08.57 (2)",
-                            "entryId": 2249
-                        },
-                        {
-                            "code": "66880",
-                            "score": 100,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.29 (1)",
                             "entryId": 2249
                         }
                     ]
@@ -6273,6 +6273,14 @@
                             "priority": 1,
                             "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.01 (2)",
+                            "entryId": 2249
+                        },
+                        {
+                            "code": "66877",
+                            "score": 218,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1), 31.08.57 (2)",
                             "entryId": 2249
                         },
                         {
@@ -6378,21 +6386,13 @@
                             "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.36 (2)",
                             "entryId": 2249
-                        },
-                        {
-                            "code": "66877",
-                            "score": 120,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.32 (1), 31.08.57 (2)",
-                            "entryId": 2249
                         }
                     ]
                 }
             },
             "freedTargets": 5,
             "budgetEffective": 5,
-            "fetchedAt": "2026-07-24T14:18:47+00:00",
+            "fetchedAt": "2026-07-24T17:03:43+00:00",
             "stale": false
         },
         {
@@ -6486,7 +6486,7 @@
                         },
                         {
                             "code": "65760",
-                            "score": null,
+                            "score": 85,
                             "priority": 3,
                             "consent": "Копия",
                             "other": "31.08.67 (1)",
@@ -6691,6 +6691,14 @@
                             "entryId": 2250
                         },
                         {
+                            "code": "66722",
+                            "score": 97,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.36 (1)",
+                            "entryId": 2250
+                        },
+                        {
                             "code": "66119",
                             "score": 90,
                             "priority": 2,
@@ -6723,14 +6731,6 @@
                             "entryId": 2250
                         },
                         {
-                            "code": "66722",
-                            "score": 20,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.36 (1)",
-                            "entryId": 2250
-                        },
-                        {
                             "code": "66575",
                             "score": 96,
                             "priority": 1,
@@ -6743,7 +6743,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:18:58+00:00",
+            "fetchedAt": "2026-07-24T17:03:55+00:00",
             "stale": false
         },
         {
@@ -7142,7 +7142,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:19:09+00:00",
+            "fetchedAt": "2026-07-24T17:04:09+00:00",
             "stale": false
         },
         {
@@ -7445,7 +7445,7 @@
             },
             "freedTargets": 4,
             "budgetEffective": 4,
-            "fetchedAt": "2026-07-24T14:19:22+00:00",
+            "fetchedAt": "2026-07-24T17:04:24+00:00",
             "stale": false
         },
         {
@@ -7473,7 +7473,7 @@
                         },
                         {
                             "code": "65760",
-                            "score": null,
+                            "score": 85,
                             "priority": 1,
                             "consent": "Копия",
                             "other": "",
@@ -7603,7 +7603,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 1,
-            "fetchedAt": "2026-07-24T14:19:33+00:00",
+            "fetchedAt": "2026-07-24T17:04:37+00:00",
             "stale": false
         },
         {
@@ -7657,6 +7657,14 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "",
+                            "entryId": 2417
+                        },
+                        {
+                            "code": "66708",
+                            "score": 193,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.09 (2)",
                             "entryId": 2417
                         },
                         {
@@ -7740,14 +7748,6 @@
                             "entryId": 2417
                         },
                         {
-                            "code": "66708",
-                            "score": 100,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.09 (2)",
-                            "entryId": 2417
-                        },
-                        {
                             "code": "66470",
                             "score": 80,
                             "priority": 1,
@@ -7760,7 +7760,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:19:38+00:00",
+            "fetchedAt": "2026-07-24T17:04:45+00:00",
             "stale": false
         },
         {
@@ -7849,6 +7849,14 @@
                             "entryId": 2418
                         },
                         {
+                            "code": "64067",
+                            "score": 97,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.32 (1)",
+                            "entryId": 2418
+                        },
+                        {
                             "code": "65794",
                             "score": 88,
                             "priority": 2,
@@ -7873,14 +7881,6 @@
                             "entryId": 2418
                         },
                         {
-                            "code": "64067",
-                            "score": null,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.32 (1)",
-                            "entryId": 2418
-                        },
-                        {
                             "code": "66947",
                             "score": null,
                             "priority": 2,
@@ -7893,7 +7893,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:19:43+00:00",
+            "fetchedAt": "2026-07-24T17:04:53+00:00",
             "stale": false
         },
         {
@@ -7930,7 +7930,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:19:47+00:00",
+            "fetchedAt": "2026-07-24T17:05:00+00:00",
             "stale": false
         },
         {
@@ -8189,6 +8189,14 @@
                             "entryId": 2254
                         },
                         {
+                            "code": "66264",
+                            "score": 152,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.76 (2)",
+                            "entryId": 2254
+                        },
+                        {
                             "code": "63546",
                             "score": 147,
                             "priority": 1,
@@ -8429,6 +8437,14 @@
                             "entryId": 2254
                         },
                         {
+                            "code": "66696",
+                            "score": 112,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.75 (2)",
+                            "entryId": 2254
+                        },
+                        {
                             "code": "64400",
                             "score": 110,
                             "priority": 1,
@@ -8522,6 +8538,14 @@
                             "priority": 2,
                             "consent": "Копия",
                             "other": "31.08.73 (1)",
+                            "entryId": 2254
+                        },
+                        {
+                            "code": "65569",
+                            "score": 96,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
                             "entryId": 2254
                         },
                         {
@@ -8637,24 +8661,8 @@
                             "entryId": 2254
                         },
                         {
-                            "code": "66264",
-                            "score": 55,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.76 (2)",
-                            "entryId": 2254
-                        },
-                        {
                             "code": "66658",
                             "score": 40,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.75 (2)",
-                            "entryId": 2254
-                        },
-                        {
-                            "code": "66696",
-                            "score": 20,
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.75 (2)",
@@ -8670,14 +8678,6 @@
                         },
                         {
                             "code": "64093",
-                            "score": null,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.74 (2)",
-                            "entryId": 2254
-                        },
-                        {
-                            "code": "65569",
                             "score": null,
                             "priority": 1,
                             "consent": "Копия",
@@ -8721,7 +8721,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:19:55+00:00",
+            "fetchedAt": "2026-07-24T17:05:13+00:00",
             "stale": false
         },
         {
@@ -8920,7 +8920,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:20:04+00:00",
+            "fetchedAt": "2026-07-24T17:05:27+00:00",
             "stale": false
         },
         {
@@ -9041,6 +9041,14 @@
                             "entryId": 2419
                         },
                         {
+                            "code": "63150",
+                            "score": 152,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.75 (1)",
+                            "entryId": 2419
+                        },
+                        {
                             "code": "58888",
                             "score": 141,
                             "priority": 2,
@@ -9153,6 +9161,14 @@
                             "entryId": 2419
                         },
                         {
+                            "code": "65569",
+                            "score": 96,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2419
+                        },
+                        {
                             "code": "61773",
                             "score": 93,
                             "priority": 1,
@@ -9257,23 +9273,7 @@
                             "entryId": 2419
                         },
                         {
-                            "code": "63150",
-                            "score": 55,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.75 (1)",
-                            "entryId": 2419
-                        },
-                        {
                             "code": "64093",
-                            "score": null,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.72 (1)",
-                            "entryId": 2419
-                        },
-                        {
-                            "code": "65569",
                             "score": null,
                             "priority": 2,
                             "consent": "Копия",
@@ -9325,7 +9325,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:20:11+00:00",
+            "fetchedAt": "2026-07-24T17:05:35+00:00",
             "stale": false
         },
         {
@@ -9411,6 +9411,14 @@
                             "priority": 2,
                             "consent": "Копия",
                             "other": "31.08.72 (1)",
+                            "entryId": 2420
+                        },
+                        {
+                            "code": "63150",
+                            "score": 152,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.74 (2)",
                             "entryId": 2420
                         },
                         {
@@ -9558,6 +9566,14 @@
                             "entryId": 2420
                         },
                         {
+                            "code": "66696",
+                            "score": 112,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2420
+                        },
+                        {
                             "code": "64400",
                             "score": 110,
                             "priority": 2,
@@ -9679,7 +9695,7 @@
                         },
                         {
                             "code": "64716",
-                            "score": 218,
+                            "score": 150,
                             "priority": 2,
                             "consent": "Оригинал",
                             "other": "31.08.77 (1)",
@@ -9694,24 +9710,8 @@
                             "entryId": 2420
                         },
                         {
-                            "code": "63150",
-                            "score": 55,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.74 (2)",
-                            "entryId": 2420
-                        },
-                        {
                             "code": "66658",
                             "score": 40,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.72 (1)",
-                            "entryId": 2420
-                        },
-                        {
-                            "code": "66696",
-                            "score": 20,
                             "priority": 2,
                             "consent": "Копия",
                             "other": "31.08.72 (1)",
@@ -9722,7 +9722,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:20:17+00:00",
+            "fetchedAt": "2026-07-24T17:05:43+00:00",
             "stale": false
         },
         {
@@ -9732,11 +9732,11 @@
                 "budget": {
                     "places": 0,
                     "applicants": 1,
-                    "maxScore": 100,
+                    "maxScore": 198,
                     "list": [
                         {
                             "code": "58208",
-                            "score": 100,
+                            "score": 198,
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.77 (1)",
@@ -9753,8 +9753,16 @@
                 "paid": {
                     "places": 5,
                     "applicants": 6,
-                    "maxScore": 127,
+                    "maxScore": 152,
                     "list": [
+                        {
+                            "code": "66264",
+                            "score": 152,
+                            "priority": 2,
+                            "consent": "Копия",
+                            "other": "31.08.72 (1)",
+                            "entryId": 2256
+                        },
                         {
                             "code": "57895",
                             "score": 116,
@@ -9774,14 +9782,6 @@
                         {
                             "code": "65639",
                             "score": 83,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.72 (1)",
-                            "entryId": 2256
-                        },
-                        {
-                            "code": "66264",
-                            "score": 55,
                             "priority": 2,
                             "consent": "Копия",
                             "other": "31.08.72 (1)",
@@ -9808,7 +9808,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 2,
-            "fetchedAt": "2026-07-24T14:20:28+00:00",
+            "fetchedAt": "2026-07-24T17:05:56+00:00",
             "stale": false
         },
         {
@@ -9862,6 +9862,14 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "58208",
+                            "score": 198,
+                            "priority": 1,
+                            "consent": "Копия",
+                            "other": "31.08.76 (1)",
                             "entryId": 2421
                         },
                         {
@@ -9969,14 +9977,6 @@
                             "entryId": 2421
                         },
                         {
-                            "code": "64716",
-                            "score": 218,
-                            "priority": 1,
-                            "consent": "Оригинал",
-                            "other": "31.08.75 (2)",
-                            "entryId": 2421
-                        },
-                        {
                             "code": "59969",
                             "score": 150,
                             "priority": 1,
@@ -9990,6 +9990,14 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "",
+                            "entryId": 2421
+                        },
+                        {
+                            "code": "64716",
+                            "score": 150,
+                            "priority": 1,
+                            "consent": "Оригинал",
+                            "other": "31.08.75 (2)",
                             "entryId": 2421
                         },
                         {
@@ -10014,14 +10022,6 @@
                             "priority": 1,
                             "consent": "Копия",
                             "other": "31.08.72 (2)",
-                            "entryId": 2421
-                        },
-                        {
-                            "code": "58208",
-                            "score": 100,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.76 (1)",
                             "entryId": 2421
                         },
                         {
@@ -10085,7 +10085,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-07-24T14:20:34+00:00",
+            "fetchedAt": "2026-07-24T17:06:03+00:00",
             "stale": false
         },
         {
@@ -10284,7 +10284,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 9,
-            "fetchedAt": "2026-07-24T14:20:41+00:00",
+            "fetchedAt": "2026-07-24T17:06:12+00:00",
             "stale": false
         }
     ],
