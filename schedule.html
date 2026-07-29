@@ -15,74 +15,110 @@
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
       --bg:#0d0d0d; --page:#0d0d0d; --card:#171d2b; --line:#26304a;
-      --fg:#e6ebf5; --sec:#c3c2b7; --muted:#898781; --border:rgba(255,255,255,0.12);
+      --fg:#e6ebf5; --sec:#c3c2b7; --muted:#8a95ad; --border:rgba(255,255,255,0.12);
       --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
       --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
     }
   }
   :root[data-theme="dark"] {
     --bg:#0d0d0d; --page:#0d0d0d; --card:#171d2b; --line:#26304a;
-    --fg:#e6ebf5; --sec:#c3c2b7; --muted:#898781; --border:rgba(255,255,255,0.12);
+    --fg:#e6ebf5; --sec:#c3c2b7; --muted:#8a95ad; --border:rgba(255,255,255,0.12);
     --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
     --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
   }
-  * { box-sizing:border-box; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   body { margin:0; background:var(--page); color:var(--fg);
          font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
-  .wrap { max-width:1120px; margin:0 auto; padding:26px 16px 80px; }
-  h1 { font-size:22px; margin:0 0 4px; }
+  .wrap { max-width:1120px; margin:0 auto; padding:16px 12px 90px; }
+  h1 { font-size:19px; margin:0 0 4px; }
   .sub { color:var(--sec); font-size:13px; }
   a { color:var(--s1); }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px 18px; margin:18px 0; }
-  h2 { font-size:16px; margin:0 0 12px; }
-  /* легенда / фильтры */
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px; margin:14px 0; }
+  h2 { font-size:15px; margin:0 0 10px; }
+
+  /* легенда / фильтры — крупные тапабельные */
   .legend { display:flex; flex-wrap:wrap; gap:8px; }
-  .lg { display:inline-flex; align-items:center; gap:8px; padding:6px 11px; border-radius:10px;
+  .lg { display:inline-flex; align-items:center; gap:8px; padding:9px 12px; border-radius:10px;
         border:1px solid var(--border); background:var(--card); cursor:pointer; font-size:13px; user-select:none; }
-  .lg .dot { width:12px; height:12px; border-radius:3px; flex:none; }
+  .lg .dot { width:13px; height:13px; border-radius:4px; flex:none; }
   .lg .who { color:var(--muted); font-size:11px; }
-  .lg[aria-pressed="false"] { opacity:.38; }
-  .typeflt { display:inline-flex; gap:4px; margin-left:auto; }
-  .typeflt button { border:1px solid var(--border); background:var(--card); color:var(--sec);
-                    border-radius:8px; padding:6px 11px; font:inherit; font-size:13px; cursor:pointer; }
-  .typeflt button[aria-pressed="true"] { border-color:var(--s1); color:var(--fg); font-weight:600; }
-  /* месяцы */
-  .month { margin-top:22px; }
-  .month h3 { font-size:15px; margin:0 0 8px; text-transform:capitalize; }
-  .grid { display:grid; grid-template-columns:repeat(7,1fr); gap:4px; }
-  .dow { text-align:center; font-size:11px; color:var(--muted); padding:2px 0; text-transform:uppercase; letter-spacing:.03em; }
-  .cell { background:var(--card); border:1px solid var(--line); border-radius:8px; min-height:76px;
-          padding:4px; display:flex; flex-direction:column; gap:3px; }
-  .cell.empty { background:transparent; border:0; }
-  .cell.we { background:color-mix(in srgb, var(--muted) 8%, var(--card)); }
-  .cell .dn { font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; }
-  .cell.today { outline:2px solid var(--today); }
-  .cell.today .dn { color:var(--today); font-weight:700; }
-  .ev { font-size:10.5px; line-height:1.25; border-radius:5px; padding:2px 5px; cursor:pointer;
-        color:#fff; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-  .ev.pr { color:var(--fg); background:transparent !important;
-           border:1px solid; border-left-width:4px; }
-  .ev b { font-weight:600; font-variant-numeric:tabular-nums; }
-  /* детали */
-  .detail { position:fixed; inset:auto 0 0 0; background:var(--card); border-top:1px solid var(--border);
-            padding:16px 18px 22px; box-shadow:0 -8px 30px rgba(0,0,0,.18); transform:translateY(110%);
-            transition:transform .2s; z-index:20; max-width:640px; margin:0 auto; border-radius:14px 14px 0 0; }
-  .detail.on { transform:translateY(0); }
-  .detail .x { float:right; cursor:pointer; color:var(--muted); font-size:20px; line-height:1; }
-  .detail .st { display:inline-block; font-size:11px; padding:2px 8px; border-radius:20px; color:#fff; margin-bottom:6px; }
-  .detail .kv { display:grid; grid-template-columns:76px 1fr; gap:4px 10px; font-size:14px; margin-top:8px; }
-  .detail .kv span { color:var(--muted); }
-  /* агенда */
-  table { border-collapse:collapse; width:100%; font-size:13px; }
-  th,td { padding:7px 9px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.03em; }
-  .scroll { overflow-x:auto; }
-  .tag { display:inline-block; font-size:10px; padding:1px 6px; border-radius:20px; border:1px solid var(--border); color:var(--sec); }
-  .banner { padding:9px 13px; border-radius:10px; font-size:13px; border:1px solid var(--s7);
+  .lg[aria-pressed="false"] { opacity:.36; }
+  .seg { display:inline-flex; gap:4px; background:var(--card); border:1px solid var(--border);
+         border-radius:11px; padding:4px; }
+  .seg button { border:0; background:transparent; color:var(--sec); border-radius:8px;
+                padding:9px 14px; font:inherit; font-size:14px; cursor:pointer; }
+  .seg button[aria-pressed="true"] { background:var(--s1); color:#fff; font-weight:600; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:14px 0 4px; }
+
+  .banner { padding:10px 13px; border-radius:10px; font-size:13px; border:1px solid var(--s7);
             background:color-mix(in srgb,var(--s7) 13%,transparent); margin-top:10px; }
   .banner.sess { border-color:var(--s8); background:color-mix(in srgb,var(--s8) 12%,transparent); }
   .note { color:var(--sec); font-size:12px; margin-top:8px; }
   .swk { color:var(--muted); font-size:11px; }
+
+  /* ── СПИСОК (мобайл-фёрст, вид по умолчанию) ── */
+  .lmonth { font-size:14px; margin:20px 0 8px; text-transform:capitalize; color:var(--sec);
+            position:sticky; top:0; background:var(--page); padding:6px 2px; z-index:2; }
+  .day { display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--line); }
+  .day.today .ddate b { color:var(--today); }
+  .ddate { flex:none; width:46px; text-align:center; }
+  .ddate b { display:block; font-size:17px; font-variant-numeric:tabular-nums; }
+  .ddate span { font-size:11px; color:var(--muted); text-transform:uppercase; }
+  .devs { flex:1; display:flex; flex-direction:column; gap:8px; min-width:0; }
+  .li { border:1px solid var(--line); border-left:4px solid var(--muted); border-radius:10px;
+        padding:9px 11px; cursor:pointer; background:var(--card); }
+  .li-top { display:flex; align-items:center; gap:8px; }
+  .li-time { font-weight:600; font-size:14px; font-variant-numeric:tabular-nums; }
+  .li-type { font-size:10px; padding:1px 7px; border-radius:20px; border:1px solid var(--border);
+             color:var(--sec); margin-left:auto; }
+  .li-name { font-size:14px; margin-top:3px; }
+  .li-meta { font-size:12px; color:var(--muted); margin-top:2px; }
+
+  /* ── КАЛЕНДАРЬ (сетка) ── */
+  #calWrap { display:none; }
+  .month { margin-top:16px; }
+  .month h3 { font-size:14px; margin:0 0 8px; text-transform:capitalize; }
+  .grid { display:grid; grid-template-columns:repeat(7,1fr); gap:3px; }
+  .dow { text-align:center; font-size:10px; color:var(--muted); padding:2px 0; }
+  .cell { background:var(--card); border:1px solid var(--line); border-radius:7px; min-height:52px;
+          padding:3px; display:flex; flex-direction:column; gap:2px; overflow:hidden; }
+  .cell.empty { background:transparent; border:0; }
+  .cell.we { background:color-mix(in srgb, var(--muted) 9%, var(--card)); }
+  .cell .dn { font-size:10px; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .cell.today { outline:2px solid var(--today); }
+  .cell.today .dn { color:var(--today); font-weight:700; }
+  /* на телефоне — компактные цветные бары */
+  .ev { border-radius:4px; cursor:pointer; height:7px; }
+  .ev.pr { border:1.5px solid; background:transparent !important; height:7px; }
+  .ev .etx { display:none; }
+
+  .scroll { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:13px; min-width:520px; }
+  th,td { padding:7px 9px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; }
+  .tag { display:inline-block; font-size:10px; padding:1px 6px; border-radius:20px; border:1px solid var(--border); color:var(--sec); }
+
+  /* нижняя карточка деталей */
+  .detail { position:fixed; inset:auto 0 0 0; background:var(--card); border-top:1px solid var(--border);
+            padding:16px; box-shadow:0 -8px 30px rgba(0,0,0,.22); transform:translateY(110%);
+            transition:transform .2s; z-index:30; max-width:640px; margin:0 auto; border-radius:16px 16px 0 0; }
+  .detail.on { transform:translateY(0); }
+  .detail .x { float:right; cursor:pointer; color:var(--muted); font-size:26px; line-height:1; padding:0 4px; }
+  .detail .st { display:inline-block; font-size:11px; padding:3px 9px; border-radius:20px; color:#fff; margin-bottom:8px; }
+  .detail .kv { display:grid; grid-template-columns:82px 1fr; gap:5px 10px; font-size:14px; margin-top:8px; }
+  .detail .kv span { color:var(--muted); }
+
+  /* ── ДЕСКТОП/ПЛАНШЕТ ── */
+  @media (min-width:640px) {
+    .wrap { padding:26px 16px 80px; }
+    h1 { font-size:22px; }
+    .cell { min-height:78px; padding:4px; }
+    .ev { height:auto; padding:2px 5px; color:#fff; font-size:10.5px; line-height:1.25;
+          white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .ev.pr { color:var(--fg); border-left-width:4px; }
+    .ev .etx { display:inline; }
+    .ev b { font-weight:600; font-variant-numeric:tabular-nums; }
+  }
 </style>
 </head>
 <body>
@@ -91,24 +127,30 @@
   <div class="sub">Специальность 31.08.78 «Физическая и реабилитационная медицина» · 1-е полугодие 2025/26 (1 семестр) · группа ФРМ-1</div>
   <div class="sub" style="margin-top:6px"><a href="index.html">← рейтинг</a> · <a href="stats.html">статистика подач</a></div>
 
-  <div class="card">
-    <h2>Предметы <span class="swk">— клик по предмету скрывает/показывает его в календаре</span></h2>
-    <div class="legend" id="legend"></div>
-    <div style="margin-top:10px" class="legend">
-      <div class="typeflt" id="typeflt" style="margin-left:0">
-        <button data-t="all" aria-pressed="true">Всё</button>
-        <button data-t="Лекция" aria-pressed="false">Только лекции</button>
-        <button data-t="Практика" aria-pressed="false">Только практика</button>
-      </div>
+  <div class="toolbar">
+    <div class="seg" id="viewSeg">
+      <button data-v="list" aria-pressed="true">📋 Список</button>
+      <button data-v="cal" aria-pressed="false">🗓 Календарь</button>
     </div>
+    <div class="seg" id="typeflt">
+      <button data-t="all" aria-pressed="true">Всё</button>
+      <button data-t="Лекция" aria-pressed="false">Лекции</button>
+      <button data-t="Практика" aria-pressed="false">Практика</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Предметы <span class="swk">— тап скрывает/показывает в расписании</span></h2>
+    <div class="legend" id="legend"></div>
     <div class="banner" id="practiceBanner"></div>
     <div class="banner sess" id="sessBanner"></div>
   </div>
 
-  <div id="months"></div>
+  <div id="listWrap" class="card"></div>
+  <div id="calWrap"></div>
 
   <div class="card">
-    <h2>Список занятий по предметам</h2>
+    <h2>Все занятия по дисциплинам</h2>
     <div class="scroll"><table id="agenda"></table></div>
     <div class="note" id="agendaNote"></div>
   </div>
@@ -127,24 +169,17 @@ const SUBJ = {
   cifr: {n:'Цифровые технологии коммуникации и информбезопасность', t:'Ислямов Р.И. · Войтенко А.П.', c:'--s6', short:'Цифровые'},
   sim:  {n:'Симуляционный курс', t:'—', c:'--s8', short:'Симуляция'},
 };
-
-// type: 'Лекция' | 'Практика' | 'Симуляционный курс'
 const EVENTS = [
-  // ЛЕКЦИИ
   {s:'konts', type:'Лекция', time:'9:50–11:20', loc:'Лекторий НКЛ «Технологии реабилитации и здоровья», б. Ленина к.5 стр.4',
    dates:['2025-09-08','2025-09-15','2025-09-29','2025-10-06','2025-10-13','2025-10-20']},
   {s:'diag', type:'Лекция', time:'9:50–11:20', loc:'Лекторий НКЛ, б. Ленина к.5 стр.4',
    dates:['2025-10-27','2025-11-03','2025-11-10','2025-11-17','2025-11-24','2025-12-01']},
   {s:'ozd', type:'Лекция', time:'16:10–17:10', loc:'МИ, корпус 2а, 5 этаж, ауд. 6', teacher:'проф. Третьякова О.С.',
    dates:['2025-09-22','2025-10-23']},
-  {s:'ped', type:'Лекция', time:'16:40–19:50', loc:'Ялтинская, 20, каб. 704', teacher:'Петренко Н.А.',
-   dates:['2025-09-02']},
-  {s:'metod', type:'Лекция', time:'16:40–19:50', loc:'МИ, корпус 2а, 6 этаж, каб. 1',
-   dates:['2025-09-18']},
-  {s:'cifr', type:'Лекция', time:'15:30–18:40', loc:'МИ, корпус 2а, 1 этаж, ауд. 6', teacher:'Ислямов Р.И.',
-   dates:['2025-09-05']},
+  {s:'ped', type:'Лекция', time:'16:40–19:50', loc:'Ялтинская, 20, каб. 704', teacher:'Петренко Н.А.', dates:['2025-09-02']},
+  {s:'metod', type:'Лекция', time:'16:40–19:50', loc:'МИ, корпус 2а, 6 этаж, каб. 1', dates:['2025-09-18']},
+  {s:'cifr', type:'Лекция', time:'15:30–18:40', loc:'МИ, корпус 2а, 1 этаж, ауд. 6', teacher:'Ислямов Р.И.', dates:['2025-09-05']},
 
-  // ПРАКТИКА
   {s:'konts', type:'Практика', time:'9:50–15:00', loc:'НКЛ, б. Ленина к.5 стр.4', range:['2025-09-16','2025-09-19']},
   {s:'konts', type:'Практика', time:'8:00–11:20', loc:'Киевская, 69 — отд. мед. реабилитации ЦНС', range:['2025-09-25','2025-09-26']},
   {s:'konts', type:'Практика', time:'9:50–15:00', loc:'Киевская, 69 — отд. ЦНС', range:['2025-09-30','2025-10-10']},
@@ -158,84 +193,109 @@ const EVENTS = [
   {s:'cifr', type:'Практика', time:'8:00–11:20', loc:'МИ, корпус 2а, 1 этаж, ауд. 7', teacher:'Войтенко А.П.',
    dates:['2025-09-02','2025-09-03','2025-09-05']},
 
-  // СИМУЛЯЦИЯ
   {s:'sim', type:'Симуляционный курс', time:'8:00–13:00', loc:'МИ, б. Ленина к.5, корпус 2а, 4 этаж', range:['2025-12-04','2025-12-16']},
 ];
-
 const PRACTICE = {from:'2025-09-22', to:'2026-01-21',
-  loc:'ГБУЗ РК «РКБ им. Н.А. Семашко», Киевская 69 (отд. ЦНС) · НКЛ, б. Ленина к.5 стр.4', teacher:'проф. Минина Е.Н.'};
-const SESSION = {from:'2026-01-26', to:'2026-01-31'};
+  loc:'РКБ им. Н.А. Семашко, Киевская 69 (отд. ЦНС) · НКЛ, б. Ленина к.5 стр.4', teacher:'проф. Минина Е.Н.'};
 
-/* ── утилиты дат ────────────────────────────────────────────────────────── */
-const iso = d => d.toISOString().slice(0,10);
+/* ── утилиты ────────────────────────────────────────────────────────────── */
+const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 function expand(ev){
   if (ev.dates) return ev.dates.slice();
-  const out=[], a=new Date(ev.range[0]+'T00:00'), b=new Date(ev.range[1]+'T00:00');
+  const out=[]; const a=new Date(ev.range[0]+'T00:00'), b=new Date(ev.range[1]+'T00:00');
   for(let d=new Date(a); d<=b; d.setDate(d.getDate()+1)) out.push(iso(d));
   return out;
 }
-// индекс: дата -> [события]
-const byDate = {};
-EVENTS.forEach((ev,i)=>{
-  ev.id=i; ev.days=expand(ev); ev.block=!!ev.range && ev.days.length>1;
-  ev.days.forEach(d=>(byDate[d] ||= []).push(ev));
-});
+const byDate={};
+EVENTS.forEach((ev,i)=>{ ev.id=i; ev.days=expand(ev); ev.block=!!ev.range && ev.days.length>1;
+  ev.days.forEach(d=>(byDate[d] ||= []).push(ev)); });
 
 const MONTHS=['2025-09','2025-10','2025-11','2025-12','2026-01'];
 const MNAME={'2025-09':'сентябрь 2025','2025-10':'октябрь 2025','2025-11':'ноябрь 2025','2025-12':'декабрь 2025','2026-01':'январь 2026'};
 const DOW=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
-const fmt = d => { const [y,m,dd]=d.split('-'); return `${+dd}.${m}`; };
+const fmt = d => `${+d.slice(8)}.${d.slice(5,7)}`;
+const todayIso = iso(new Date());
 
 let hidden=new Set(), typeFilter='all';
+let view = window.matchMedia('(max-width:639px)').matches ? 'list' : 'cal';
 
 /* ── легенда ────────────────────────────────────────────────────────────── */
 document.getElementById('legend').innerHTML = Object.entries(SUBJ).map(([k,v])=>
-  `<div class="lg" data-k="${k}" aria-pressed="true">
-     <span class="dot" style="background:var(${v.c})"></span>
-     <span>${v.short}<div class="who">${v.t}</div></span>
-   </div>`).join('');
+  `<div class="lg" data-k="${k}" aria-pressed="true"><span class="dot" style="background:var(${v.c})"></span>
+     <span>${v.short}<div class="who">${v.t}</div></span></div>`).join('');
 document.getElementById('legend').onclick = e=>{
   const el=e.target.closest('.lg'); if(!el) return;
   const k=el.dataset.k;
-  if(hidden.has(k)){hidden.delete(k); el.setAttribute('aria-pressed','true');}
-  else{hidden.add(k); el.setAttribute('aria-pressed','false');}
+  hidden.has(k) ? hidden.delete(k) : hidden.add(k);
+  el.setAttribute('aria-pressed', String(!hidden.has(k)));
   render();
 };
 document.getElementById('typeflt').onclick = e=>{
   const b=e.target.closest('button'); if(!b) return;
   typeFilter=b.dataset.t;
-  document.querySelectorAll('#typeflt button').forEach(x=>x.setAttribute('aria-pressed', x.dataset.t===typeFilter));
+  document.querySelectorAll('#typeflt button').forEach(x=>x.setAttribute('aria-pressed', String(x.dataset.t===typeFilter)));
   render();
 };
+document.getElementById('viewSeg').onclick = e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  view=b.dataset.v;
+  document.querySelectorAll('#viewSeg button').forEach(x=>x.setAttribute('aria-pressed', String(x.dataset.v===view)));
+  render();
+};
+function syncViewBtns(){ document.querySelectorAll('#viewSeg button').forEach(x=>x.setAttribute('aria-pressed', String(x.dataset.v===view))); }
 
 document.getElementById('practiceBanner').innerHTML =
-  `🏥 <b>Производственная (клиническая) практика:</b> ${fmt(PRACTICE.from)}.2025 – ${fmt(PRACTICE.to)}.2026, по режиму ЛПУ. ${PRACTICE.loc}. ${PRACTICE.teacher}.`;
+  `🏥 <b>Клиническая практика:</b> 22.09.2025 – 21.01.2026, по режиму ЛПУ. ${PRACTICE.loc}. ${PRACTICE.teacher}.`;
 document.getElementById('sessBanner').innerHTML =
-  `📝 <b>Промежуточная аттестация (сессия):</b> 26.01–31.01.2026. Экзамен — «Диагностические и реабилитационные технологии ФРМ»; диф. зачёт — практика и симуляционный курс; зачёт — остальные дисциплины.`;
+  `📝 <b>Сессия:</b> 26.01–31.01.2026. Экзамен — «Диагностические технологии ФРМ»; диф. зачёт — практика и симуляция; зачёт — остальные.`;
 
-/* ── рендер месяцев ─────────────────────────────────────────────────────── */
-function visible(ev){ return !hidden.has(ev.s) && (typeFilter==='all' || ev.type===typeFilter); }
-const todayIso = iso(new Date());
+/* ── видимость ──────────────────────────────────────────────────────────── */
+const visible = ev => !hidden.has(ev.s) && (typeFilter==='all' || ev.type===typeFilter);
 
+/* ── рендер ─────────────────────────────────────────────────────────────── */
 function render(){
-  document.getElementById('months').innerHTML = MONTHS.map(m=>{
+  syncViewBtns();
+  const listWrap=document.getElementById('listWrap'), calWrap=document.getElementById('calWrap');
+  if(view==='list'){ listWrap.style.display='block'; calWrap.style.display='none'; renderList(listWrap); }
+  else { listWrap.style.display='none'; calWrap.style.display='block'; renderCalendar(calWrap); }
+}
+
+function renderList(box){
+  const days=Object.keys(byDate).filter(d=>byDate[d].some(visible)).sort();
+  if(!days.length){ box.innerHTML='<div class="note">Нет занятий по выбранным фильтрам.</div>'; return; }
+  let html='', cur='';
+  for(const d of days){
+    const mk=d.slice(0,7);
+    if(mk!==cur){ cur=mk; html+=`<div class="lmonth">${MNAME[mk]}</div>`; }
+    const dt=new Date(d+'T00:00'), dow=DOW[(dt.getDay()+6)%7];
+    const evs=byDate[d].filter(visible);
+    html+=`<div class="day ${d===todayIso?'today':''}">
+      <div class="ddate"><b>${+d.slice(8)}</b><span>${d.slice(5,7)==='0'?'':''}${dow}</span></div>
+      <div class="devs">${evs.map(ev=>{const v=SUBJ[ev.s];
+        return `<div class="li" data-id="${ev.id}" style="border-left-color:var(${v.c})">
+          <div class="li-top"><span class="li-time">${ev.time}</span>
+            <span class="li-type">${ev.type}${ev.block?' · блок':''}</span></div>
+          <div class="li-name">${v.n}</div>
+          <div class="li-meta">${ev.teacher||v.t} · ${ev.loc}</div></div>`;}).join('')}</div></div>`;
+  }
+  box.innerHTML=html;
+}
+
+function renderCalendar(box){
+  box.innerHTML = MONTHS.map(m=>{
     const [y,mo]=m.split('-').map(Number);
-    const first=new Date(y,mo-1,1), start=(first.getDay()+6)%7; // Пн=0
-    const dim=new Date(y,mo,0).getDate();
+    const start=(new Date(y,mo-1,1).getDay()+6)%7, dim=new Date(y,mo,0).getDate();
     let cells='';
     for(let i=0;i<start;i++) cells+='<div class="cell empty"></div>';
     for(let day=1;day<=dim;day++){
       const ds=`${y}-${String(mo).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
       const dow=(new Date(y,mo-1,day).getDay()+6)%7;
       const evs=(byDate[ds]||[]).filter(visible);
-      const chips=evs.map(ev=>{
-        const v=SUBJ[ev.s], pr=ev.type!=='Лекция';
-        const style=pr?`border-color:var(${v.c});color:var(${v.c})`:`background:var(${v.c})`;
-        return `<div class="ev ${pr?'pr':''}" style="${style}" data-id="${ev.id}" title="${v.short}">
-                  <b>${ev.time.split('–')[0]}</b> ${v.short}${ev.block?' ·бл':''}</div>`;
+      const chips=evs.map(ev=>{const v=SUBJ[ev.s], pr=ev.type!=='Лекция';
+        const st=pr?`border-color:var(${v.c});color:var(${v.c})`:`background:var(${v.c})`;
+        return `<div class="ev ${pr?'pr':''}" style="${st}" data-id="${ev.id}"><span class="etx"><b>${ev.time.split('–')[0]}</b> ${v.short}${ev.block?' ·бл':''}</span></div>`;
       }).join('');
-      cells+=`<div class="cell ${dow>=5?'we':''} ${ds===todayIso?'today':''}">
-                <div class="dn">${day}</div>${chips}</div>`;
+      cells+=`<div class="cell ${dow>=5?'we':''} ${ds===todayIso?'today':''}"><div class="dn">${day}</div>${chips}</div>`;
     }
     return `<div class="month card"><h3>${MNAME[m]}</h3>
       <div class="grid">${DOW.map(d=>`<div class="dow">${d}</div>`).join('')}</div>
@@ -243,49 +303,38 @@ function render(){
   }).join('');
 }
 
-/* ── детали по клику ────────────────────────────────────────────────────── */
+/* ── детали ─────────────────────────────────────────────────────────────── */
 const detail=document.getElementById('detail');
-document.getElementById('months').onclick=e=>{
-  const c=e.target.closest('.ev'); if(!c) return;
+document.body.addEventListener('click', e=>{
+  const c=e.target.closest('[data-id]');
+  if(!c){ if(!e.target.closest('#detail')) detail.classList.remove('on'); return; }
   const ev=EVENTS[+c.dataset.id], v=SUBJ[ev.s];
   const dates = ev.range ? `${fmt(ev.range[0])} – ${fmt(ev.range[1])} (блок)` : ev.dates.map(fmt).join(', ');
-  detail.innerHTML=`<span class="x" onclick="detail.classList.remove('on')">✕</span>
+  detail.innerHTML=`<span class="x">✕</span>
     <span class="st" style="background:var(${v.c})">${ev.type}</span>
     <div style="font-weight:600;font-size:15px">${v.n}</div>
-    <div class="kv">
-      <span>Преподаватель</span><div>${ev.teacher||v.t}</div>
-      <span>Время</span><div>${ev.time}</div>
-      <span>Даты</span><div>${dates}</div>
-      <span>Место</span><div>${ev.loc}</div>
-    </div>`;
+    <div class="kv"><span>Преподаватель</span><div>${ev.teacher||v.t}</div>
+      <span>Время</span><div>${ev.time}</div><span>Даты</span><div>${dates}</div>
+      <span>Место</span><div>${ev.loc}</div></div>`;
   detail.classList.add('on');
-};
+});
+detail.addEventListener('click', e=>{ if(e.target.classList.contains('x')) detail.classList.remove('on'); });
 
-/* ── агенда (список) ────────────────────────────────────────────────────── */
+/* ── агенда таблицей ────────────────────────────────────────────────────── */
 (function(){
   const rows=[];
   for(const k of Object.keys(SUBJ)){
-    const evs=EVENTS.filter(e=>e.s===k);
-    if(!evs.length) continue;
-    const v=SUBJ[k];
+    const evs=EVENTS.filter(e=>e.s===k); if(!evs.length) continue; const v=SUBJ[k];
     evs.forEach((ev,idx)=>{
       const dates = ev.range ? `${fmt(ev.range[0])}–${fmt(ev.range[1])}` : ev.dates.map(fmt).join(', ');
-      rows.push(`<tr>
-        ${idx===0?`<td rowspan="${evs.length}"><span class="dot" style="display:inline-block;width:10px;height:10px;border-radius:3px;background:var(${v.c})"></span> <b>${v.n}</b><div class="swk">${v.t}</div></td>`:''}
-        <td><span class="tag">${ev.type}</span></td>
-        <td>${dates}</td>
-        <td>${ev.time}</td>
-        <td>${ev.teacher||''}</td>
-        <td>${ev.loc}</td>
-      </tr>`);
+      rows.push(`<tr>${idx===0?`<td rowspan="${evs.length}"><span class="dot" style="display:inline-block;width:10px;height:10px;border-radius:3px;background:var(${v.c})"></span> <b>${v.n}</b><div class="swk">${v.t}</div></td>`:''}
+        <td><span class="tag">${ev.type}</span></td><td>${dates}</td><td>${ev.time}</td><td>${ev.teacher||''}</td><td>${ev.loc}</td></tr>`);
     });
   }
-  document.getElementById('agenda').innerHTML=
-    `<thead><tr><th>Дисциплина</th><th>Тип</th><th>Даты</th><th>Время</th><th>Преподаватель</th><th>Место</th></tr></thead><tbody>${rows.join('')}</tbody>`;
-  // счётчики
+  document.getElementById('agenda').innerHTML=`<thead><tr><th>Дисциплина</th><th>Тип</th><th>Даты</th><th>Время</th><th>Препод.</th><th>Место</th></tr></thead><tbody>${rows.join('')}</tbody>`;
   const nl=EVENTS.filter(e=>e.type==='Лекция').reduce((a,e)=>a+e.days.length,0);
   document.getElementById('agendaNote').textContent =
-    `«·бл» в календаре — день многодневного блока практики. Лекции идут в основном по понедельникам (09:50–11:20). Практика — блоками. Всего лекционных дней: ${nl}.`;
+    `Лекции — в основном по понедельникам, 09:50–11:20. Практика идёт блоками («блок» = многодневный). Всего лекционных дней: ${nl}.`;
 })();
 
 render();
