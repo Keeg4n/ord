@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-08-06T09:08:21+00:00",
+    "generatedAt": "2026-08-06T11:34:42+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -462,7 +462,7 @@
             },
             "freedTargets": 7,
             "budgetEffective": 7,
-            "fetchedAt": "2026-08-06T09:08:35+00:00",
+            "fetchedAt": "2026-08-06T11:34:57+00:00",
             "stale": false
         },
         {
@@ -949,7 +949,7 @@
             },
             "freedTargets": 8,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-06T09:08:54+00:00",
+            "fetchedAt": "2026-08-06T11:35:18+00:00",
             "stale": false
         },
         {
@@ -995,7 +995,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-06T09:09:05+00:00",
+            "fetchedAt": "2026-08-06T11:35:26+00:00",
             "stale": false
         },
         {
@@ -1066,7 +1066,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-06T09:09:15+00:00",
+            "fetchedAt": "2026-08-06T11:35:34+00:00",
             "stale": false
         },
         {
@@ -1665,7 +1665,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:09:33+00:00",
+            "fetchedAt": "2026-08-06T11:35:49+00:00",
             "stale": false
         },
         {
@@ -1711,7 +1711,7 @@
             },
             "freedTargets": 5,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-06T09:09:41+00:00",
+            "fetchedAt": "2026-08-06T11:35:57+00:00",
             "stale": false
         },
         {
@@ -1789,7 +1789,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-06T09:09:49+00:00",
+            "fetchedAt": "2026-08-06T11:36:03+00:00",
             "stale": false
         },
         {
@@ -1826,7 +1826,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-06T09:10:04+00:00",
+            "fetchedAt": "2026-08-06T11:36:13+00:00",
             "stale": false
         },
         {
@@ -1927,7 +1927,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:10:09+00:00",
+            "fetchedAt": "2026-08-06T11:36:17+00:00",
             "stale": false
         },
         {
@@ -1964,7 +1964,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-06T09:10:22+00:00",
+            "fetchedAt": "2026-08-06T11:36:27+00:00",
             "stale": false
         },
         {
@@ -2187,7 +2187,7 @@
             },
             "freedTargets": 14,
             "budgetEffective": 14,
-            "fetchedAt": "2026-08-06T09:10:31+00:00",
+            "fetchedAt": "2026-08-06T11:36:36+00:00",
             "stale": false
         },
         {
@@ -2482,7 +2482,7 @@
             },
             "freedTargets": 11,
             "budgetEffective": 11,
-            "fetchedAt": "2026-08-06T09:10:46+00:00",
+            "fetchedAt": "2026-08-06T11:36:45+00:00",
             "stale": false
         },
         {
@@ -2769,7 +2769,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-06T09:10:59+00:00",
+            "fetchedAt": "2026-08-06T11:36:54+00:00",
             "stale": false
         },
         {
@@ -2879,7 +2879,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-06T09:11:02+00:00",
+            "fetchedAt": "2026-08-06T11:36:57+00:00",
             "stale": false
         },
         {
@@ -3493,7 +3493,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-06T09:11:10+00:00",
+            "fetchedAt": "2026-08-06T11:37:04+00:00",
             "stale": false
         },
         {
@@ -3611,7 +3611,7 @@
             },
             "freedTargets": 4,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-06T09:11:17+00:00",
+            "fetchedAt": "2026-08-06T11:37:09+00:00",
             "stale": false
         },
         {
@@ -3938,7 +3938,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-06T09:11:31+00:00",
+            "fetchedAt": "2026-08-06T11:37:25+00:00",
             "stale": false
         },
         {
@@ -4313,7 +4313,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-06T09:11:44+00:00",
+            "fetchedAt": "2026-08-06T11:37:33+00:00",
             "stale": false
         },
         {
@@ -4383,7 +4383,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-06T09:11:52+00:00",
+            "fetchedAt": "2026-08-06T11:37:40+00:00",
             "stale": false
         },
         {
@@ -4478,7 +4478,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-06T09:12:00+00:00",
+            "fetchedAt": "2026-08-06T11:37:49+00:00",
             "stale": false
         },
         {
@@ -4515,7 +4515,7 @@
             },
             "freedTargets": 8,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-06T09:12:08+00:00",
+            "fetchedAt": "2026-08-06T11:37:57+00:00",
             "stale": false
         },
         {
@@ -5098,7 +5098,7 @@
             },
             "freedTargets": 10,
             "budgetEffective": 10,
-            "fetchedAt": "2026-08-06T09:12:25+00:00",
+            "fetchedAt": "2026-08-06T11:38:10+00:00",
             "stale": false
         },
         {
@@ -5135,7 +5135,7 @@
             },
             "freedTargets": 7,
             "budgetEffective": 7,
-            "fetchedAt": "2026-08-06T09:12:44+00:00",
+            "fetchedAt": "2026-08-06T11:38:26+00:00",
             "stale": false
         },
         {
@@ -5261,7 +5261,7 @@
                 },
                 "paid": {
                     "places": 11,
-                    "applicants": 32,
+                    "applicants": 31,
                     "maxScore": 236,
                     "list": [
                         {
@@ -5473,14 +5473,6 @@
                             "entryId": 2247
                         },
                         {
-                            "code": "64080",
-                            "score": 120,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.57 (1)",
-                            "entryId": 2247
-                        },
-                        {
                             "code": "63209",
                             "score": 110,
                             "priority": 1,
@@ -5525,7 +5517,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-06T09:12:54+00:00",
+            "fetchedAt": "2026-08-06T11:38:38+00:00",
             "stale": false
         },
         {
@@ -5692,7 +5684,7 @@
             },
             "freedTargets": 14,
             "budgetEffective": 17,
-            "fetchedAt": "2026-08-06T09:13:12+00:00",
+            "fetchedAt": "2026-08-06T11:38:53+00:00",
             "stale": false
         },
         {
@@ -5769,7 +5761,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:13:23+00:00",
+            "fetchedAt": "2026-08-06T11:39:02+00:00",
             "stale": false
         },
         {
@@ -5873,17 +5865,9 @@
                 },
                 "target": {
                     "places": 12,
-                    "applicants": 7,
+                    "applicants": 6,
                     "maxScore": 417,
                     "list": [
-                        {
-                            "code": "64080",
-                            "score": 120,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "",
-                            "entryId": 2801
-                        },
                         {
                             "code": "64415",
                             "score": 417,
@@ -5936,7 +5920,7 @@
                 },
                 "paid": {
                     "places": 6,
-                    "applicants": 17,
+                    "applicants": 16,
                     "maxScore": 310,
                     "list": [
                         {
@@ -6052,14 +6036,6 @@
                             "entryId": 2249
                         },
                         {
-                            "code": "63904",
-                            "score": 157,
-                            "priority": 2,
-                            "consent": "Копия",
-                            "other": "31.08.68 (1)",
-                            "entryId": 2249
-                        },
-                        {
                             "code": "65746",
                             "score": 145,
                             "priority": 1,
@@ -6078,9 +6054,9 @@
                     ]
                 }
             },
-            "freedTargets": 5,
-            "budgetEffective": 5,
-            "fetchedAt": "2026-08-06T09:13:37+00:00",
+            "freedTargets": 6,
+            "budgetEffective": 6,
+            "fetchedAt": "2026-08-06T11:39:13+00:00",
             "stale": false
         },
         {
@@ -6423,7 +6399,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:13:55+00:00",
+            "fetchedAt": "2026-08-06T11:39:25+00:00",
             "stale": false
         },
         {
@@ -6798,7 +6774,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:14:13+00:00",
+            "fetchedAt": "2026-08-06T11:39:38+00:00",
             "stale": false
         },
         {
@@ -7101,7 +7077,7 @@
             },
             "freedTargets": 4,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-06T09:14:31+00:00",
+            "fetchedAt": "2026-08-06T11:39:56+00:00",
             "stale": false
         },
         {
@@ -7251,7 +7227,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-06T09:14:48+00:00",
+            "fetchedAt": "2026-08-06T11:40:11+00:00",
             "stale": false
         },
         {
@@ -7272,7 +7248,7 @@
                 },
                 "paid": {
                     "places": 8,
-                    "applicants": 16,
+                    "applicants": 15,
                     "maxScore": 263,
                     "list": [
                         {
@@ -7380,14 +7356,6 @@
                             "entryId": 2417
                         },
                         {
-                            "code": "63904",
-                            "score": 157,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.57 (2)",
-                            "entryId": 2417
-                        },
-                        {
                             "code": "63306",
                             "score": 151,
                             "priority": 2,
@@ -7408,7 +7376,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:14:58+00:00",
+            "fetchedAt": "2026-08-06T11:40:18+00:00",
             "stale": false
         },
         {
@@ -7525,7 +7493,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:15:08+00:00",
+            "fetchedAt": "2026-08-06T11:40:26+00:00",
             "stale": false
         },
         {
@@ -7562,7 +7530,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:15:16+00:00",
+            "fetchedAt": "2026-08-06T11:40:31+00:00",
             "stale": false
         },
         {
@@ -8337,7 +8305,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:15:26+00:00",
+            "fetchedAt": "2026-08-06T11:40:43+00:00",
             "stale": false
         },
         {
@@ -8520,7 +8488,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-06T09:15:42+00:00",
+            "fetchedAt": "2026-08-06T11:40:55+00:00",
             "stale": false
         },
         {
@@ -8885,7 +8853,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:15:53+00:00",
+            "fetchedAt": "2026-08-06T11:41:02+00:00",
             "stale": false
         },
         {
@@ -9274,7 +9242,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:16:03+00:00",
+            "fetchedAt": "2026-08-06T11:41:10+00:00",
             "stale": false
         },
         {
@@ -9352,7 +9320,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-06T09:16:19+00:00",
+            "fetchedAt": "2026-08-06T11:41:20+00:00",
             "stale": false
         },
         {
@@ -9605,7 +9573,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-06T09:16:28+00:00",
+            "fetchedAt": "2026-08-06T11:41:27+00:00",
             "stale": false
         },
         {
@@ -9788,7 +9756,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 9,
-            "fetchedAt": "2026-08-06T09:16:39+00:00",
+            "fetchedAt": "2026-08-06T11:41:35+00:00",
             "stale": false
         }
     ],
