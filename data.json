@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-08-08T15:48:46+00:00",
+    "generatedAt": "2026-08-09T07:18:29+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -46,8 +46,8 @@
                         {
                             "code": "63691",
                             "score": 211,
-                            "priority": 31,
-                            "consent": "31.08.01 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.01 (1), 31.08.16 (3)",
                             "entryId": 2141
                         },
@@ -62,8 +62,8 @@
                         {
                             "code": "66593",
                             "score": 198,
-                            "priority": 31,
-                            "consent": "31.08.01 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.01 (1)",
                             "entryId": 2141
                         },
@@ -142,8 +142,8 @@
                         {
                             "code": "66872",
                             "score": 132,
-                            "priority": 31,
-                            "consent": "31.08.01 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.01 (1), 31.08.02 (2)",
                             "entryId": 2141
                         },
@@ -158,8 +158,8 @@
                         {
                             "code": "66127",
                             "score": 82,
-                            "priority": 31,
-                            "consent": "31.08.18 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.01 (1), 31.08.18 (1)",
                             "entryId": 2141
                         }
@@ -181,7 +181,7 @@
                         {
                             "code": "66593",
                             "score": 198,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2682
@@ -462,8 +462,8 @@
             },
             "freedTargets": 7,
             "budgetEffective": 7,
-            "fetchedAt": "2026-08-08T13:14:20+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-09T07:18:42+00:00",
+            "stale": false
         },
         {
             "code": "31.08.02",
@@ -485,8 +485,8 @@
                         {
                             "code": "63282",
                             "score": 218,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1)",
                             "entryId": 2142
                         },
@@ -533,24 +533,24 @@
                         {
                             "code": "60800",
                             "score": 195,
-                            "priority": 31,
-                            "consent": "31.08.42 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.42 (1), 31.08.02 (2)",
                             "entryId": 2142
                         },
                         {
                             "code": "64745",
                             "score": 188,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1), 31.08.16 (3)",
                             "entryId": 2142
                         },
                         {
                             "code": "64281",
                             "score": 181,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1), 31.08.45 (3)",
                             "entryId": 2142
                         },
@@ -565,16 +565,16 @@
                         {
                             "code": "64405",
                             "score": 176,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1), 31.08.59 (2)",
                             "entryId": 2142
                         },
                         {
                             "code": "65745",
                             "score": 175,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1), 31.08.28 (1)",
                             "entryId": 2142
                         },
@@ -605,16 +605,16 @@
                         {
                             "code": "66872",
                             "score": 132,
-                            "priority": 31,
-                            "consent": "31.08.01 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.01 (1), 31.08.02 (2)",
                             "entryId": 2142
                         },
                         {
                             "code": "66352",
                             "score": 123,
-                            "priority": 31,
-                            "consent": "31.08.49 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.02 (2)",
                             "entryId": 2142
                         },
@@ -660,7 +660,7 @@
                         {
                             "code": "64745",
                             "score": 388,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2702
@@ -668,7 +668,7 @@
                         {
                             "code": "64405",
                             "score": 376,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2702
@@ -684,7 +684,7 @@
                         {
                             "code": "62996",
                             "score": 372,
-                            "priority": 4,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2702
@@ -708,7 +708,7 @@
                         {
                             "code": "64281",
                             "score": 181,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2702
@@ -716,7 +716,7 @@
                         {
                             "code": "65745",
                             "score": 175,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2702
@@ -949,7 +949,7 @@
             },
             "freedTargets": 8,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-08T15:49:37+00:00",
+            "fetchedAt": "2026-08-09T07:19:02+00:00",
             "stale": false
         },
         {
@@ -995,7 +995,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-08T15:49:41+00:00",
+            "fetchedAt": "2026-08-09T07:19:09+00:00",
             "stale": false
         },
         {
@@ -1057,7 +1057,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-08T15:49:46+00:00",
+            "fetchedAt": "2026-08-09T07:19:15+00:00",
             "stale": false
         },
         {
@@ -1072,8 +1072,8 @@
                         {
                             "code": "63290",
                             "score": 300,
-                            "priority": 31,
-                            "consent": "31.08.09 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1), 31.08.28 (3)",
                             "entryId": 2145
                         },
@@ -1176,8 +1176,8 @@
                         {
                             "code": "63306",
                             "score": 151,
-                            "priority": 31,
-                            "consent": "31.08.09 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1), 31.08.68 (2)",
                             "entryId": 2145
                         },
@@ -1192,8 +1192,8 @@
                         {
                             "code": "63135",
                             "score": 117,
-                            "priority": 31,
-                            "consent": "31.08.66 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.66 (1), 31.08.09 (2)",
                             "entryId": 2145
                         },
@@ -1224,16 +1224,16 @@
                         {
                             "code": "62649",
                             "score": 86,
-                            "priority": 31,
-                            "consent": "31.08.09 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1)",
                             "entryId": 2145
                         },
                         {
                             "code": "66677",
                             "score": 75,
-                            "priority": 31,
-                            "consent": "31.08.45 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1), 31.08.45 (1)",
                             "entryId": 2145
                         }
@@ -1255,7 +1255,7 @@
                         {
                             "code": "66405",
                             "score": 372,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2718
@@ -1263,7 +1263,7 @@
                         {
                             "code": "62751",
                             "score": 367,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2718
@@ -1271,7 +1271,7 @@
                         {
                             "code": "63306",
                             "score": 351,
-                            "priority": 4,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2718
@@ -1656,7 +1656,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:49:56+00:00",
+            "fetchedAt": "2026-08-09T07:19:30+00:00",
             "stale": false
         },
         {
@@ -1702,7 +1702,7 @@
             },
             "freedTargets": 5,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-08T15:50:01+00:00",
+            "fetchedAt": "2026-08-09T07:19:39+00:00",
             "stale": false
         },
         {
@@ -1717,8 +1717,8 @@
                         {
                             "code": "66294",
                             "score": 131,
-                            "priority": 31,
-                            "consent": "31.08.45 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.45 (1)",
                             "entryId": 2568
                         },
@@ -1780,7 +1780,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-08T15:50:04+00:00",
+            "fetchedAt": "2026-08-09T07:19:46+00:00",
             "stale": false
         },
         {
@@ -1817,7 +1817,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-08T15:50:09+00:00",
+            "fetchedAt": "2026-08-09T07:19:56+00:00",
             "stale": false
         },
         {
@@ -1918,7 +1918,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:50:12+00:00",
+            "fetchedAt": "2026-08-09T07:20:00+00:00",
             "stale": false
         },
         {
@@ -1955,7 +1955,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-08T15:50:18+00:00",
+            "fetchedAt": "2026-08-09T07:20:10+00:00",
             "stale": false
         },
         {
@@ -2018,8 +2018,8 @@
                         {
                             "code": "63208",
                             "score": 77,
-                            "priority": 31,
-                            "consent": "31.08.19 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.17 (1), 31.08.19 (1)",
                             "entryId": 2149
                         }
@@ -2178,7 +2178,7 @@
             },
             "freedTargets": 14,
             "budgetEffective": 14,
-            "fetchedAt": "2026-08-08T15:50:24+00:00",
+            "fetchedAt": "2026-08-09T07:20:16+00:00",
             "stale": false
         },
         {
@@ -2217,16 +2217,16 @@
                         {
                             "code": "66376",
                             "score": 132,
-                            "priority": 31,
-                            "consent": "31.08.20 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.20 (1), 31.08.09 (2)",
                             "entryId": 2150
                         },
                         {
                             "code": "65680",
                             "score": 122,
-                            "priority": 31,
-                            "consent": "31.08.20 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.20 (1)",
                             "entryId": 2150
                         },
@@ -2272,7 +2272,7 @@
                         {
                             "code": "63909",
                             "score": 283,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2743
@@ -2288,7 +2288,7 @@
                         {
                             "code": "65680",
                             "score": 122,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2743
@@ -2473,7 +2473,7 @@
             },
             "freedTargets": 11,
             "budgetEffective": 11,
-            "fetchedAt": "2026-08-08T15:50:32+00:00",
+            "fetchedAt": "2026-08-09T07:20:27+00:00",
             "stale": false
         },
         {
@@ -2488,8 +2488,8 @@
                         {
                             "code": "63290",
                             "score": 300,
-                            "priority": 31,
-                            "consent": "31.08.09 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1)",
                             "entryId": 2151
                         },
@@ -2504,8 +2504,8 @@
                         {
                             "code": "65981",
                             "score": 226,
-                            "priority": 31,
-                            "consent": "31.08.28 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.28 (1), 31.08.67 (2)",
                             "entryId": 2151
                         },
@@ -2528,8 +2528,8 @@
                         {
                             "code": "60731",
                             "score": 195,
-                            "priority": 31,
-                            "consent": "31.08.57 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.28 (2)",
                             "entryId": 2151
                         },
@@ -2544,8 +2544,8 @@
                         {
                             "code": "65745",
                             "score": 175,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1), 31.08.28 (1)",
                             "entryId": 2151
                         },
@@ -2760,7 +2760,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-08T15:50:38+00:00",
+            "fetchedAt": "2026-08-09T07:20:35+00:00",
             "stale": false
         },
         {
@@ -2870,7 +2870,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-08T15:50:41+00:00",
+            "fetchedAt": "2026-08-09T07:20:42+00:00",
             "stale": false
         },
         {
@@ -3476,7 +3476,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-08T15:50:45+00:00",
+            "fetchedAt": "2026-08-09T07:20:50+00:00",
             "stale": false
         },
         {
@@ -3499,8 +3499,8 @@
                         {
                             "code": "65660",
                             "score": 192,
-                            "priority": 31,
-                            "consent": "31.08.35 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.35 (1), 31.08.78 (3)",
                             "entryId": 2240
                         },
@@ -3515,8 +3515,8 @@
                         {
                             "code": "60620",
                             "score": 155,
-                            "priority": 31,
-                            "consent": "31.08.58 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.58 (1)",
                             "entryId": 2240
                         },
@@ -3531,8 +3531,8 @@
                         {
                             "code": "64276",
                             "score": 93,
-                            "priority": 31,
-                            "consent": "31.08.35 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.35 (1), 31.08.51 (3)",
                             "entryId": 2240
                         },
@@ -3578,7 +3578,7 @@
                         {
                             "code": "64276",
                             "score": 93,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2749
@@ -3594,7 +3594,7 @@
             },
             "freedTargets": 4,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-08T15:50:48+00:00",
+            "fetchedAt": "2026-08-09T07:20:55+00:00",
             "stale": false
         },
         {
@@ -3633,8 +3633,8 @@
                         {
                             "code": "66164",
                             "score": 238,
-                            "priority": 31,
-                            "consent": "31.08.49 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.36 (2)",
                             "entryId": 2241
                         },
@@ -3921,7 +3921,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-08T15:50:59+00:00",
+            "fetchedAt": "2026-08-09T07:21:10+00:00",
             "stale": false
         },
         {
@@ -3936,8 +3936,8 @@
                         {
                             "code": "62467",
                             "score": 310,
-                            "priority": 31,
-                            "consent": "31.08.57 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.42 (2)",
                             "entryId": 2242
                         },
@@ -3968,8 +3968,8 @@
                         {
                             "code": "60800",
                             "score": 195,
-                            "priority": 31,
-                            "consent": "31.08.42 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.42 (1), 31.08.02 (2)",
                             "entryId": 2242
                         },
@@ -3984,8 +3984,8 @@
                         {
                             "code": "64297",
                             "score": 192,
-                            "priority": 31,
-                            "consent": "31.08.42 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.42 (1), 31.08.66 (3)",
                             "entryId": 2242
                         },
@@ -4024,8 +4024,8 @@
                         {
                             "code": "63263",
                             "score": 97,
-                            "priority": 31,
-                            "consent": "31.08.42 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.42 (1)",
                             "entryId": 2242
                         }
@@ -4047,7 +4047,7 @@
                         {
                             "code": "64297",
                             "score": 192,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2758
@@ -4055,7 +4055,7 @@
                         {
                             "code": "63263",
                             "score": 97,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2758
@@ -4288,7 +4288,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-08T15:51:05+00:00",
+            "fetchedAt": "2026-08-09T07:21:23+00:00",
             "stale": false
         },
         {
@@ -4311,16 +4311,16 @@
                         {
                             "code": "64281",
                             "score": 181,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1)",
                             "entryId": 2260
                         },
                         {
                             "code": "66677",
                             "score": 75,
-                            "priority": 31,
-                            "consent": "31.08.45 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1), 31.08.45 (1)",
                             "entryId": 2260
                         }
@@ -4358,7 +4358,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-08T15:51:09+00:00",
+            "fetchedAt": "2026-08-09T07:21:32+00:00",
             "stale": false
         },
         {
@@ -4381,8 +4381,8 @@
                         {
                             "code": "65732",
                             "score": 121,
-                            "priority": 31,
-                            "consent": "31.08.46 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.46 (1), 31.08.78 (3)",
                             "entryId": 2243
                         }
@@ -4453,7 +4453,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-08T15:51:17+00:00",
+            "fetchedAt": "2026-08-09T07:21:45+00:00",
             "stale": false
         },
         {
@@ -4490,7 +4490,7 @@
             },
             "freedTargets": 8,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-08T15:51:22+00:00",
+            "fetchedAt": "2026-08-09T07:21:51+00:00",
             "stale": false
         },
         {
@@ -4553,8 +4553,8 @@
                         {
                             "code": "66164",
                             "score": 238,
-                            "priority": 31,
-                            "consent": "31.08.49 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.36 (2)",
                             "entryId": 2245
                         },
@@ -4601,24 +4601,24 @@
                         {
                             "code": "64709",
                             "score": 188,
-                            "priority": 31,
-                            "consent": "31.08.09 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.09 (1)",
                             "entryId": 2245
                         },
                         {
                             "code": "66101",
                             "score": 178,
-                            "priority": 31,
-                            "consent": "31.08.54 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.54 (1)",
                             "entryId": 2245
                         },
                         {
                             "code": "63946",
                             "score": 177,
-                            "priority": 31,
-                            "consent": "31.08.49 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.28 (1), 31.08.49 (1)",
                             "entryId": 2245
                         },
@@ -4633,8 +4633,8 @@
                         {
                             "code": "66400",
                             "score": 167,
-                            "priority": 31,
-                            "consent": "31.08.49 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.36 (2)",
                             "entryId": 2245
                         },
@@ -4665,8 +4665,8 @@
                         {
                             "code": "66352",
                             "score": 123,
-                            "priority": 31,
-                            "consent": "31.08.49 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.02 (2)",
                             "entryId": 2245
                         },
@@ -4736,7 +4736,7 @@
                         {
                             "code": "65921",
                             "score": 403,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2775
@@ -4744,7 +4744,7 @@
                         {
                             "code": "63894",
                             "score": 392,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2775
@@ -4752,7 +4752,7 @@
                         {
                             "code": "63946",
                             "score": 377,
-                            "priority": 4,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2775
@@ -4760,7 +4760,7 @@
                         {
                             "code": "66400",
                             "score": 367,
-                            "priority": 5,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2775
@@ -4784,7 +4784,7 @@
                         {
                             "code": "66352",
                             "score": 323,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2775
@@ -5073,7 +5073,7 @@
             },
             "freedTargets": 10,
             "budgetEffective": 10,
-            "fetchedAt": "2026-08-08T15:51:32+00:00",
+            "fetchedAt": "2026-08-09T07:22:03+00:00",
             "stale": false
         },
         {
@@ -5110,7 +5110,7 @@
             },
             "freedTargets": 7,
             "budgetEffective": 7,
-            "fetchedAt": "2026-08-08T15:51:40+00:00",
+            "fetchedAt": "2026-08-09T07:22:18+00:00",
             "stale": false
         },
         {
@@ -5141,8 +5141,8 @@
                         {
                             "code": "64713",
                             "score": 230,
-                            "priority": 31,
-                            "consent": "31.08.58 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.58 (1), 31.08.53 (2)",
                             "entryId": 2247
                         },
@@ -5484,7 +5484,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-08T15:51:48+00:00",
+            "fetchedAt": "2026-08-09T07:22:31+00:00",
             "stale": false
         },
         {
@@ -5515,8 +5515,8 @@
                         {
                             "code": "66101",
                             "score": 178,
-                            "priority": 31,
-                            "consent": "31.08.54 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.49 (1), 31.08.54 (1)",
                             "entryId": 2248
                         },
@@ -5554,7 +5554,7 @@
                         {
                             "code": "64648",
                             "score": 335,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2798
@@ -5643,7 +5643,7 @@
             },
             "freedTargets": 14,
             "budgetEffective": 17,
-            "fetchedAt": "2026-08-08T15:51:57+00:00",
+            "fetchedAt": "2026-08-09T07:22:47+00:00",
             "stale": false
         },
         {
@@ -5720,7 +5720,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:52:01+00:00",
+            "fetchedAt": "2026-08-09T07:22:54+00:00",
             "stale": false
         },
         {
@@ -5735,8 +5735,8 @@
                         {
                             "code": "62467",
                             "score": 310,
-                            "priority": 31,
-                            "consent": "31.08.57 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.42 (2)",
                             "entryId": 2249
                         },
@@ -5783,24 +5783,24 @@
                         {
                             "code": "63906",
                             "score": 205,
-                            "priority": 31,
-                            "consent": "31.08.67 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.67 (1)",
                             "entryId": 2249
                         },
                         {
                             "code": "60731",
                             "score": 195,
-                            "priority": 31,
-                            "consent": "31.08.57 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.28 (2)",
                             "entryId": 2249
                         },
                         {
                             "code": "64734",
                             "score": 195,
-                            "priority": 31,
-                            "consent": "31.08.67 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.57 (1), 31.08.67 (1)",
                             "entryId": 2249
                         },
@@ -5838,7 +5838,7 @@
                         {
                             "code": "60731",
                             "score": 395,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2803
@@ -5846,7 +5846,7 @@
                         {
                             "code": "66694",
                             "score": 377,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2803
@@ -5854,7 +5854,7 @@
                         {
                             "code": "64751",
                             "score": 360,
-                            "priority": 4,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2803
@@ -6015,7 +6015,7 @@
             },
             "freedTargets": 6,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-08T15:52:09+00:00",
+            "fetchedAt": "2026-08-09T07:23:07+00:00",
             "stale": false
         },
         {
@@ -6030,8 +6030,8 @@
                         {
                             "code": "64713",
                             "score": 230,
-                            "priority": 31,
-                            "consent": "31.08.58 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.58 (1), 31.08.53 (2)",
                             "entryId": 2250
                         },
@@ -6046,8 +6046,8 @@
                         {
                             "code": "64511",
                             "score": 200,
-                            "priority": 31,
-                            "consent": "31.08.58 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.58 (1)",
                             "entryId": 2250
                         },
@@ -6062,8 +6062,8 @@
                         {
                             "code": "65509",
                             "score": 170,
-                            "priority": 31,
-                            "consent": "31.08.66 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.66 (1), 31.08.58 (2)",
                             "entryId": 2250
                         },
@@ -6078,8 +6078,8 @@
                         {
                             "code": "60620",
                             "score": 155,
-                            "priority": 31,
-                            "consent": "31.08.58 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.58 (1), 31.08.35 (3)",
                             "entryId": 2250
                         },
@@ -6102,8 +6102,8 @@
                         {
                             "code": "65760",
                             "score": 85,
-                            "priority": 31,
-                            "consent": "31.08.67 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.67 (1)",
                             "entryId": 2250
                         }
@@ -6358,7 +6358,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:52:18+00:00",
+            "fetchedAt": "2026-08-09T07:23:23+00:00",
             "stale": false
         },
         {
@@ -6453,8 +6453,8 @@
                         {
                             "code": "58788",
                             "score": 87,
-                            "priority": 31,
-                            "consent": "31.08.59 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.59 (1)",
                             "entryId": 2251
                         }
@@ -6484,7 +6484,7 @@
                         {
                             "code": "63647",
                             "score": 352,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2807
@@ -6733,7 +6733,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:52:27+00:00",
+            "fetchedAt": "2026-08-09T07:23:34+00:00",
             "stale": false
         },
         {
@@ -6748,24 +6748,24 @@
                         {
                             "code": "58501",
                             "score": 275,
-                            "priority": 31,
-                            "consent": "31.08.66 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.66 (1), 31.08.67 (3)",
                             "entryId": 2252
                         },
                         {
                             "code": "64331",
                             "score": 196,
-                            "priority": 31,
-                            "consent": "31.08.02 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.02 (1)",
                             "entryId": 2252
                         },
                         {
                             "code": "64297",
                             "score": 192,
-                            "priority": 31,
-                            "consent": "31.08.42 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.42 (1)",
                             "entryId": 2252
                         },
@@ -6788,24 +6788,24 @@
                         {
                             "code": "66629",
                             "score": 173,
-                            "priority": 31,
-                            "consent": "31.08.67 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.66 (1), 31.08.67 (1)",
                             "entryId": 2252
                         },
                         {
                             "code": "65509",
                             "score": 170,
-                            "priority": 31,
-                            "consent": "31.08.66 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.66 (1), 31.08.58 (2)",
                             "entryId": 2252
                         },
                         {
                             "code": "63135",
                             "score": 117,
-                            "priority": 31,
-                            "consent": "31.08.66 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.66 (1), 31.08.09 (2)",
                             "entryId": 2252
                         },
@@ -6859,7 +6859,7 @@
                         {
                             "code": "62747",
                             "score": 385,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2793
@@ -6867,7 +6867,7 @@
                         {
                             "code": "62962",
                             "score": 385,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2793
@@ -6875,7 +6875,7 @@
                         {
                             "code": "61735",
                             "score": 337,
-                            "priority": 4,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2793
@@ -7036,7 +7036,7 @@
             },
             "freedTargets": 4,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-08T15:52:37+00:00",
+            "fetchedAt": "2026-08-09T07:23:50+00:00",
             "stale": false
         },
         {
@@ -7089,7 +7089,7 @@
                         {
                             "code": "62733",
                             "score": 420,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2779
@@ -7097,7 +7097,7 @@
                         {
                             "code": "63906",
                             "score": 405,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2779
@@ -7105,7 +7105,7 @@
                         {
                             "code": "65544",
                             "score": 385,
-                            "priority": 4,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2779
@@ -7113,7 +7113,7 @@
                         {
                             "code": "66629",
                             "score": 373,
-                            "priority": 5,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2779
@@ -7137,7 +7137,7 @@
                         {
                             "code": "62744",
                             "score": 200,
-                            "priority": 2,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2779
@@ -7145,7 +7145,7 @@
                         {
                             "code": "64357",
                             "score": 182,
-                            "priority": 3,
+                            "priority": 1,
                             "consent": "Оригинал",
                             "other": "",
                             "entryId": 2779
@@ -7186,7 +7186,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-08T15:52:46+00:00",
+            "fetchedAt": "2026-08-09T07:24:05+00:00",
             "stale": false
         },
         {
@@ -7335,7 +7335,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:52:50+00:00",
+            "fetchedAt": "2026-08-09T07:24:14+00:00",
             "stale": false
         },
         {
@@ -7452,7 +7452,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:52:54+00:00",
+            "fetchedAt": "2026-08-09T07:24:22+00:00",
             "stale": false
         },
         {
@@ -7489,7 +7489,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:52:57+00:00",
+            "fetchedAt": "2026-08-09T07:24:27+00:00",
             "stale": false
         },
         {
@@ -7552,8 +7552,8 @@
                         {
                             "code": "58870",
                             "score": 80,
-                            "priority": 31,
-                            "consent": "31.08.72 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.72 (1), 31.08.74 (1)",
                             "entryId": 2254
                         }
@@ -8264,7 +8264,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:53:03+00:00",
+            "fetchedAt": "2026-08-09T07:24:35+00:00",
             "stale": false
         },
         {
@@ -8295,8 +8295,8 @@
                         {
                             "code": "63648",
                             "score": 78,
-                            "priority": 31,
-                            "consent": "31.08.73 (1)",
+                            "priority": 2,
+                            "consent": "Оригинал",
                             "other": "31.08.73 (1), 31.08.75 (1)",
                             "entryId": 2255
                         }
@@ -8447,7 +8447,7 @@
             },
             "freedTargets": 1,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-08T15:53:10+00:00",
+            "fetchedAt": "2026-08-09T07:24:45+00:00",
             "stale": false
         },
         {
@@ -8812,7 +8812,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:53:15+00:00",
+            "fetchedAt": "2026-08-09T07:24:53+00:00",
             "stale": false
         },
         {
@@ -9201,7 +9201,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:53:19+00:00",
+            "fetchedAt": "2026-08-09T07:25:00+00:00",
             "stale": false
         },
         {
@@ -9279,7 +9279,7 @@
             },
             "freedTargets": 2,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-08T15:53:27+00:00",
+            "fetchedAt": "2026-08-09T07:25:12+00:00",
             "stale": false
         },
         {
@@ -9532,7 +9532,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-08T15:53:31+00:00",
+            "fetchedAt": "2026-08-09T07:25:19+00:00",
             "stale": false
         },
         {
@@ -9563,8 +9563,8 @@
                         {
                             "code": "65660",
                             "score": 192,
-                            "priority": 31,
-                            "consent": "31.08.35 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.35 (1)",
                             "entryId": 2257
                         },
@@ -9595,8 +9595,8 @@
                         {
                             "code": "65732",
                             "score": 121,
-                            "priority": 31,
-                            "consent": "31.08.46 (1)",
+                            "priority": 3,
+                            "consent": "Оригинал",
                             "other": "31.08.46 (1)",
                             "entryId": 2257
                         },
@@ -9715,7 +9715,7 @@
             },
             "freedTargets": 3,
             "budgetEffective": 9,
-            "fetchedAt": "2026-08-08T15:53:37+00:00",
+            "fetchedAt": "2026-08-09T07:25:32+00:00",
             "stale": false
         }
     ],
