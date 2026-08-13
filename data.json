@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-08-12T16:11:33+00:00",
+    "generatedAt": "2026-08-13T07:56:20+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -7,8 +7,8 @@
             "name": "Акушерство и гинекология",
             "forms": {
                 "budget": {
-                    "places": 8,
-                    "applicants": 18,
+                    "places": 6,
+                    "applicants": 17,
                     "maxScore": 220,
                     "list": [
                         {
@@ -137,14 +137,6 @@
                             "priority": 3,
                             "consent": "Оригинал",
                             "other": "31.08.01 (1), 31.08.02 (2)",
-                            "entryId": 2141
-                        },
-                        {
-                            "code": "64725",
-                            "score": 105,
-                            "priority": 6,
-                            "consent": "Да (6)",
-                            "other": "31.08.01 (1), 31.08.09 (2)",
                             "entryId": 2141
                         },
                         {
@@ -445,17 +437,17 @@
                 }
             },
             "freedTargets": 0,
-            "budgetEffective": 8,
-            "fetchedAt": "2026-08-12T13:51:06+00:00",
-            "stale": true
+            "budgetEffective": 6,
+            "fetchedAt": "2026-08-13T07:56:34+00:00",
+            "stale": false
         },
         {
             "code": "31.08.02",
             "name": "Анестезиология-реаниматология",
             "forms": {
                 "budget": {
-                    "places": 11,
-                    "applicants": 20,
+                    "places": 6,
+                    "applicants": 19,
                     "maxScore": 218,
                     "list": [
                         {
@@ -608,14 +600,6 @@
                             "priority": 5,
                             "consent": "Да (5)",
                             "other": "31.08.02 (1), 31.08.49 (3)",
-                            "entryId": 2142
-                        },
-                        {
-                            "code": "64719",
-                            "score": 83,
-                            "priority": 6,
-                            "consent": "Да (6)",
-                            "other": "31.08.02 (1), 31.08.09 (2)",
                             "entryId": 2142
                         }
                     ]
@@ -932,28 +916,19 @@
                 }
             },
             "freedTargets": 0,
-            "budgetEffective": 11,
-            "fetchedAt": "2026-08-12T13:51:21+00:00",
-            "stale": true
+            "budgetEffective": 6,
+            "fetchedAt": "2026-08-13T07:56:52+00:00",
+            "stale": false
         },
         {
             "code": "31.08.05",
             "name": "Клиническая лабораторная диагностика",
             "forms": {
                 "budget": {
-                    "places": 3,
-                    "applicants": 1,
-                    "maxScore": 112,
-                    "list": [
-                        {
-                            "code": "65944",
-                            "score": 112,
-                            "priority": 1,
-                            "consent": "Да (1)",
-                            "other": "31.08.05 (1)",
-                            "entryId": 2143
-                        }
-                    ]
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
                 },
                 "target": {
                     "places": 0,
@@ -969,28 +944,19 @@
                 }
             },
             "freedTargets": 0,
-            "budgetEffective": 3,
-            "fetchedAt": "2026-08-12T13:51:22+00:00",
-            "stale": true
+            "budgetEffective": 1,
+            "fetchedAt": "2026-08-13T07:56:54+00:00",
+            "stale": false
         },
         {
             "code": "31.08.07",
             "name": "Патологическая анатомия",
             "forms": {
                 "budget": {
-                    "places": 2,
-                    "applicants": 1,
-                    "maxScore": 177,
-                    "list": [
-                        {
-                            "code": "64477",
-                            "score": 177,
-                            "priority": 1,
-                            "consent": "Да (1)",
-                            "other": "31.08.66 (1), 31.08.07 (2)",
-                            "entryId": 2144
-                        }
-                    ]
+                    "places": 1,
+                    "applicants": 0,
+                    "maxScore": null,
+                    "list": []
                 },
                 "target": {
                     "places": 1,
@@ -1040,9 +1006,9 @@
                 }
             },
             "freedTargets": 0,
-            "budgetEffective": 2,
-            "fetchedAt": "2026-08-12T13:51:32+00:00",
-            "stale": true
+            "budgetEffective": 1,
+            "fetchedAt": "2026-08-13T07:57:03+00:00",
+            "stale": false
         },
         {
             "code": "31.08.09",
@@ -1624,15 +1590,15 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-12T13:51:44+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:57:15+00:00",
+            "stale": false
         },
         {
             "code": "31.08.10",
             "name": "Судебно-медицинская экспертиза",
             "forms": {
                 "budget": {
-                    "places": 5,
+                    "places": 0,
                     "applicants": 1,
                     "maxScore": 91,
                     "list": [
@@ -1669,9 +1635,9 @@
                 }
             },
             "freedTargets": 0,
-            "budgetEffective": 5,
-            "fetchedAt": "2026-08-12T13:51:47+00:00",
-            "stale": true
+            "budgetEffective": 0,
+            "fetchedAt": "2026-08-13T07:57:18+00:00",
+            "stale": false
         },
         {
             "code": "31.08.13",
@@ -1748,8 +1714,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-12T13:51:53+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:57:25+00:00",
+            "stale": false
         },
         {
             "code": "31.08.16",
@@ -1810,8 +1776,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-12T13:52:01+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:57:34+00:00",
+            "stale": false
         },
         {
             "code": "31.08.17",
@@ -1911,8 +1877,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:52:06+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:57:40+00:00",
+            "stale": false
         },
         {
             "code": "31.08.18",
@@ -1973,8 +1939,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-12T13:52:13+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:57:50+00:00",
+            "stale": false
         },
         {
             "code": "31.08.19",
@@ -2196,8 +2162,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 15,
-            "fetchedAt": "2026-08-12T13:52:24+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:02+00:00",
+            "stale": false
         },
         {
             "code": "31.08.20",
@@ -2491,8 +2457,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 12,
-            "fetchedAt": "2026-08-12T13:52:32+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:12+00:00",
+            "stale": false
         },
         {
             "code": "31.08.28",
@@ -2769,8 +2735,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-12T13:52:38+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:22+00:00",
+            "stale": false
         },
         {
             "code": "31.08.29",
@@ -2879,8 +2845,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-12T13:52:41+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:27+00:00",
+            "stale": false
         },
         {
             "code": "31.08.32",
@@ -3485,8 +3451,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-12T13:52:48+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:35+00:00",
+            "stale": false
         },
         {
             "code": "31.08.35",
@@ -3603,8 +3569,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-12T13:52:52+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:39+00:00",
+            "stale": false
         },
         {
             "code": "31.08.36",
@@ -3930,8 +3896,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-12T13:53:03+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:58:53+00:00",
+            "stale": false
         },
         {
             "code": "31.08.42",
@@ -4297,8 +4263,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-12T13:53:10+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:00+00:00",
+            "stale": false
         },
         {
             "code": "31.08.45",
@@ -4359,8 +4325,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-12T13:53:17+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:09+00:00",
+            "stale": false
         },
         {
             "code": "31.08.46",
@@ -4454,8 +4420,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-12T13:53:23+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:17+00:00",
+            "stale": false
         },
         {
             "code": "31.08.48",
@@ -4491,8 +4457,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-12T13:53:26+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:20+00:00",
+            "stale": false
         },
         {
             "code": "31.08.49",
@@ -5058,8 +5024,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 13,
-            "fetchedAt": "2026-08-12T13:53:36+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:33+00:00",
+            "stale": false
         },
         {
             "code": "31.08.51",
@@ -5128,8 +5094,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 7,
-            "fetchedAt": "2026-08-12T13:53:44+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:41+00:00",
+            "stale": false
         },
         {
             "code": "31.08.53",
@@ -5518,8 +5484,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-12T13:53:51+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T07:59:51+00:00",
+            "stale": false
         },
         {
             "code": "31.08.54",
@@ -5685,8 +5651,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 18,
-            "fetchedAt": "2026-08-12T13:53:59+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:00:00+00:00",
+            "stale": false
         },
         {
             "code": "31.08.56",
@@ -5754,8 +5720,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:54:07+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:00:10+00:00",
+            "stale": false
         },
         {
             "code": "31.08.57",
@@ -6041,8 +6007,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 7,
-            "fetchedAt": "2026-08-12T13:54:15+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:00:19+00:00",
+            "stale": false
         },
         {
             "code": "31.08.58",
@@ -6376,8 +6342,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-12T13:54:28+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:00:30+00:00",
+            "stale": false
         },
         {
             "code": "31.08.59",
@@ -6743,8 +6709,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-12T13:54:40+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:00:41+00:00",
+            "stale": false
         },
         {
             "code": "31.08.66",
@@ -7046,8 +7012,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-12T13:54:55+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:00:57+00:00",
+            "stale": false
         },
         {
             "code": "31.08.67",
@@ -7309,8 +7275,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-12T13:55:05+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:01:08+00:00",
+            "stale": false
         },
         {
             "code": "31.08.68",
@@ -7458,8 +7424,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:55:14+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:01:16+00:00",
+            "stale": false
         },
         {
             "code": "31.08.69",
@@ -7575,8 +7541,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:55:22+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:01:25+00:00",
+            "stale": false
         },
         {
             "code": "31.08.71",
@@ -7612,8 +7578,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:55:29+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:01:33+00:00",
+            "stale": false
         },
         {
             "code": "31.08.72",
@@ -8387,8 +8353,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:55:40+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:01:48+00:00",
+            "stale": false
         },
         {
             "code": "31.08.73",
@@ -8562,8 +8528,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-12T13:55:49+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:02:02+00:00",
+            "stale": false
         },
         {
             "code": "31.08.74",
@@ -8927,8 +8893,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:55:58+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:02:10+00:00",
+            "stale": false
         },
         {
             "code": "31.08.75",
@@ -9316,8 +9282,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:56:07+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:02:21+00:00",
+            "stale": false
         },
         {
             "code": "31.08.76",
@@ -9394,8 +9360,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-12T13:56:14+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:02:30+00:00",
+            "stale": false
         },
         {
             "code": "31.08.77",
@@ -9647,8 +9613,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-12T13:56:21+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:02:40+00:00",
+            "stale": false
         },
         {
             "code": "31.08.78",
@@ -9830,8 +9796,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 9,
-            "fetchedAt": "2026-08-12T13:56:33+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-13T08:02:52+00:00",
+            "stale": false
         }
     ],
     "applicantHits": [
