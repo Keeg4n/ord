@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-08-20T15:50:19+00:00",
+    "generatedAt": "2026-08-21T07:09:38+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -342,7 +342,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-20T15:50:34+00:00",
+            "fetchedAt": "2026-08-21T07:09:50+00:00",
             "stale": false
         },
         {
@@ -693,7 +693,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-20T15:50:50+00:00",
+            "fetchedAt": "2026-08-21T07:10:09+00:00",
             "stale": false
         },
         {
@@ -730,7 +730,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:50:53+00:00",
+            "fetchedAt": "2026-08-21T07:10:11+00:00",
             "stale": false
         },
         {
@@ -801,7 +801,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:51:01+00:00",
+            "fetchedAt": "2026-08-21T07:10:19+00:00",
             "stale": false
         },
         {
@@ -1192,7 +1192,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:51:13+00:00",
+            "fetchedAt": "2026-08-21T07:10:32+00:00",
             "stale": false
         },
         {
@@ -1229,7 +1229,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-20T15:51:17+00:00",
+            "fetchedAt": "2026-08-21T07:10:38+00:00",
             "stale": false
         },
         {
@@ -1299,7 +1299,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:51:23+00:00",
+            "fetchedAt": "2026-08-21T07:10:45+00:00",
             "stale": false
         },
         {
@@ -1345,7 +1345,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-20T15:51:30+00:00",
+            "fetchedAt": "2026-08-21T07:10:53+00:00",
             "stale": false
         },
         {
@@ -1446,7 +1446,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:51:36+00:00",
+            "fetchedAt": "2026-08-21T07:10:59+00:00",
             "stale": false
         },
         {
@@ -1492,7 +1492,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:51:44+00:00",
+            "fetchedAt": "2026-08-21T07:11:10+00:00",
             "stale": false
         },
         {
@@ -1683,7 +1683,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-20T15:51:54+00:00",
+            "fetchedAt": "2026-08-21T07:11:17+00:00",
             "stale": false
         },
         {
@@ -1922,7 +1922,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:52:04+00:00",
+            "fetchedAt": "2026-08-21T07:11:24+00:00",
             "stale": false
         },
         {
@@ -2112,7 +2112,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:52:12+00:00",
+            "fetchedAt": "2026-08-21T07:11:32+00:00",
             "stale": false
         },
         {
@@ -2198,7 +2198,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:52:17+00:00",
+            "fetchedAt": "2026-08-21T07:11:35+00:00",
             "stale": false
         },
         {
@@ -2700,7 +2700,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:52:26+00:00",
+            "fetchedAt": "2026-08-21T07:11:42+00:00",
             "stale": false
         },
         {
@@ -2770,7 +2770,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-20T15:52:31+00:00",
+            "fetchedAt": "2026-08-21T07:11:48+00:00",
             "stale": false
         },
         {
@@ -3025,7 +3025,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:52:44+00:00",
+            "fetchedAt": "2026-08-21T07:12:02+00:00",
             "stale": false
         },
         {
@@ -3320,7 +3320,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-20T15:52:52+00:00",
+            "fetchedAt": "2026-08-21T07:12:08+00:00",
             "stale": false
         },
         {
@@ -3374,7 +3374,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-20T15:52:59+00:00",
+            "fetchedAt": "2026-08-21T07:12:17+00:00",
             "stale": false
         },
         {
@@ -3461,7 +3461,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:53:05+00:00",
+            "fetchedAt": "2026-08-21T07:12:25+00:00",
             "stale": false
         },
         {
@@ -3489,7 +3489,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-20T15:53:07+00:00",
+            "fetchedAt": "2026-08-21T07:12:28+00:00",
             "stale": false
         },
         {
@@ -3936,7 +3936,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 11,
-            "fetchedAt": "2026-08-20T15:53:18+00:00",
+            "fetchedAt": "2026-08-21T07:12:39+00:00",
             "stale": false
         },
         {
@@ -3982,7 +3982,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:53:25+00:00",
+            "fetchedAt": "2026-08-21T07:12:48+00:00",
             "stale": false
         },
         {
@@ -4292,7 +4292,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-20T15:53:33+00:00",
+            "fetchedAt": "2026-08-21T07:12:56+00:00",
             "stale": false
         },
         {
@@ -4459,7 +4459,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 18,
-            "fetchedAt": "2026-08-20T15:53:41+00:00",
+            "fetchedAt": "2026-08-21T07:13:03+00:00",
             "stale": false
         },
         {
@@ -4528,7 +4528,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:53:49+00:00",
+            "fetchedAt": "2026-08-21T07:13:12+00:00",
             "stale": false
         },
         {
@@ -4743,7 +4743,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-20T15:54:00+00:00",
+            "fetchedAt": "2026-08-21T07:13:21+00:00",
             "stale": false
         },
         {
@@ -4998,7 +4998,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:54:13+00:00",
+            "fetchedAt": "2026-08-21T07:13:36+00:00",
             "stale": false
         },
         {
@@ -5269,7 +5269,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:54:28+00:00",
+            "fetchedAt": "2026-08-21T07:13:48+00:00",
             "stale": false
         },
         {
@@ -5500,7 +5500,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:54:42+00:00",
+            "fetchedAt": "2026-08-21T07:14:04+00:00",
             "stale": false
         },
         {
@@ -5643,7 +5643,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-20T15:54:53+00:00",
+            "fetchedAt": "2026-08-21T07:14:15+00:00",
             "stale": false
         },
         {
@@ -5792,7 +5792,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:55:01+00:00",
+            "fetchedAt": "2026-08-21T07:14:25+00:00",
             "stale": false
         },
         {
@@ -5909,7 +5909,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:55:10+00:00",
+            "fetchedAt": "2026-08-21T07:14:37+00:00",
             "stale": false
         },
         {
@@ -5946,7 +5946,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:55:16+00:00",
+            "fetchedAt": "2026-08-21T07:14:44+00:00",
             "stale": false
         },
         {
@@ -6664,7 +6664,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:55:26+00:00",
+            "fetchedAt": "2026-08-21T07:14:56+00:00",
             "stale": false
         },
         {
@@ -6823,7 +6823,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-20T15:55:36+00:00",
+            "fetchedAt": "2026-08-21T07:15:09+00:00",
             "stale": false
         },
         {
@@ -7188,7 +7188,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:55:45+00:00",
+            "fetchedAt": "2026-08-21T07:15:21+00:00",
             "stale": false
         },
         {
@@ -7577,7 +7577,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:55:54+00:00",
+            "fetchedAt": "2026-08-21T07:15:31+00:00",
             "stale": false
         },
         {
@@ -7679,7 +7679,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-20T15:56:01+00:00",
+            "fetchedAt": "2026-08-21T07:15:39+00:00",
             "stale": false
         },
         {
@@ -7924,7 +7924,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-20T15:56:10+00:00",
+            "fetchedAt": "2026-08-21T07:15:49+00:00",
             "stale": false
         },
         {
@@ -8059,7 +8059,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-20T15:56:21+00:00",
+            "fetchedAt": "2026-08-21T07:16:00+00:00",
             "stale": false
         }
     ],
