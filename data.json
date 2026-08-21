@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-08-21T09:53:24+00:00",
+    "generatedAt": "2026-08-21T13:13:06+00:00",
     "applicant": "58490",
     "directions": [
         {
@@ -342,7 +342,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-21T09:53:37+00:00",
+            "fetchedAt": "2026-08-21T13:13:18+00:00",
             "stale": false
         },
         {
@@ -693,7 +693,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 6,
-            "fetchedAt": "2026-08-21T09:53:57+00:00",
+            "fetchedAt": "2026-08-21T13:13:35+00:00",
             "stale": false
         },
         {
@@ -730,7 +730,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:54:01+00:00",
+            "fetchedAt": "2026-08-21T13:13:38+00:00",
             "stale": false
         },
         {
@@ -801,7 +801,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:54:11+00:00",
+            "fetchedAt": "2026-08-21T13:13:46+00:00",
             "stale": false
         },
         {
@@ -1192,7 +1192,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T09:54:28+00:00",
+            "fetchedAt": "2026-08-21T13:13:57+00:00",
             "stale": false
         },
         {
@@ -1229,7 +1229,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-21T09:54:34+00:00",
+            "fetchedAt": "2026-08-21T13:14:02+00:00",
             "stale": false
         },
         {
@@ -1299,7 +1299,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:54:42+00:00",
+            "fetchedAt": "2026-08-21T13:14:10+00:00",
             "stale": false
         },
         {
@@ -1314,8 +1314,8 @@
                         {
                             "code": "65700",
                             "score": 215,
-                            "priority": 3,
-                            "consent": "Оригинал",
+                            "priority": 31,
+                            "consent": "31.08.57 (2)",
                             "other": "31.08.57 (2)",
                             "entryId": 2848
                         }
@@ -1345,7 +1345,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-21T09:54:52+00:00",
+            "fetchedAt": "2026-08-21T13:14:17+00:00",
             "stale": false
         },
         {
@@ -1446,7 +1446,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T09:54:57+00:00",
+            "fetchedAt": "2026-08-21T13:14:23+00:00",
             "stale": false
         },
         {
@@ -1492,7 +1492,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:55:07+00:00",
+            "fetchedAt": "2026-08-21T13:14:31+00:00",
             "stale": false
         },
         {
@@ -1675,7 +1675,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-21T09:55:21+00:00",
+            "fetchedAt": "2026-08-21T13:14:43+00:00",
             "stale": false
         },
         {
@@ -1914,7 +1914,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:55:31+00:00",
+            "fetchedAt": "2026-08-21T13:14:54+00:00",
             "stale": false
         },
         {
@@ -2104,7 +2104,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:55:42+00:00",
+            "fetchedAt": "2026-08-21T13:15:03+00:00",
             "stale": false
         },
         {
@@ -2119,8 +2119,8 @@
                         {
                             "code": "58711",
                             "score": 267,
-                            "priority": 2,
-                            "consent": "Оригинал",
+                            "priority": 31,
+                            "consent": "31.08.54 (1)",
                             "other": "31.08.54 (1)",
                             "entryId": 2853
                         }
@@ -2190,7 +2190,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T09:55:49+00:00",
+            "fetchedAt": "2026-08-21T13:15:09+00:00",
             "stale": false
         },
         {
@@ -2523,7 +2523,7 @@
                             "code": "66873",
                             "score": 153,
                             "priority": 1,
-                            "consent": "Копия",
+                            "consent": "Оригинал",
                             "other": "31.08.51 (1)",
                             "entryId": 2239
                         },
@@ -2588,7 +2588,7 @@
                             "score": 122,
                             "priority": 1,
                             "consent": "Оригинал",
-                            "other": "31.08.20 (1), 31.08.53 (2), 31.08.69 (2)",
+                            "other": "31.08.69 (2)",
                             "entryId": 2239
                         },
                         {
@@ -2692,7 +2692,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:55:56+00:00",
+            "fetchedAt": "2026-08-21T13:15:15+00:00",
             "stale": false
         },
         {
@@ -2762,7 +2762,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-21T09:56:03+00:00",
+            "fetchedAt": "2026-08-21T13:15:21+00:00",
             "stale": false
         },
         {
@@ -3017,7 +3017,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T09:56:18+00:00",
+            "fetchedAt": "2026-08-21T13:15:34+00:00",
             "stale": false
         },
         {
@@ -3312,7 +3312,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-21T09:56:24+00:00",
+            "fetchedAt": "2026-08-21T13:15:43+00:00",
             "stale": false
         },
         {
@@ -3327,8 +3327,8 @@
                         {
                             "code": "67401",
                             "score": 120,
-                            "priority": 2,
-                            "consent": "Оригинал",
+                            "priority": 1,
+                            "consent": "Да (1)",
                             "other": "31.08.53 (1)",
                             "entryId": 2856
                         }
@@ -3366,7 +3366,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 4,
-            "fetchedAt": "2026-08-21T09:56:33+00:00",
+            "fetchedAt": "2026-08-21T13:15:50+00:00",
             "stale": false
         },
         {
@@ -3381,8 +3381,8 @@
                         {
                             "code": "59970",
                             "score": 126,
-                            "priority": 2,
-                            "consent": "Копия",
+                            "priority": 31,
+                            "consent": "31.08.20 (1)",
                             "other": "31.08.20 (1)",
                             "entryId": 2860
                         }
@@ -3453,7 +3453,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T09:56:40+00:00",
+            "fetchedAt": "2026-08-21T13:15:58+00:00",
             "stale": false
         },
         {
@@ -3481,7 +3481,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 8,
-            "fetchedAt": "2026-08-21T09:56:42+00:00",
+            "fetchedAt": "2026-08-21T13:16:01+00:00",
             "stale": false
         },
         {
@@ -3912,7 +3912,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 11,
-            "fetchedAt": "2026-08-21T09:56:55+00:00",
+            "fetchedAt": "2026-08-21T13:16:12+00:00",
             "stale": false
         },
         {
@@ -3958,7 +3958,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T09:57:08+00:00",
+            "fetchedAt": "2026-08-21T13:16:21+00:00",
             "stale": false
         },
         {
@@ -4268,8 +4268,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 5,
-            "fetchedAt": "2026-08-21T07:12:56+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-21T13:16:32+00:00",
+            "stale": false
         },
         {
             "code": "31.08.54",
@@ -4277,22 +4277,30 @@
             "forms": {
                 "budget": {
                     "places": 18,
-                    "applicants": 6,
+                    "applicants": 5,
                     "maxScore": 267,
                     "list": [
                         {
                             "code": "58711",
                             "score": 267,
                             "priority": 1,
-                            "consent": "Оригинал",
+                            "consent": "Да (1)",
                             "other": "31.08.29 (2)",
+                            "entryId": 2862
+                        },
+                        {
+                            "code": "66392",
+                            "score": 247,
+                            "priority": 31,
+                            "consent": "31.08.49 (1)",
+                            "other": "31.08.49 (1)",
                             "entryId": 2862
                         },
                         {
                             "code": "60523",
                             "score": 241,
-                            "priority": 2,
-                            "consent": "Оригинал",
+                            "priority": 31,
+                            "consent": "31.08.19 (1)",
                             "other": "31.08.19 (1)",
                             "entryId": 2862
                         },
@@ -4300,16 +4308,8 @@
                             "code": "64712",
                             "score": 135,
                             "priority": 2,
-                            "consent": "Оригинал",
+                            "consent": "Да (2)",
                             "other": "31.08.53 (1)",
-                            "entryId": 2862
-                        },
-                        {
-                            "code": "66392",
-                            "score": 212,
-                            "priority": 1,
-                            "consent": "Копия",
-                            "other": "31.08.49 (2)",
                             "entryId": 2862
                         },
                         {
@@ -4318,14 +4318,6 @@
                             "priority": 2,
                             "consent": "Копия",
                             "other": "31.08.49 (1)",
-                            "entryId": 2862
-                        },
-                        {
-                            "code": "68305",
-                            "score": 53,
-                            "priority": 1,
-                            "consent": "Оригинал",
-                            "other": "31.08.78 (2)",
                             "entryId": 2862
                         }
                     ]
@@ -4435,8 +4427,8 @@
             },
             "freedTargets": 0,
             "budgetEffective": 18,
-            "fetchedAt": "2026-08-21T07:13:03+00:00",
-            "stale": true
+            "fetchedAt": "2026-08-21T13:16:40+00:00",
+            "stale": false
         },
         {
             "code": "31.08.56",
@@ -4504,7 +4496,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T09:59:17+00:00",
+            "fetchedAt": "2026-08-21T13:16:50+00:00",
             "stale": false
         },
         {
@@ -4719,7 +4711,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-21T09:59:27+00:00",
+            "fetchedAt": "2026-08-21T13:17:02+00:00",
             "stale": false
         },
         {
@@ -4974,7 +4966,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T09:59:43+00:00",
+            "fetchedAt": "2026-08-21T13:17:15+00:00",
             "stale": false
         },
         {
@@ -5245,7 +5237,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T09:59:58+00:00",
+            "fetchedAt": "2026-08-21T13:17:26+00:00",
             "stale": false
         },
         {
@@ -5476,7 +5468,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T10:00:26+00:00",
+            "fetchedAt": "2026-08-21T13:17:43+00:00",
             "stale": false
         },
         {
@@ -5611,7 +5603,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-21T10:00:35+00:00",
+            "fetchedAt": "2026-08-21T13:17:54+00:00",
             "stale": false
         },
         {
@@ -5760,7 +5752,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:00:44+00:00",
+            "fetchedAt": "2026-08-21T13:18:03+00:00",
             "stale": false
         },
         {
@@ -5837,7 +5829,7 @@
                             "score": 122,
                             "priority": 2,
                             "consent": "Оригинал",
-                            "other": "31.08.20 (1), 31.08.32 (1), 31.08.53 (2)",
+                            "other": "31.08.32 (1)",
                             "entryId": 2418
                         },
                         {
@@ -5877,7 +5869,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:00:55+00:00",
+            "fetchedAt": "2026-08-21T13:18:12+00:00",
             "stale": false
         },
         {
@@ -5914,7 +5906,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:01:04+00:00",
+            "fetchedAt": "2026-08-21T13:18:18+00:00",
             "stale": false
         },
         {
@@ -6632,7 +6624,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:01:15+00:00",
+            "fetchedAt": "2026-08-21T13:18:29+00:00",
             "stale": false
         },
         {
@@ -6791,7 +6783,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 1,
-            "fetchedAt": "2026-08-21T10:01:25+00:00",
+            "fetchedAt": "2026-08-21T13:18:42+00:00",
             "stale": false
         },
         {
@@ -7156,7 +7148,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:01:35+00:00",
+            "fetchedAt": "2026-08-21T13:18:50+00:00",
             "stale": false
         },
         {
@@ -7545,7 +7537,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:01:44+00:00",
+            "fetchedAt": "2026-08-21T13:19:01+00:00",
             "stale": false
         },
         {
@@ -7554,22 +7546,14 @@
             "forms": {
                 "budget": {
                     "places": 2,
-                    "applicants": 4,
+                    "applicants": 3,
                     "maxScore": 178,
                     "list": [
                         {
                             "code": "64016",
                             "score": 93,
                             "priority": 1,
-                            "consent": "Оригинал",
-                            "other": "",
-                            "entryId": 2866
-                        },
-                        {
-                            "code": "68184",
-                            "score": 88,
-                            "priority": 1,
-                            "consent": "Оригинал",
+                            "consent": "Да (1)",
                             "other": "",
                             "entryId": 2866
                         },
@@ -7585,7 +7569,7 @@
                             "code": "66312",
                             "score": 66,
                             "priority": 1,
-                            "consent": "Копия",
+                            "consent": "Оригинал",
                             "other": "",
                             "entryId": 2866
                         }
@@ -7647,7 +7631,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 2,
-            "fetchedAt": "2026-08-21T10:01:51+00:00",
+            "fetchedAt": "2026-08-21T13:19:08+00:00",
             "stale": false
         },
         {
@@ -7892,7 +7876,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 0,
-            "fetchedAt": "2026-08-21T10:02:00+00:00",
+            "fetchedAt": "2026-08-21T13:19:16+00:00",
             "stale": false
         },
         {
@@ -8027,7 +8011,7 @@
             },
             "freedTargets": 0,
             "budgetEffective": 3,
-            "fetchedAt": "2026-08-21T10:02:07+00:00",
+            "fetchedAt": "2026-08-21T13:19:27+00:00",
             "stale": false
         }
     ],
